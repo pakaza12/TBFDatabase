@@ -28,8 +28,8 @@ public class User {
 		return this.personCode;
 	}
 	
-	public String getAddress() {
-		return this.getAddress();
+	public Address getAddress() {
+		return this.address;
 	}
 	
 	public String getFirstName() {
