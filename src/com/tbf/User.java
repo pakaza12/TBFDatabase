@@ -1,3 +1,4 @@
+package com.tbf;
 
 import java.util.Set;
 
@@ -10,4 +11,5 @@ public class User {
 	private String brokerStatus;
 	private String secIdentity;
 	private Set<String> email;
+	
 }
