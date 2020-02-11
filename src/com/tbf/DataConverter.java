@@ -21,8 +21,9 @@ public class DataConverter {
 				String broker[] = token[1].split(",", -2);
 				String names[] = token[2].split(",", -2);
 				String address[] = token[3].split(",");
+				Address p1 = Address(address[0], address[1], address[2], address[3], address[4]);
 				String email[] = token[4].split(",");
-				User(token[0], token);
+				inputUsers[i] = User(token[0], );
 			}
 			
 
