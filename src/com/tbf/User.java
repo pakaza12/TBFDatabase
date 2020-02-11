@@ -24,4 +24,33 @@ public class User {
 		this.email = email;
 	}
 	
+	public String getPersonCode(){
+		return this.personCode;
+	}
+	
+	public String getAddress() {
+		return this.getAddress();
+	}
+	
+	public String getFirstName() {
+		return this.firstName;
+	}
+	
+	public String getLastName(){
+		return this.lastName;
+	}
+	
+	public String getBrokerStatus(){
+		return this.brokerStatus;
+	}
+	
+	public String getSecidnetity(){
+		return this.secIdentity;
+	}
+	
+	public Set<String> getEmail(){
+		return this.email;
+	}
+	
+	
 }
