@@ -10,5 +10,5 @@ public class User {
 	private String brokerStatus;
 	private String secIdentity;
 	private Set<String> email;
-	//Test
+	
 }
