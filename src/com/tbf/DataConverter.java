@@ -14,8 +14,16 @@ public class DataConverter {
 			Scanner input = new Scanner(new File("data/Persons.dat"));
 
 			int size = Integer.parseInt(input.nextLine());
+			User inputUsers[] = new User[size];
 			
-			
+			for(int i = 0; i < size; i++) {
+				String token[] = input.nextLine().split(";", -5);
+				String broker[] = token[1].split(",", -2);
+				String names[] = token[2].split(",", -2);
+				String address[] = token[3].split(",");
+				String email[] = token[4].split(",");
+				User(token[0], token);
+			}
 			
 
 			// Close the file
