@@ -12,4 +12,16 @@ public class User {
 	private String secIdentity;
 	private Set<String> email;
 	
+	public User(String personCode, Address address, String firstName, String lastName, String brokerStatus,
+				String secIdentity, Set<String> email) {
+		super();
+		this.personCode = personCode;
+		this.address = address;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.brokerStatus = brokerStatus;
+		this.secIdentity = secIdentity;
+		this.email = email;
+	}
+	
 }
