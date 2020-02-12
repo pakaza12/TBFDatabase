@@ -1,1 +1,890 @@
-
+<person>
+  <personCode>944c</personCode>
+  <address>
+    <street>1060 West Addison Street</street>
+    <city>Chicago</city>
+    <state>IL</state>
+    <zip>60613</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Starlin</firstName>
+  <lastName>Castro</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>scastro@cubs.com</string>
+    <string>starlin_castro13@gmail.com</string>
+  </email>
+</person><person>
+  <personCode>306a</personCode>
+  <address>
+    <street>123 N 1st Street</street>
+    <city>Omaha</city>
+    <state>NE</state>
+    <zip>68116</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Brock</firstName>
+  <lastName>Sampson</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>brock_f_sampson@gmail.com</string>
+    <string>bsampson@venture.com</string>
+  </email>
+</person><person>
+  <personCode>2342</personCode>
+  <address>
+    <street>123 Friendly Street</street>
+    <city>Ottawa</city>
+    <state>ON</state>
+    <zip>K1A 0G9</zip>
+    <country>Canada</country>
+  </address>
+  <firstName>Miles</firstName>
+  <lastName>O&apos;Brien</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string></string>
+  </email>
+</person><person>
+  <personCode>aef1</personCode>
+  <address>
+    <street>1 Wall Street</street>
+    <city>New York</city>
+    <state>NY</state>
+    <zip>10005-0012</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Gordon</firstName>
+  <lastName>Gekko</lastName>
+  <brokerStatus>E</brokerStatus>
+  <secIdentity>sec001</secIdentity>
+  <email>
+    <string></string>
+  </email>
+</person><person>
+  <personCode>321f</personCode>
+  <address>
+    <street>321 Bronx Street</street>
+    <city>New York</city>
+    <state>NY</state>
+    <zip>10004</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Bud</firstName>
+  <lastName>Fox</lastName>
+  <brokerStatus>J</brokerStatus>
+  <secIdentity>sec991</secIdentity>
+  <email>
+    <string>bfox@gmail.com</string>
+    <string>csheen@crazy.net</string>
+  </email>
+</person><person>
+  <personCode>ma12</personCode>
+  <address>
+    <street>1060 West Addison Street</street>
+    <city>Chicago</city>
+    <state>IL</state>
+    <zip>60613</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Dale</firstName>
+  <lastName>Sveum</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>sveum@cubs.com</string>
+  </email>
+</person><person>
+  <personCode>321nd</personCode>
+  <address>
+    <street>1060 West Addison Street</street>
+    <city>Chicago</city>
+    <state>IL</state>
+    <zip>60613</zip>
+    <country>USA</country>
+  </address>
+  <firstName>William</firstName>
+  <lastName>Hartnell</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>whartnell@doctors.com</string>
+    <string>dr@who.com</string>
+  </email>
+</person><person>
+  <personCode>nf32a</personCode>
+  <address>
+    <street>1060 West Addison Street</street>
+    <city>Chicago</city>
+    <state>IL</state>
+    <zip>60613</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Patrick</firstName>
+  <lastName>Troughton</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>ptroug@cse.unl.edu</string>
+    <string>ptrou32@unl.edu</string>
+  </email>
+</person><person>
+  <personCode>321na</personCode>
+  <address>
+    <street>301 Front St W</street>
+    <city> Toronto</city>
+    <state> ON</state>
+    <zip> M5V 2T6</zip>
+    <country> Canada</country>
+  </address>
+  <firstName>Jon</firstName>
+  <lastName>Pertwee</lastName>
+  <brokerStatus>E</brokerStatus>
+  <secIdentity>sec125</secIdentity>
+  <email>
+    <string>jpet@whofan.com</string>
+  </email>
+</person><person>
+  <personCode>231</personCode>
+  <address>
+    <street>1 Blue Jays Way</street>
+    <city> Toronto</city>
+    <state> ON</state>
+    <zip> M5V 1J1</zip>
+    <country> Canada</country>
+  </address>
+  <firstName>Tom</firstName>
+  <lastName>Baker</lastName>
+  <brokerStatus>E</brokerStatus>
+  <secIdentity>sec221</secIdentity>
+  <email>
+    <string>mostfamous@whovian.com</string>
+    <string>thedoctor@bbc.com</string>
+    <string>famousdoc@who.com</string>
+    <string>tbaker@cse.unl.edu</string>
+  </email>
+</person><person>
+  <personCode>doc05</personCode>
+  <address>
+    <street>23450 Cabo San Lucas</street>
+    <city> Los Cabos</city>
+    <state> BCS</state>
+    <zip></zip>
+    <country> Mexico</country>
+  </address>
+  <firstName>Peter</firstName>
+  <lastName>Davison</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string></string>
+  </email>
+</person><person>
+  <personCode>6doc</personCode>
+  <address>
+    <street>Campos El290</street>
+    <city>Mexico City</city>
+    <state> FD</state>
+    <zip></zip>
+    <country> Mexico</country>
+  </address>
+  <firstName>Richard</firstName>
+  <lastName>Hurndall</lastName>
+  <brokerStatus>J</brokerStatus>
+  <secIdentity>sec982</secIdentity>
+  <email>
+    <string>rhurndall@cse.unl.edu</string>
+    <string>richard@unl.edu</string>
+  </email>
+</person><person>
+  <personCode>321dr</personCode>
+  <address>
+    <street>Avery Hall</street>
+    <city>Lincoln</city>
+    <state>NE</state>
+    <zip>68503</zip>
+    <country>USA</country>
+  </address>
+  <firstName>C.</firstName>
+  <lastName>Baker</lastName>
+  <brokerStatus>J</brokerStatus>
+  <secIdentity>sec543</secIdentity>
+  <email>
+    <string>dr@baker.com</string>
+  </email>
+</person><person>
+  <personCode>1svndr</personCode>
+  <address>
+    <street>126-01 Roosevelt Ave</street>
+    <city> Flushing</city>
+    <state> NY</state>
+    <zip>11368</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Sylvester</firstName>
+  <lastName>McCoy</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>mccoy@whofan.com</string>
+    <string>slyguy@hotmail.com</string>
+  </email>
+</person><person>
+  <personCode>123lst</personCode>
+  <address>
+    <street>1 MetLife Stadium Dr</street>
+    <city> East Rutherford</city>
+    <state> NJ</state>
+    <zip>07073</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Paul</firstName>
+  <lastName>McGann</lastName>
+  <brokerStatus>E</brokerStatus>
+  <secIdentity>sec31x</secIdentity>
+  <email>
+    <string>foo@bar.com</string>
+    <string>pmc@unl.edu</string>
+    <string>pmcgann@mlb.com</string>
+  </email>
+</person><person>
+  <personCode>nwdoc1</personCode>
+  <address>
+    <street>1 E 161st St</street>
+    <city> Bronx</city>
+    <state> NY</state>
+    <zip>10451</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Chris</firstName>
+  <lastName>Eccleston</lastName>
+  <brokerStatus>J</brokerStatus>
+  <secIdentity>sec953</secIdentity>
+  <email>
+    <string>newguy@whovian.com</string>
+  </email>
+</person><person>
+  <personCode>2ndbestd</personCode>
+  <address>
+    <street>700 E Grand Ave</street>
+    <city> Chicago</city>
+    <state> IL</state>
+    <zip> 60611</zip>
+    <country>USA</country>
+  </address>
+  <firstName>David</firstName>
+  <lastName>Tennant</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>actor@shakespeare.com</string>
+    <string>tdavid@unl.edu</string>
+  </email>
+</person><person>
+  <personCode>wrddoc</personCode>
+  <address>
+    <street>333 W 35th St</street>
+    <city> Chicago</city>
+    <state> IL</state>
+    <zip>60616</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Matt</firstName>
+  <lastName>Smith</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>thedoc@cse.unl.edu</string>
+    <string>msmith@who.com</string>
+  </email>
+</person><person>
+  <personCode>bbchar</personCode>
+  <address>
+    <street>800 West 7th Street</street>
+    <city> Albuquerque</city>
+    <state> NM</state>
+    <zip> 87105</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Kaylee</firstName>
+  <lastName>Ehrmantraut</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string></string>
+  </email>
+</person><person>
+  <personCode>0102</personCode>
+  <address>
+    <street>123 Madison Avenue</street>
+    <city> Bodega</city>
+    <state> NL</state>
+    <zip></zip>
+    <country>CUBA</country>
+  </address>
+  <firstName>Fidel</firstName>
+  <lastName>Castro</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>fcastro@socialist.gov</string>
+  </email>
+</person><person>
+  <personCode>2PAC</personCode>
+  <address>
+    <street>123 N 1st Street</street>
+    <city>Compton</city>
+    <state>CA</state>
+    <zip>90210</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Trey</firstName>
+  <lastName>Shakura</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string></string>
+  </email>
+</person><person>
+  <personCode>8008</personCode>
+  <address>
+    <street>123 Madison Ave</street>
+    <city>New York</city>
+    <state>NY</state>
+    <zip>10005</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Conan</firstName>
+  <lastName>O&apos;Brien</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string></string>
+  </email>
+</person><person>
+  <personCode>LEAF</personCode>
+  <address>
+    <street>100 W Fake Street</street>
+    <city>Albaquerque</city>
+    <state>NM</state>
+    <zip>80706</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Walter</firstName>
+  <lastName>White</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>heisenburg@savewalter.com</string>
+  </email>
+</person><person>
+  <personCode>ANY1</personCode>
+  <address>
+    <street>124 Easy Street</street>
+    <city>Detroit</city>
+    <state>MI</state>
+    <zip>48202</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Ice</firstName>
+  <lastName>Cube</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>ezpleazin@iamnotvanillaicethanks.net</string>
+    <string>neverforgetthatiamnotvanillaice@jokesonyou.edu</string>
+  </email>
+</person><person>
+  <personCode>NUID</personCode>
+  <address>
+    <street>6700 Vine St</street>
+    <city>Lincoln</city>
+    <state>NE</state>
+    <zip>68505</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Tommy</firstName>
+  <lastName>Frazier</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>tommy.frazier@unl.edu</string>
+    <string>tpayne@history.gov</string>
+  </email>
+</person><person>
+  <personCode>NTAC</personCode>
+  <address>
+    <street>1017 BlueJay Way</street>
+    <city> London</city>
+    <state> DA</state>
+    <zip> 070708</zip>
+    <country> England</country>
+  </address>
+  <firstName>Tommy</firstName>
+  <lastName>Tutone</lastName>
+  <brokerStatus>E</brokerStatus>
+  <secIdentity>sec867</secIdentity>
+  <email>
+    <string>gummybears@myspace.com</string>
+    <string>damnu@tommytutone.edu</string>
+  </email>
+</person><person>
+  <personCode>L337</personCode>
+  <address>
+    <street>123 Talledega Road</street>
+    <city>Tallahasse</city>
+    <state>TN</state>
+    <zip>34345</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Jeff</firstName>
+  <lastName>Gordon</lastName>
+  <brokerStatus>E</brokerStatus>
+  <secIdentity>sec007</secIdentity>
+  <email>
+    <string></string>
+  </email>
+</person><person>
+  <personCode>M1LF</personCode>
+  <address>
+    <street>321 Bronx Street</street>
+    <city>New York</city>
+    <state>NY</state>
+    <zip>10004</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Barry</firstName>
+  <lastName>White</lastName>
+  <brokerStatus>J</brokerStatus>
+  <secIdentity>sec666</secIdentity>
+  <email>
+    <string>takeoffthatbraziermydear@thisisbarry.edu</string>
+  </email>
+</person><person>
+  <personCode>URAD</personCode>
+  <address>
+    <street>935 Pennsylvania Ave NW</street>
+    <city> Washington DC</city>
+    <state> DC</state>
+    <zip> 20535</zip>
+    <country> USA</country>
+  </address>
+  <firstName>Fox</firstName>
+  <lastName>Mulder</lastName>
+  <brokerStatus>J</brokerStatus>
+  <secIdentity>sec530</secIdentity>
+  <email>
+    <string>spooky@fbi.gov</string>
+    <string>iwnt2bleve@yahoo.com</string>
+  </email>
+</person><person>
+  <personCode>2kj3o</personCode>
+  <address>
+    <street>500 Areo Drive</street>
+    <city>Port Town</city>
+    <state>CA</state>
+    <zip>90010</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Douglas</firstName>
+  <lastName>Falcon</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>cfalcon@fzero.com</string>
+  </email>
+</person><person>
+  <personCode>0fi323</personCode>
+  <address>
+    <street>123 Tsune kuni</street>
+    <city>Hamamatsu City</city>
+    <state>Toyama Prefecture</state>
+    <zip></zip>
+    <country>Japan</country>
+  </address>
+  <firstName>Light</firstName>
+  <lastName>Yagami</lastName>
+  <brokerStatus>E</brokerStatus>
+  <secIdentity>sec385</secIdentity>
+  <email>
+    <string></string>
+  </email>
+</person><person>
+  <personCode>kd93n</personCode>
+  <address>
+    <street>35 Main Street</street>
+    <city>Springfield</city>
+    <state>IL</state>
+    <zip>62702</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Joe</firstName>
+  <lastName>Johnson</lastName>
+  <brokerStatus>J</brokerStatus>
+  <secIdentity>sec928</secIdentity>
+  <email>
+    <string>jjohnson@somewhere.com</string>
+    <string>averagejoe@someplace.com</string>
+  </email>
+</person><person>
+  <personCode>2h54gw</personCode>
+  <address>
+    <street>23432 Madison Ave</street>
+    <city> New York</city>
+    <state> NY</state>
+    <zip> 23432</zip>
+    <country> USA</country>
+  </address>
+  <firstName>Barak</firstName>
+  <lastName>Obama</lastName>
+  <brokerStatus>J</brokerStatus>
+  <secIdentity>sec111</secIdentity>
+  <email>
+    <string>barak@obama.com</string>
+  </email>
+</person><person>
+  <personCode>2h45</personCode>
+  <address>
+    <street>111 1st St</street>
+    <city> Toronto</city>
+    <state> NE</state>
+    <zip> 23125</zip>
+    <country> USA</country>
+  </address>
+  <firstName>George</firstName>
+  <lastName>Bush</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>george@bush.com</string>
+  </email>
+</person><person>
+  <personCode>h6455ey</personCode>
+  <address>
+    <street>6453 3nd</street>
+    <city> High St</city>
+    <state> Lincoln</state>
+    <zip> NE</zip>
+    <country> 12122</country>
+  </address>
+  <firstName>Bill</firstName>
+  <lastName>Clinton</lastName>
+  <brokerStatus>E</brokerStatus>
+  <secIdentity>sec232</secIdentity>
+  <email>
+    <string></string>
+  </email>
+</person><person>
+  <personCode>ej556</personCode>
+  <address>
+    <street>999 1st St</street>
+    <city> Chicago</city>
+    <state>IL</state>
+    <zip> 23452</zip>
+    <country> USA</country>
+  </address>
+  <firstName>GeorgeSr.</firstName>
+  <lastName>Bush</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string> bush@whitehouse.com</string>
+    <string> bush@taxas.gov</string>
+    <string>     george@bush.com</string>
+  </email>
+</person><person>
+  <personCode>ej6h65e</personCode>
+  <address>
+    <street>1 Maple Leave St</street>
+    <city> Ottowa</city>
+    <state> Ontario </state>
+    <zip>M5V 1G3</zip>
+    <country> Canada</country>
+  </address>
+  <firstName>Ronald</firstName>
+  <lastName>Regant</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string></string>
+  </email>
+</person><person>
+  <personCode>23fs</personCode>
+  <address>
+    <street>123 Math Drive</street>
+    <city> Omaha</city>
+    <state> NE</state>
+    <zip>11111</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Carter</firstName>
+  <lastName>Jimmy</lastName>
+  <brokerStatus>J</brokerStatus>
+  <secIdentity>sec532</secIdentity>
+  <email>
+    <string>jimmy@carter.com</string>
+  </email>
+</person><person>
+  <personCode>23fre</personCode>
+  <address>
+    <street>123 Bob Drive</street>
+    <city> Seattle</city>
+    <state> NE</state>
+    <zip> 23432</zip>
+    <country> USA</country>
+  </address>
+  <firstName>Smith</firstName>
+  <lastName>Bob</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>bobsmith2343@gmail.com</string>
+  </email>
+</person><person>
+  <personCode>1234a</personCode>
+  <address>
+    <street>1243 West O Street</street>
+    <city>Lincoln</city>
+    <state>NE</state>
+    <zip>68415</zip>
+    <country>USA</country>
+  </address>
+  <firstName>John</firstName>
+  <lastName>Alden</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>aj@gmail.com</string>
+  </email>
+</person><person>
+  <personCode>34tas8</personCode>
+  <address>
+    <street>521 Adam Street</street>
+    <city>Omaha</city>
+    <state>NE</state>
+    <zip>68471</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Roam</firstName>
+  <lastName>Jenny</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>jr1834@hotmail.com</string>
+  </email>
+</person><person>
+  <personCode>mar59</personCode>
+  <address>
+    <street>321 Lemon Street</street>
+    <city>New York</city>
+    <state>NY</state>
+    <zip>10012</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Chrik</firstName>
+  <lastName>Waston</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>wc345@who.com</string>
+    <string>wc345@gmail.com</string>
+  </email>
+</person><person>
+  <personCode>sus12</personCode>
+  <address>
+    <street>511 Avery Hall</street>
+    <city>Denver</city>
+    <state>CO</state>
+    <zip>14520</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Lee</firstName>
+  <lastName>Adam</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string></string>
+  </email>
+</person><person>
+  <personCode>dot105</personCode>
+  <address>
+    <street>123 Cabo San Lucas</street>
+    <city> Los</city>
+    <state> BS</state>
+    <zip> </zip>
+    <country> Mexico</country>
+  </address>
+  <firstName>Peter</firstName>
+  <lastName>Davison</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string></string>
+  </email>
+</person><person>
+  <personCode>usp12</personCode>
+  <address>
+    <street>142 Drive</street>
+    <city> Shanghai</city>
+    <state></state>
+    <zip>200012</zip>
+    <country>China</country>
+  </address>
+  <firstName>Sim</firstName>
+  <lastName>John</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>123@gwoo.com</string>
+  </email>
+</person><person>
+  <personCode>weo123</personCode>
+  <address>
+    <street>478 A street</street>
+    <city>Boston</city>
+    <state>MA</state>
+    <zip>47891</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Wang</firstName>
+  <lastName>Wei</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>wweiz2@gmail.com</string>
+  </email>
+</person><person>
+  <personCode>qwer4</personCode>
+  <address>
+    <street>1478 Maple Dr.</street>
+    <city>Ogalalla</city>
+    <state>NE</state>
+    <zip>68501</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Cherry</firstName>
+  <lastName>Brittany</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string></string>
+  </email>
+</person><person>
+  <personCode>wetet23</personCode>
+  <address>
+    <street>124 Hello world Dr.</street>
+    <city>Mccook</city>
+    <state>NE</state>
+    <zip>57814</zip>
+    <country>USA</country>
+  </address>
+  <firstName>John</firstName>
+  <lastName>Frank</lastName>
+  <brokerStatus></brokerStatus>
+  <secIdentity></secIdentity>
+  <email>
+    <string>fj2@zoo.com</string>
+  </email>
+</person><person>
+  <personCode>wsy62</personCode>
+  <address>
+    <street>7814 Jordan Street</street>
+    <city>Denver</city>
+    <state>CO</state>
+    <zip>65203</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Adison</firstName>
+  <lastName>Tom</lastName>
+  <brokerStatus>J</brokerStatus>
+  <secIdentity>sec123</secIdentity>
+  <email>
+    <string>tadison@unl.edu</string>
+  </email>
+</person><person>
+  <personCode>twuox2</personCode>
+  <address>
+    <street>1596 Apple Street</street>
+    <city>Flushing</city>
+    <state>NY</state>
+    <zip>10451</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Smiths</firstName>
+  <lastName>Peter</lastName>
+  <brokerStatus>J</brokerStatus>
+  <secIdentity>sec290</secIdentity>
+  <email>
+    <string>ps1991@gmail.com</string>
+    <string>ps1991@huskers.unl.edu</string>
+  </email>
+</person><person>
+  <personCode>xc908iy</personCode>
+  <address>
+    <street>478 South 87th Street</street>
+    <city>Grand Island</city>
+    <state>NE</state>
+    <zip>64789</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Frank</firstName>
+  <lastName>Gorge</lastName>
+  <brokerStatus>J</brokerStatus>
+  <secIdentity>sec324</secIdentity>
+  <email>
+    <string>gfrank001@huskers.unl.edu</string>
+  </email>
+</person><person>
+  <personCode>r3wo12s</personCode>
+  <address>
+    <street>489 Grand Street</street>
+    <city>Boston</city>
+    <state>MA</state>
+    <zip>14258</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Mike</firstName>
+  <lastName>Ellen</lastName>
+  <brokerStatus>E</brokerStatus>
+  <secIdentity>sec781</secIdentity>
+  <email>
+    <string>emike@hotmail.com</string>
+    <string>emike2@yahoo.com</string>
+  </email>
+</person><person>
+  <personCode>vtw9io</personCode>
+  <address>
+    <street>2314 North 18th Street</street>
+    <city>Kansas City</city>
+    <state>KS</state>
+    <zip>54723</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Paul</firstName>
+  <lastName>Tony</lastName>
+  <brokerStatus>E</brokerStatus>
+  <secIdentity>sec963</secIdentity>
+  <email>
+    <string>tpaul@who.com</string>
+  </email>
+</person><person>
+  <personCode>pautw87st</personCode>
+  <address>
+    <street>4789 Lake Street</street>
+    <city>Chicago</city>
+    <state>IL</state>
+    <zip>60123</zip>
+    <country>USA</country>
+  </address>
+  <firstName>Hunter</firstName>
+  <lastName>David</lastName>
+  <brokerStatus>E</brokerStatus>
+  <secIdentity>sec856</secIdentity>
+  <email>
+    <string>davidhunter@yahoo.com</string>
+    <string>dv123@who.com</string>
+  </email>
+</person>
