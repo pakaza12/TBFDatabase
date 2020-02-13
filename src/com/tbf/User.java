@@ -1,16 +1,19 @@
 package com.tbf;
 
+import java.util.List;
 import java.util.Set;
 
 public class User {
 
-	private String personCode;
-	private Address address;
-	private String firstName;
-	private String lastName;
-	private String brokerStatus;
-	private String secIdentity;
-	private Set<String> email;
+	protected String personCode;
+	protected Address address;
+	protected String firstName;
+	protected String lastName;
+	protected String brokerStatus;
+	protected String secIdentity;
+	protected Set<String> email;
+	protected List<Accounts> bankAccounts;
+	
 	
 	public User(String personCode, Address address, String firstName, String lastName, String brokerStatus,
 				String secIdentity, Set<String> email) {
