@@ -14,6 +14,10 @@ public class DataConverter {
 
 	public static void main(String[] args) {
 		
+		Persons();
+	}
+	
+	public static void Persons() {
 		try {
 			//Open a file and process it for input
 			Scanner input = new Scanner(new File("data/Persons.dat"));
@@ -65,6 +69,10 @@ public class DataConverter {
 		} catch (InputMismatchException ime) {
 			throw new RuntimeException("Bad file");
 		}
+	}
+	
+	public static void Assets() {
+		
 	}
 
 }
