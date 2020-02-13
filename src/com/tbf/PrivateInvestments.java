@@ -1,6 +1,6 @@
 package com.tbf;
 
-public class PrivateInvestments {
+public class PrivateInvestments extends Accounts {
 	
 	private String label;
 	private double quarterlyDividend;
@@ -8,7 +8,8 @@ public class PrivateInvestments {
 	private double baseOmegaMeasure;
 	private double totalValue;
 	
-	public PrivateInvestments(String label, double quarterlyDividend, double baseRateOfReturn, double baseOmegaMeasure, double totalValue) {
+	public PrivateInvestments(String code, String type, String label, double quarterlyDividend, double baseRateOfReturn, double baseOmegaMeasure, double totalValue) {
+		super(code, type);
 		this.label = label;
 		this.quarterlyDividend = quarterlyDividend;
 		this.baseRateOfReturn = baseRateOfReturn;

@@ -6,6 +6,7 @@ public abstract class Accounts {
 	protected String type;
 	
 	public Accounts(String code, String type) {
+		this.code = code;
 		this.type = type;
 	}
 	

@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.HashSet;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -56,7 +57,7 @@ public class DataConverter {
 			xstream.alias("person", User.class);
 			for(int i = 0; i < size; i++) {
 				String xml = xstream.toXML(inputUsers[i]);
-				result += xml;
+				result += (xml + "\n");
 			}
 			
 			//Opens PrintWriter in order to output the xml string
@@ -87,24 +88,17 @@ public class DataConverter {
 				String temp = "";
 				temp += input.nextLine();
 				if(temp.contains(";D;")) {
-					String token[] = input.nextLine().split(";", -4);
+					String token[] = temp.split(";", -4);
 					Deposit tempB = new Deposit(token[0], token[1], token[2], Double.parseDouble(token[3]));
-					//Implement initialization of the deposit
-					//Then put that deposit class in the Accounts inputUsers[]
 					inputUsers[i] = tempB;
 				} else if(temp.contains(";S;")) {
-					String token[] = input.nextLine().split(";", -8);
-					Stocks tempB = new Stocks(token[2], Double.parseDouble(token[3]), Double.parseDouble(token[4]), Double.parseDouble(token[5]), token[6], Double.parseDouble(token[7]));
-					Stock tempC = new Stock(token[0], token[1]);
-					tempC.addStock(tempB);
-					inputUsers[i] = tempC;
-					
+					String token[] = temp.split(";", -8);
+					Stocks tempB = new Stocks(token[0], token[1], token[2], Double.parseDouble(token[3]), Double.parseDouble(token[4]), Double.parseDouble(token[5]), token[6], Double.parseDouble(token[7]));
+					inputUsers[i] = tempB;	
 				} else if(temp.contains(";P;")) {
-					String token[] = input.nextLine().split(";", -7);
-					PrivateInvestments tempB = new PrivateInvestments(token[2], Double.parseDouble(token[3]), Double.parseDouble(token[4]), Double.parseDouble(token[5]), Double.parseDouble(token[6]));
-					Investments tempC = new Investments(token[0], token[1]);
-					tempC.addInvestments(tempB);
-					inputUsers[i] = tempC;
+					String token[] = temp.split(";", -7);
+					PrivateInvestments tempB = new PrivateInvestments(token[0], token[1], token[2], Double.parseDouble(token[3]), Double.parseDouble(token[4]), Double.parseDouble(token[5]), Double.parseDouble(token[6]));
+					inputUsers[i] = tempB;
 				}
 			}
 			input.close();			
@@ -112,12 +106,11 @@ public class DataConverter {
 			//Calls XStream in order to change each user to an xml string
 			String result = "";
 			XStream xstream = new XStream();
-			xstream.alias("Accounts", Accounts.class);
 			for(int i = 0; i < size; i++) {
 				String xml = xstream.toXML(inputUsers[i]);
-				result += xml;
+				result += (xml + "\n");
 			}
-			
+			System.out.println(result);
 			//Opens PrintWriter in order to output the xml string
 			File output = new File("data/Assets.xml");
 			PrintWriter pw = new PrintWriter(output);
