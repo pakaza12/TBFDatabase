@@ -1,42 +1,35 @@
 <com.tbf.Deposit>
   <code>BX001-23</code>
-  <type>D</type>
   <label>Money Market Savings</label>
   <apr>1.05</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
   <code>AGTSAV</code>
-  <type>D</type>
   <label>Savings Account</label>
   <apr>0.25</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
   <code>CD99312</code>
-  <type>D</type>
   <label>5-year CD</label>
   <apr>4.35</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
   <code>CD1Y3X</code>
-  <type>D</type>
   <label>1-year Rollover CD</label>
   <apr>2.75</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
   <code>CD1Y3Y</code>
-  <type>D</type>
   <label>1-year Rollover CD</label>
   <apr>2.75</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
   <code>RIRA01</code>
-  <type>D</type>
   <label>Roth IRA</label>
   <apr>3.4</apr>
 </com.tbf.Deposit>
 <com.tbf.Stocks>
   <code>GOOG001</code>
-  <type>S</type>
   <label>Google Inc.</label>
   <quarterlyDividend>0.0</quarterlyDividend>
   <baseRateOfReturn>5.6</baseRateOfReturn>
@@ -46,7 +39,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>DIAGEO12</code>
-  <type>S</type>
   <label>Diageo PLC</label>
   <quarterlyDividend>12.0</quarterlyDividend>
   <baseRateOfReturn>3.2</baseRateOfReturn>
@@ -56,7 +48,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>123APP</code>
-  <type>S</type>
   <label>Apple</label>
   <quarterlyDividend>24.5</quarterlyDividend>
   <baseRateOfReturn>4.3</baseRateOfReturn>
@@ -66,7 +57,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>321CC</code>
-  <type>S</type>
   <label>Coca-Cola</label>
   <quarterlyDividend>5.45</quarterlyDividend>
   <baseRateOfReturn>3.1</baseRateOfReturn>
@@ -76,7 +66,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>No1BURR</code>
-  <type>S</type>
   <label>Chipotle Mexican Grill</label>
   <quarterlyDividend>45.57</quarterlyDividend>
   <baseRateOfReturn>3.19</baseRateOfReturn>
@@ -86,7 +75,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>B0oWM</code>
-  <type>S</type>
   <label>Costco</label>
   <quarterlyDividend>10.0</quarterlyDividend>
   <baseRateOfReturn>2.25</baseRateOfReturn>
@@ -96,7 +84,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>N0TPIX</code>
-  <type>S</type>
   <label>3D Systems</label>
   <quarterlyDividend>0.0</quarterlyDividend>
   <baseRateOfReturn>1.25</baseRateOfReturn>
@@ -106,7 +93,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>wOOWoo1S</code>
-  <type>S</type>
   <label>Canadian National Railway</label>
   <quarterlyDividend>2.75</quarterlyDividend>
   <baseRateOfReturn>4.6</baseRateOfReturn>
@@ -116,7 +102,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>BERK-B</code>
-  <type>S</type>
   <label>Berkshire Hathaway</label>
   <quarterlyDividend>0.0</quarterlyDividend>
   <baseRateOfReturn>7.2</baseRateOfReturn>
@@ -126,7 +111,6 @@
 </com.tbf.Stocks>
 <com.tbf.PrivateInvestments>
   <code>RENT445</code>
-  <type>P</type>
   <label>Rental Property</label>
   <quarterlyDividend>2400.0</quarterlyDividend>
   <baseRateOfReturn>0.25</baseRateOfReturn>
@@ -135,7 +119,6 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>CMPROP0121</code>
-  <type>P</type>
   <label>Commercial Property-Red Oaks Mall</label>
   <quarterlyDividend>14240.0</quarterlyDividend>
   <baseRateOfReturn>5.35</baseRateOfReturn>
@@ -144,7 +127,6 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>FOOD12</code>
-  <type>P</type>
   <label>Cluckin&apos;s restaurant chain</label>
   <quarterlyDividend>35000.0</quarterlyDividend>
   <baseRateOfReturn>3.0</baseRateOfReturn>
@@ -153,7 +135,6 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>REALStr12</code>
-  <type>P</type>
   <label>Fred&apos;s Fabulous Hardware Store</label>
   <quarterlyDividend>1232.0</quarterlyDividend>
   <baseRateOfReturn>1.23</baseRateOfReturn>
@@ -162,7 +143,6 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>IND321</code>
-  <type>P</type>
   <label>Industrial Widget Manufacturers Inc.</label>
   <quarterlyDividend>10500.0</quarterlyDividend>
   <baseRateOfReturn>2.0</baseRateOfReturn>
@@ -171,7 +151,6 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>RSTOR322</code>
-  <type>P</type>
   <label>7&quot; Vinyl Records</label>
   <quarterlyDividend>2453.21</quarterlyDividend>
   <baseRateOfReturn>2.1</baseRateOfReturn>
@@ -180,37 +159,31 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.Deposit>
   <code>SAVE01</code>
-  <type>D</type>
   <label>Savings Account</label>
   <apr>0.25</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
   <code>MONMO1</code>
-  <type>D</type>
   <label>Money Market Savings</label>
   <apr>1.05</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
   <code>CD5YER</code>
-  <type>D</type>
   <label>5-year CD</label>
   <apr>4.35</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
   <code>CD1YER</code>
-  <type>D</type>
   <label>1-year Rollover CD</label>
   <apr>2.75</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
   <code>ROTIRA</code>
-  <type>D</type>
   <label>Roth IRA</label>
   <apr>3.4</apr>
 </com.tbf.Deposit>
 <com.tbf.Stocks>
   <code>TABLET</code>
-  <type>S</type>
   <label>Surface Inc</label>
   <quarterlyDividend>0.0</quarterlyDividend>
   <baseRateOfReturn>5.6</baseRateOfReturn>
@@ -220,7 +193,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>SCHROK</code>
-  <type>S</type>
   <label>Schrock Innovation</label>
   <quarterlyDividend>12.0</quarterlyDividend>
   <baseRateOfReturn>3.2</baseRateOfReturn>
@@ -230,7 +202,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>BUBBAG</code>
-  <type>S</type>
   <label>BubbaGump Shrimp</label>
   <quarterlyDividend>24.5</quarterlyDividend>
   <baseRateOfReturn>4.3</baseRateOfReturn>
@@ -240,7 +211,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>PEPSI1</code>
-  <type>S</type>
   <label>Pepsi</label>
   <quarterlyDividend>5.45</quarterlyDividend>
   <baseRateOfReturn>3.1</baseRateOfReturn>
@@ -250,7 +220,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>MILTEC</code>
-  <type>S</type>
   <label>US Army</label>
   <quarterlyDividend>45.57</quarterlyDividend>
   <baseRateOfReturn>3.19</baseRateOfReturn>
@@ -260,19 +229,16 @@
 </com.tbf.Stocks>
 <com.tbf.Deposit>
   <code>CD4523</code>
-  <type>D</type>
   <label>10-year CD</label>
   <apr>8.76</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
   <code>DTh38R</code>
-  <type>D</type>
   <label>Money Market Account</label>
   <apr>0.96</apr>
 </com.tbf.Deposit>
 <com.tbf.Stocks>
   <code>YHOO003</code>
-  <type>S</type>
   <label>Yahoo! Inc.</label>
   <quarterlyDividend>0.0</quarterlyDividend>
   <baseRateOfReturn>3.4</baseRateOfReturn>
@@ -282,7 +248,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>MSFT007</code>
-  <type>S</type>
   <label>Microsoft Corporation</label>
   <quarterlyDividend>0.92</quarterlyDividend>
   <baseRateOfReturn>4.1</baseRateOfReturn>
@@ -292,7 +257,6 @@
 </com.tbf.Stocks>
 <com.tbf.PrivateInvestments>
   <code>THRE456</code>
-  <type>P</type>
   <label>Three-14 Pi Shop</label>
   <quarterlyDividend>1050.5</quarterlyDividend>
   <baseRateOfReturn>5.6</baseRateOfReturn>
@@ -301,7 +265,6 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>BIKE035</code>
-  <type>P</type>
   <label>Buck&apos;s Bike Store</label>
   <quarterlyDividend>3678.19</quarterlyDividend>
   <baseRateOfReturn>3.9</baseRateOfReturn>
@@ -310,13 +273,11 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.Deposit>
   <code>SVSVNGS</code>
-  <type>D</type>
   <label>Savings Account</label>
   <apr>0.08</apr>
 </com.tbf.Deposit>
 <com.tbf.Stocks>
   <code>TWTTER01</code>
-  <type>S</type>
   <label>Twitter Inc.</label>
   <quarterlyDividend>23.0</quarterlyDividend>
   <baseRateOfReturn>11.0</baseRateOfReturn>
@@ -326,7 +287,6 @@
 </com.tbf.Stocks>
 <com.tbf.PrivateInvestments>
   <code>GLDSD03</code>
-  <type>P</type>
   <label>Gold</label>
   <quarterlyDividend>0.0</quarterlyDividend>
   <baseRateOfReturn>0.24</baseRateOfReturn>
@@ -335,7 +295,6 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.Stocks>
   <code>MSFT32</code>
-  <type>S</type>
   <label>Microsoft Inc.</label>
   <quarterlyDividend>12.0</quarterlyDividend>
   <baseRateOfReturn>0.013</baseRateOfReturn>
@@ -345,7 +304,6 @@
 </com.tbf.Stocks>
 <com.tbf.PrivateInvestments>
   <code>CPPRD03</code>
-  <type>P</type>
   <label>Copper</label>
   <quarterlyDividend>1.0</quarterlyDividend>
   <baseRateOfReturn>0.11</baseRateOfReturn>
@@ -354,25 +312,21 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.Deposit>
   <code>ESPN001</code>
-  <type>D</type>
   <label>Huskers</label>
   <apr>8.5</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
   <code>SEARCH8</code>
-  <type>D</type>
   <label>Yahoo</label>
   <apr>1.34</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
   <code>VTST</code>
-  <type>D</type>
   <label>Geigco</label>
   <apr>1.78</apr>
 </com.tbf.Deposit>
 <com.tbf.Stocks>
   <code>WESYT129</code>
-  <type>S</type>
   <label>Bank of America</label>
   <quarterlyDividend>3.25</quarterlyDividend>
   <baseRateOfReturn>2.4</baseRateOfReturn>
@@ -382,7 +336,6 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>PWES912</code>
-  <type>S</type>
   <label>PEPSI INC</label>
   <quarterlyDividend>5.24</quarterlyDividend>
   <baseRateOfReturn>8.14</baseRateOfReturn>
@@ -392,7 +345,6 @@
 </com.tbf.Stocks>
 <com.tbf.PrivateInvestments>
   <code>YUOPCT</code>
-  <type>P</type>
   <label>WALMART</label>
   <quarterlyDividend>4789.32</quarterlyDividend>
   <baseRateOfReturn>0.32</baseRateOfReturn>
@@ -401,7 +353,6 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>DR0U7Z5TW</code>
-  <type>P</type>
   <label>TARGET</label>
   <quarterlyDividend>7812.41</quarterlyDividend>
   <baseRateOfReturn>2.5</baseRateOfReturn>
@@ -410,11 +361,9 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>TEWS4A1MO</code>
-  <type>P</type>
   <label>AMAZON</label>
   <quarterlyDividend>9631.45</quarterlyDividend>
   <baseRateOfReturn>0.64</baseRateOfReturn>
   <baseOmegaMeasure>0.25</baseOmegaMeasure>
   <totalValue>296352.87</totalValue>
 </com.tbf.PrivateInvestments>
-

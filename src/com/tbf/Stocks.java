@@ -9,9 +9,9 @@ public class Stocks extends Accounts {
 	private String stockSymbol;
 	private double sharePrice;
 	
-	public Stocks(String code, String type, String label, double quarterlyDividend, double baseRateOfReturn, double betaMeasure,
+	public Stocks(String code, String label, double quarterlyDividend, double baseRateOfReturn, double betaMeasure,
 			String stockSymbol, double sharePrice) {
-		super(code, type);
+		super(code);
 		this.label = label;
 		this.quarterlyDividend = quarterlyDividend;
 		this.baseRateOfReturn = baseRateOfReturn;

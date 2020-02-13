@@ -8,8 +8,8 @@ public class PrivateInvestments extends Accounts {
 	private double baseOmegaMeasure;
 	private double totalValue;
 	
-	public PrivateInvestments(String code, String type, String label, double quarterlyDividend, double baseRateOfReturn, double baseOmegaMeasure, double totalValue) {
-		super(code, type);
+	public PrivateInvestments(String code, String label, double quarterlyDividend, double baseRateOfReturn, double baseOmegaMeasure, double totalValue) {
+		super(code);
 		this.label = label;
 		this.quarterlyDividend = quarterlyDividend;
 		this.baseRateOfReturn = baseRateOfReturn;

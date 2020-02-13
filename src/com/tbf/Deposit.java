@@ -5,8 +5,8 @@ public class Deposit extends Accounts {
 	private String label;
 	private double apr;
 	
-	public Deposit(String code, String type, String label, double apr) {
-		super(code, type);
+	public Deposit(String code, String label, double apr) {
+		super(code);
 		this.label = label;
 		this.apr = apr;
 	}
