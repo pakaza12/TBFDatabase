@@ -1,7 +1,11 @@
 package com.tbf;
 
-public class Accounts {
+public abstract class Accounts {
 
-	//ffffs
+	protected String type;
+	
+	public Accounts(String type) {
+		this.type = type;
+	}
 	
 }
