@@ -8,9 +8,7 @@ public class PrivateInvestments {
 	private double baseOmegaMeasure;
 	private double totalValue;
 	
-	public PrivateInvestments(String label, double quarterlyDividend, double baseRateOfReturn, double baseOmegaMeasure,
-			double totalValue) {
-		super();
+	public PrivateInvestments(String label, double quarterlyDividend, double baseRateOfReturn, double baseOmegaMeasure, double totalValue) {
 		this.label = label;
 		this.quarterlyDividend = quarterlyDividend;
 		this.baseRateOfReturn = baseRateOfReturn;

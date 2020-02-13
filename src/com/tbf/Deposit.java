@@ -1,12 +1,14 @@
 package com.tbf;
 
-public class CD extends Accounts {
+public class Deposit extends Accounts {
 
+	private String label;
 	private int balance;
 	private int apr;
 	
-	public CD(String type, int balance, int apr) {
+	public Deposit(String type, String label, int balance, int apr) {
 		super(type);
+		this.label = label;
 		this.balance = balance;
 		this.apr = apr;
 	}
@@ -25,6 +27,14 @@ public class CD extends Accounts {
 
 	public void setApr(int apr) {
 		this.apr = apr;
+	}
+
+	public String getLabel() {
+		return label;
+	}
+
+	public void setLabel(String label) {
+		this.label = label;
 	}
 	
 }

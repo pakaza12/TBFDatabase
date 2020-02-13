@@ -1,8 +1,6 @@
 package com.tbf;
 
 public class Stocks {
-	
-	
 
 	private String label;
 	private double quarterlyDividend;
@@ -13,7 +11,6 @@ public class Stocks {
 	
 	public Stocks(String label, double quarterlyDividend, double baseRateOfReturn, double betaMeasure,
 			double stockSymbol, double sharePrice) {
-		super();
 		this.label = label;
 		this.quarterlyDividend = quarterlyDividend;
 		this.baseRateOfReturn = baseRateOfReturn;

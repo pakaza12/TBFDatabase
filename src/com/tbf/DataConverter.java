@@ -15,6 +15,8 @@ public class DataConverter {
 	public static void main(String[] args) {
 		
 		Persons();
+		
+		
 	}
 	
 	public static void Persons() {
@@ -46,7 +48,7 @@ public class DataConverter {
 					inputUsers[i] = new User(token[0], p1, names[1].replaceAll("\\s+", ""), names[0], "", "", emails);
 				}
 			}
-			input.close();
+			input.close();			
 			
 			//Calls XStream in order to change each user to an xml string
 			String result = "";
@@ -72,7 +74,42 @@ public class DataConverter {
 	}
 	
 	public static void Assets() {
-		
+		try {
+			//Open a file and process it for input
+			Scanner input = new Scanner(new File("data/Assets.dat"));
+
+			//Get the size of the file (how many lines of data there are an initialize an array of users
+			int size = Integer.parseInt(input.nextLine());
+			User inputUsers[] = new User[size];
+			
+			//Splits each line of data into its correct parts
+			for(int i = 0; i < size; i++) {
+				String token[] = input.nextLine().split(";", -4);
+				
+			}
+			input.close();			
+			
+			//Calls XStream in order to change each user to an xml string
+			String result = "";
+			XStream xstream = new XStream();
+			xstream.alias("person", User.class);
+			for(int i = 0; i < size; i++) {
+				String xml = xstream.toXML(inputUsers[i]);
+				result += xml;
+			}
+			
+			//Opens PrintWriter in order to output the xml string
+			File output = new File("data/Persons.xml");
+			PrintWriter pw = new PrintWriter(output);
+			pw.println(result);
+			
+			pw.close();
+			// Error checking
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException(e);
+		} catch (InputMismatchException ime) {
+			throw new RuntimeException("Bad file");
+		}
 	}
 
 }
