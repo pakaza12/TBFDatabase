@@ -2,7 +2,7 @@ package com.tbf;
 
 import java.util.List;
 
-public abstract class Stock extends Accounts {
+public class Stock extends Accounts {
 
 	protected List<Stocks> stocks;
 	

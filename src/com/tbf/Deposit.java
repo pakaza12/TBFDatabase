@@ -3,19 +3,19 @@ package com.tbf;
 public class Deposit extends Accounts {
 
 	private String label;
-	private int apr;
+	private double apr;
 	
-	public Deposit(String code, String type, String label, int apr) {
+	public Deposit(String code, String type, String label, double apr) {
 		super(code, type);
 		this.label = label;
 		this.apr = apr;
 	}
 
-	public int getApr() {
+	public double getApr() {
 		return apr;
 	}
 
-	public void setApr(int apr) {
+	public void setApr(double apr) {
 		this.apr = apr;
 	}
 

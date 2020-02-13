@@ -6,11 +6,11 @@ public class Stocks {
 	private double quarterlyDividend;
 	private double baseRateOfReturn;
 	private double betaMeasure;
-	private double stockSymbol;
+	private String stockSymbol;
 	private double sharePrice;
 	
 	public Stocks(String label, double quarterlyDividend, double baseRateOfReturn, double betaMeasure,
-			double stockSymbol, double sharePrice) {
+			String stockSymbol, double sharePrice) {
 		this.label = label;
 		this.quarterlyDividend = quarterlyDividend;
 		this.baseRateOfReturn = baseRateOfReturn;
@@ -51,11 +51,11 @@ public class Stocks {
 		this.betaMeasure = betaMeasure;
 	}
 	
-	public double getStockSymbol() {
+	public String getStockSymbol() {
 		return stockSymbol;
 	}
 	
-	public void setStockSymbol(double stockSymbol) {
+	public void setStockSymbol(String stockSymbol) {
 		this.stockSymbol = stockSymbol;
 	}
 	

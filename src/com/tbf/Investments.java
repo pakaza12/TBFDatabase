@@ -18,7 +18,7 @@ protected List<PrivateInvestments> investments;
 		this.investments = investments;
 	}
 	
-	public void addStock(PrivateInvestments a) {
+	public void addInvestments(PrivateInvestments a) {
 		this.investments.add(a);
 	}
 	
