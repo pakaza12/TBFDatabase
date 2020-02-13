@@ -80,12 +80,22 @@ public class DataConverter {
 
 			//Get the size of the file (how many lines of data there are an initialize an array of users
 			int size = Integer.parseInt(input.nextLine());
-			User inputUsers[] = new User[size];
+			Accounts inputUsers[] = new Accounts[size];
 			
 			//Splits each line of data into its correct parts
 			for(int i = 0; i < size; i++) {
-				String token[] = input.nextLine().split(";", -4);
-				
+				String temp = "";
+				temp += input.nextLine();
+				if(temp.contains(";D;")) {
+					String token[] = input.nextLine().split(";", -4);
+					Deposit tempB = new Deposit(token[0], token[1], token[2], Integer.parseInt(token[3]));
+					//Implement initialization of the deposit
+					//Then put that deposit class in the Accounts inputUsers[]
+				} else if(temp.contains(";S;")) {
+					
+				} else if(temp.contains(";P;")) {
+					
+				}
 			}
 			input.close();			
 			

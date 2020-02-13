@@ -6,8 +6,8 @@ public abstract class Stock extends Accounts {
 
 	protected List<Stocks> stocks;
 	
-	public Stock(String type) {
-		super(type);
+	public Stock(String code, String type) {
+		super(code, type);
 	}
 
 	public List<Stocks> getStocks() {

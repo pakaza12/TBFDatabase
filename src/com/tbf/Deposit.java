@@ -3,22 +3,12 @@ package com.tbf;
 public class Deposit extends Accounts {
 
 	private String label;
-	private int balance;
 	private int apr;
 	
-	public Deposit(String type, String label, int balance, int apr) {
-		super(type);
+	public Deposit(String code, String type, String label, int apr) {
+		super(code, type);
 		this.label = label;
-		this.balance = balance;
 		this.apr = apr;
-	}
-
-	public int getBalance() {
-		return balance;
-	}
-
-	public void setBalance(int balance) {
-		this.balance = balance;
 	}
 
 	public int getApr() {

@@ -6,8 +6,8 @@ public class Investments extends Accounts {
 
 protected List<PrivateInvestments> investments;
 	
-	public Investments(String type) {
-		super(type);
+	public Investments(String code, String type) {
+		super(code, type);
 	}
 
 	public List<PrivateInvestments> getStocks() {
