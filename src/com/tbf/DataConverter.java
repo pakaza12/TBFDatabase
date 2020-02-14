@@ -18,9 +18,13 @@ public class DataConverter {
 		
 	}
 	
+	/**
+	 * This method will open data/Persons.dat file, take in the data, 
+	 * change it to xml, then output it to data/Persons.xml whenever it's called
+	 */
 	public static void Persons() {
 		try {
-			//Open a file and process it for input
+
 			Scanner input = new Scanner(new File("data/Persons.dat"));
 
 			//Get the size of the file (how many lines of data there are an initialize an array of users
@@ -74,9 +78,13 @@ public class DataConverter {
 		}
 	}
 	
+	/**
+	 * This method will open data/Assets.dat file, take in the data, 
+	 * change it to xml, then output it to data/Assets.xml whenever it's called
+	 */
 	public static void Assets() {
 		try {
-			//Open a file and process it for input
+
 			Scanner input = new Scanner(new File("data/Assets.dat"));
 
 			//Get the size of the file (how many lines of data there are an initialize an array of users
