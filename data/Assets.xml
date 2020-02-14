@@ -1,369 +1,1618 @@
 <com.tbf.Deposit>
-  <code>BX001-23</code>
-  <label>Money Market Savings</label>
+  <code>53-710-4922</code>
+  <label>Cammish</label>
+  <apr>11.37</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>20-584-7436</code>
+  <label>Scourgie</label>
+  <apr>63.87</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>27-368-2414</code>
+  <label>McGlue</label>
+  <apr>42.46</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>79-344-1401</code>
+  <label>Freyne</label>
+  <apr>10.98</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>92-084-7202</code>
+  <label>Moller</label>
+  <apr>64.71</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>94-106-2926</code>
+  <label>Moehle</label>
+  <apr>47.25</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>67-118-3825</code>
+  <label>Covey</label>
+  <apr>8.63</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>13-929-7392</code>
+  <label>Hairsine</label>
+  <apr>79.34</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>52-447-6672</code>
+  <label>Foot</label>
+  <apr>83.92</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>71-151-0197</code>
+  <label>Treweek</label>
   <apr>1.05</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
-  <code>AGTSAV</code>
-  <label>Savings Account</label>
-  <apr>0.25</apr>
+  <code>72-158-0674</code>
+  <label>Brands</label>
+  <apr>71.04</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
-  <code>CD99312</code>
-  <label>5-year CD</label>
-  <apr>4.35</apr>
+  <code>06-480-2274</code>
+  <label>Zamora</label>
+  <apr>24.36</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
-  <code>CD1Y3X</code>
-  <label>1-year Rollover CD</label>
-  <apr>2.75</apr>
-</com.tbf.Deposit>
-<com.tbf.Deposit>
-  <code>CD1Y3Y</code>
-  <label>1-year Rollover CD</label>
-  <apr>2.75</apr>
-</com.tbf.Deposit>
-<com.tbf.Deposit>
-  <code>RIRA01</code>
-  <label>Roth IRA</label>
-  <apr>3.4</apr>
-</com.tbf.Deposit>
-<com.tbf.Stocks>
-  <code>GOOG001</code>
-  <label>Google Inc.</label>
-  <quarterlyDividend>0.0</quarterlyDividend>
-  <baseRateOfReturn>5.6</baseRateOfReturn>
-  <betaMeasure>-0.05</betaMeasure>
-  <stockSymbol>GOOG</stockSymbol>
-  <sharePrice>814.708</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Stocks>
-  <code>DIAGEO12</code>
-  <label>Diageo PLC</label>
-  <quarterlyDividend>12.0</quarterlyDividend>
-  <baseRateOfReturn>3.2</baseRateOfReturn>
-  <betaMeasure>0.01</betaMeasure>
-  <stockSymbol>DEO</stockSymbol>
-  <sharePrice>122.75</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Stocks>
-  <code>123APP</code>
-  <label>Apple</label>
-  <quarterlyDividend>24.5</quarterlyDividend>
-  <baseRateOfReturn>4.3</baseRateOfReturn>
-  <betaMeasure>-0.07</betaMeasure>
-  <stockSymbol>AAPL</stockSymbol>
-  <sharePrice>429.8</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Stocks>
-  <code>321CC</code>
-  <label>Coca-Cola</label>
-  <quarterlyDividend>5.45</quarterlyDividend>
-  <baseRateOfReturn>3.1</baseRateOfReturn>
-  <betaMeasure>0.075</betaMeasure>
-  <stockSymbol>KO</stockSymbol>
-  <sharePrice>41.08</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Stocks>
-  <code>No1BURR</code>
-  <label>Chipotle Mexican Grill</label>
-  <quarterlyDividend>45.57</quarterlyDividend>
-  <baseRateOfReturn>3.19</baseRateOfReturn>
-  <betaMeasure>0.0</betaMeasure>
-  <stockSymbol>CMG</stockSymbol>
-  <sharePrice>341.91</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Stocks>
-  <code>B0oWM</code>
-  <label>Costco</label>
-  <quarterlyDividend>10.0</quarterlyDividend>
-  <baseRateOfReturn>2.25</baseRateOfReturn>
-  <betaMeasure>0.13</betaMeasure>
-  <stockSymbol>COST</stockSymbol>
-  <sharePrice>106.13</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Stocks>
-  <code>N0TPIX</code>
-  <label>3D Systems</label>
-  <quarterlyDividend>0.0</quarterlyDividend>
-  <baseRateOfReturn>1.25</baseRateOfReturn>
-  <betaMeasure>0.08</betaMeasure>
-  <stockSymbol>DDD</stockSymbol>
-  <sharePrice>35.4</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Stocks>
-  <code>wOOWoo1S</code>
-  <label>Canadian National Railway</label>
-  <quarterlyDividend>2.75</quarterlyDividend>
-  <baseRateOfReturn>4.6</baseRateOfReturn>
-  <betaMeasure>0.12</betaMeasure>
-  <stockSymbol>CNI</stockSymbol>
-  <sharePrice>97.75</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Stocks>
-  <code>BERK-B</code>
-  <label>Berkshire Hathaway</label>
-  <quarterlyDividend>0.0</quarterlyDividend>
-  <baseRateOfReturn>7.2</baseRateOfReturn>
-  <betaMeasure>-0.1</betaMeasure>
-  <stockSymbol>BRK-B</stockSymbol>
-  <sharePrice>107.04</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.PrivateInvestments>
-  <code>RENT445</code>
-  <label>Rental Property</label>
-  <quarterlyDividend>2400.0</quarterlyDividend>
-  <baseRateOfReturn>0.25</baseRateOfReturn>
-  <baseOmegaMeasure>0.15</baseOmegaMeasure>
-  <totalValue>120000.0</totalValue>
-</com.tbf.PrivateInvestments>
-<com.tbf.PrivateInvestments>
-  <code>CMPROP0121</code>
-  <label>Commercial Property-Red Oaks Mall</label>
-  <quarterlyDividend>14240.0</quarterlyDividend>
-  <baseRateOfReturn>5.35</baseRateOfReturn>
-  <baseOmegaMeasure>0.25</baseOmegaMeasure>
-  <totalValue>1.0456E7</totalValue>
-</com.tbf.PrivateInvestments>
-<com.tbf.PrivateInvestments>
-  <code>FOOD12</code>
-  <label>Cluckin&apos;s restaurant chain</label>
-  <quarterlyDividend>35000.0</quarterlyDividend>
-  <baseRateOfReturn>3.0</baseRateOfReturn>
-  <baseOmegaMeasure>0.32</baseOmegaMeasure>
-  <totalValue>1212500.0</totalValue>
-</com.tbf.PrivateInvestments>
-<com.tbf.PrivateInvestments>
-  <code>REALStr12</code>
-  <label>Fred&apos;s Fabulous Hardware Store</label>
-  <quarterlyDividend>1232.0</quarterlyDividend>
-  <baseRateOfReturn>1.23</baseRateOfReturn>
-  <baseOmegaMeasure>0.13</baseOmegaMeasure>
-  <totalValue>54300.0</totalValue>
-</com.tbf.PrivateInvestments>
-<com.tbf.PrivateInvestments>
-  <code>IND321</code>
-  <label>Industrial Widget Manufacturers Inc.</label>
-  <quarterlyDividend>10500.0</quarterlyDividend>
-  <baseRateOfReturn>2.0</baseRateOfReturn>
-  <baseOmegaMeasure>-0.15</baseOmegaMeasure>
-  <totalValue>4213333.0</totalValue>
-</com.tbf.PrivateInvestments>
-<com.tbf.PrivateInvestments>
-  <code>RSTOR322</code>
-  <label>7&quot; Vinyl Records</label>
-  <quarterlyDividend>2453.21</quarterlyDividend>
-  <baseRateOfReturn>2.1</baseRateOfReturn>
-  <baseOmegaMeasure>0.54</baseOmegaMeasure>
-  <totalValue>13500.0</totalValue>
-</com.tbf.PrivateInvestments>
-<com.tbf.Deposit>
-  <code>SAVE01</code>
-  <label>Savings Account</label>
-  <apr>0.25</apr>
-</com.tbf.Deposit>
-<com.tbf.Deposit>
-  <code>MONMO1</code>
-  <label>Money Market Savings</label>
-  <apr>1.05</apr>
-</com.tbf.Deposit>
-<com.tbf.Deposit>
-  <code>CD5YER</code>
-  <label>5-year CD</label>
-  <apr>4.35</apr>
-</com.tbf.Deposit>
-<com.tbf.Deposit>
-  <code>CD1YER</code>
-  <label>1-year Rollover CD</label>
-  <apr>2.75</apr>
-</com.tbf.Deposit>
-<com.tbf.Deposit>
-  <code>ROTIRA</code>
-  <label>Roth IRA</label>
-  <apr>3.4</apr>
-</com.tbf.Deposit>
-<com.tbf.Stocks>
-  <code>TABLET</code>
-  <label>Surface Inc</label>
-  <quarterlyDividend>0.0</quarterlyDividend>
-  <baseRateOfReturn>5.6</baseRateOfReturn>
-  <betaMeasure>-0.05</betaMeasure>
-  <stockSymbol>MIC</stockSymbol>
-  <sharePrice>814.708</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Stocks>
-  <code>SCHROK</code>
-  <label>Schrock Innovation</label>
-  <quarterlyDividend>12.0</quarterlyDividend>
-  <baseRateOfReturn>3.2</baseRateOfReturn>
-  <betaMeasure>0.01</betaMeasure>
-  <stockSymbol>SSI</stockSymbol>
-  <sharePrice>122.75</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Stocks>
-  <code>BUBBAG</code>
-  <label>BubbaGump Shrimp</label>
-  <quarterlyDividend>24.5</quarterlyDividend>
-  <baseRateOfReturn>4.3</baseRateOfReturn>
-  <betaMeasure>-0.07</betaMeasure>
-  <stockSymbol>BUB</stockSymbol>
-  <sharePrice>429.8</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Stocks>
-  <code>PEPSI1</code>
-  <label>Pepsi</label>
-  <quarterlyDividend>5.45</quarterlyDividend>
-  <baseRateOfReturn>3.1</baseRateOfReturn>
-  <betaMeasure>0.075</betaMeasure>
-  <stockSymbol>PEP</stockSymbol>
-  <sharePrice>41.08</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Stocks>
-  <code>MILTEC</code>
-  <label>US Army</label>
-  <quarterlyDividend>45.57</quarterlyDividend>
-  <baseRateOfReturn>3.19</baseRateOfReturn>
-  <betaMeasure>0.0</betaMeasure>
-  <stockSymbol>USA</stockSymbol>
-  <sharePrice>341.91</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Deposit>
-  <code>CD4523</code>
-  <label>10-year CD</label>
+  <code>91-978-8339</code>
+  <label>Dowall</label>
   <apr>8.76</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
-  <code>DTh38R</code>
-  <label>Money Market Account</label>
-  <apr>0.96</apr>
-</com.tbf.Deposit>
-<com.tbf.Stocks>
-  <code>YHOO003</code>
-  <label>Yahoo! Inc.</label>
-  <quarterlyDividend>0.0</quarterlyDividend>
-  <baseRateOfReturn>3.4</baseRateOfReturn>
-  <betaMeasure>-0.03</betaMeasure>
-  <stockSymbol>YHOO</stockSymbol>
-  <sharePrice>28.17</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.Stocks>
-  <code>MSFT007</code>
-  <label>Microsoft Corporation</label>
-  <quarterlyDividend>0.92</quarterlyDividend>
-  <baseRateOfReturn>4.1</baseRateOfReturn>
-  <betaMeasure>0.17</betaMeasure>
-  <stockSymbol>MSFT</stockSymbol>
-  <sharePrice>31.15</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.PrivateInvestments>
-  <code>THRE456</code>
-  <label>Three-14 Pi Shop</label>
-  <quarterlyDividend>1050.5</quarterlyDividend>
-  <baseRateOfReturn>5.6</baseRateOfReturn>
-  <baseOmegaMeasure>0.33</baseOmegaMeasure>
-  <totalValue>23006.53</totalValue>
-</com.tbf.PrivateInvestments>
-<com.tbf.PrivateInvestments>
-  <code>BIKE035</code>
-  <label>Buck&apos;s Bike Store</label>
-  <quarterlyDividend>3678.19</quarterlyDividend>
-  <baseRateOfReturn>3.9</baseRateOfReturn>
-  <baseOmegaMeasure>0.48</baseOmegaMeasure>
-  <totalValue>47800.35</totalValue>
-</com.tbf.PrivateInvestments>
-<com.tbf.Deposit>
-  <code>SVSVNGS</code>
-  <label>Savings Account</label>
-  <apr>0.08</apr>
-</com.tbf.Deposit>
-<com.tbf.Stocks>
-  <code>TWTTER01</code>
-  <label>Twitter Inc.</label>
-  <quarterlyDividend>23.0</quarterlyDividend>
-  <baseRateOfReturn>11.0</baseRateOfReturn>
-  <betaMeasure>-0.1</betaMeasure>
-  <stockSymbol>TWTR</stockSymbol>
-  <sharePrice>324.23</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.PrivateInvestments>
-  <code>GLDSD03</code>
-  <label>Gold</label>
-  <quarterlyDividend>0.0</quarterlyDividend>
-  <baseRateOfReturn>0.24</baseRateOfReturn>
-  <baseOmegaMeasure>0.12</baseOmegaMeasure>
-  <totalValue>2343212.0</totalValue>
-</com.tbf.PrivateInvestments>
-<com.tbf.Stocks>
-  <code>MSFT32</code>
-  <label>Microsoft Inc.</label>
-  <quarterlyDividend>12.0</quarterlyDividend>
-  <baseRateOfReturn>0.013</baseRateOfReturn>
-  <betaMeasure>0.45</betaMeasure>
-  <stockSymbol>MSFT</stockSymbol>
-  <sharePrice>30.23</sharePrice>
-</com.tbf.Stocks>
-<com.tbf.PrivateInvestments>
-  <code>CPPRD03</code>
-  <label>Copper</label>
-  <quarterlyDividend>1.0</quarterlyDividend>
-  <baseRateOfReturn>0.11</baseRateOfReturn>
-  <baseOmegaMeasure>0.15</baseOmegaMeasure>
-  <totalValue>1111.0</totalValue>
-</com.tbf.PrivateInvestments>
-<com.tbf.Deposit>
-  <code>ESPN001</code>
-  <label>Huskers</label>
-  <apr>8.5</apr>
+  <code>11-948-4300</code>
+  <label>Pancoast</label>
+  <apr>5.55</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
-  <code>SEARCH8</code>
-  <label>Yahoo</label>
-  <apr>1.34</apr>
+  <code>52-981-7818</code>
+  <label>Churly</label>
+  <apr>95.14</apr>
 </com.tbf.Deposit>
 <com.tbf.Deposit>
-  <code>VTST</code>
-  <label>Geigco</label>
-  <apr>1.78</apr>
+  <code>17-909-9488</code>
+  <label>Marini</label>
+  <apr>25.63</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>64-205-2246</code>
+  <label>Du Hamel</label>
+  <apr>62.96</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>97-396-8841</code>
+  <label>Laurenty</label>
+  <apr>6.24</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>67-502-4505</code>
+  <label>Hounsome</label>
+  <apr>52.65</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>66-415-9322</code>
+  <label>Cuffe</label>
+  <apr>47.96</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>53-477-9671</code>
+  <label>Stolworthy</label>
+  <apr>84.17</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>18-032-8480</code>
+  <label>Iddens</label>
+  <apr>97.06</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>17-195-8925</code>
+  <label>Earland</label>
+  <apr>54.47</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>65-860-1570</code>
+  <label>Wittrington</label>
+  <apr>19.38</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>82-219-9223</code>
+  <label>Langfat</label>
+  <apr>53.31</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>08-901-9248</code>
+  <label>Skule</label>
+  <apr>87.64</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>02-841-5566</code>
+  <label>Bratchell</label>
+  <apr>10.35</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>73-871-1966</code>
+  <label>Walak</label>
+  <apr>38.52</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>87-023-0219</code>
+  <label>Cleugh</label>
+  <apr>25.65</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>37-462-7653</code>
+  <label>Baal</label>
+  <apr>7.55</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>92-321-6158</code>
+  <label>Zarfati</label>
+  <apr>24.85</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>36-748-5105</code>
+  <label>Bransby</label>
+  <apr>52.47</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>06-978-0222</code>
+  <label>Beswick</label>
+  <apr>12.69</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>23-198-1925</code>
+  <label>Gatfield</label>
+  <apr>19.34</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>32-231-3008</code>
+  <label>Labro</label>
+  <apr>8.24</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>50-764-0734</code>
+  <label>Skeleton</label>
+  <apr>66.15</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>22-438-7425</code>
+  <label>MacEllen</label>
+  <apr>14.15</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>03-469-9996</code>
+  <label>Brownill</label>
+  <apr>30.17</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>69-872-1232</code>
+  <label>Sexti</label>
+  <apr>66.43</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>34-609-9798</code>
+  <label>Sapsed</label>
+  <apr>66.76</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>12-357-3025</code>
+  <label>Denison</label>
+  <apr>44.63</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>53-639-0044</code>
+  <label>MacAllaster</label>
+  <apr>72.64</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>49-140-7713</code>
+  <label>Trouncer</label>
+  <apr>18.8</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>06-792-9272</code>
+  <label>Renowden</label>
+  <apr>81.16</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>21-785-3712</code>
+  <label>Barnby</label>
+  <apr>66.96</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>37-773-6696</code>
+  <label>Annice</label>
+  <apr>12.62</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>25-877-8887</code>
+  <label>Yeardsley</label>
+  <apr>86.48</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>97-684-5085</code>
+  <label>Andreuzzi</label>
+  <apr>88.97</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>08-853-9488</code>
+  <label>Langwade</label>
+  <apr>31.6</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>01-382-2320</code>
+  <label>Klosa</label>
+  <apr>5.02</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>21-247-8375</code>
+  <label>Habbershon</label>
+  <apr>14.64</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>46-109-2197</code>
+  <label>Hardeman</label>
+  <apr>47.05</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>01-765-1940</code>
+  <label>Riddoch</label>
+  <apr>37.26</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>33-774-0561</code>
+  <label>Fontanet</label>
+  <apr>47.46</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>32-019-2392</code>
+  <label>Pauer</label>
+  <apr>53.13</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>83-424-6407</code>
+  <label>Fleet</label>
+  <apr>18.44</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>98-338-3573</code>
+  <label>Olyff</label>
+  <apr>23.13</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>83-225-2655</code>
+  <label>Bryer</label>
+  <apr>32.68</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>01-251-4248</code>
+  <label>Pidgeon</label>
+  <apr>94.53</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>53-252-2545</code>
+  <label>Cunniam</label>
+  <apr>59.15</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>26-666-0581</code>
+  <label>Tolliday</label>
+  <apr>44.37</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>53-192-4077</code>
+  <label>Haig</label>
+  <apr>18.89</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>89-855-1528</code>
+  <label>Fletcher</label>
+  <apr>76.13</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>55-333-7408</code>
+  <label>Manuely</label>
+  <apr>88.61</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>56-154-5531</code>
+  <label>Dreher</label>
+  <apr>72.05</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>57-993-7576</code>
+  <label>Lympany</label>
+  <apr>25.92</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>19-622-3948</code>
+  <label>Beamiss</label>
+  <apr>35.26</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>21-067-1793</code>
+  <label>Dwyr</label>
+  <apr>94.73</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>10-009-0060</code>
+  <label>McCooke</label>
+  <apr>55.19</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>55-253-5409</code>
+  <label>Gimson</label>
+  <apr>94.91</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>21-498-0963</code>
+  <label>Prestedge</label>
+  <apr>40.82</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>83-791-4313</code>
+  <label>Ripsher</label>
+  <apr>34.54</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>51-625-2699</code>
+  <label>Belhomme</label>
+  <apr>81.85</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>84-551-8431</code>
+  <label>Fish</label>
+  <apr>46.97</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>79-418-7828</code>
+  <label>Dunlop</label>
+  <apr>31.88</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>93-120-4652</code>
+  <label>Gaw</label>
+  <apr>55.01</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>51-440-8667</code>
+  <label>Middas</label>
+  <apr>88.71</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>45-665-4207</code>
+  <label>Vink</label>
+  <apr>81.71</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>50-543-5820</code>
+  <label>Lonergan</label>
+  <apr>7.8</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>47-972-9319</code>
+  <label>Howlett</label>
+  <apr>78.45</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>73-095-5034</code>
+  <label>Pashler</label>
+  <apr>18.33</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>14-577-6349</code>
+  <label>Scammell</label>
+  <apr>11.55</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>36-321-3818</code>
+  <label>Atherton</label>
+  <apr>59.3</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>63-459-7631</code>
+  <label>Iannello</label>
+  <apr>47.14</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>01-259-5736</code>
+  <label>Mallia</label>
+  <apr>72.72</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>52-806-9198</code>
+  <label>Fazzioli</label>
+  <apr>98.14</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>18-869-5189</code>
+  <label>Killock</label>
+  <apr>19.55</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>60-007-2836</code>
+  <label>Cantrell</label>
+  <apr>40.42</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>85-368-5892</code>
+  <label>Hales</label>
+  <apr>74.34</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>78-177-1402</code>
+  <label>Whitlow</label>
+  <apr>59.66</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>04-788-4114</code>
+  <label>Ashley</label>
+  <apr>71.1</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>15-597-8459</code>
+  <label>Haggleton</label>
+  <apr>96.59</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>21-726-6552</code>
+  <label>Bruff</label>
+  <apr>18.85</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>57-380-7822</code>
+  <label>Sumshon</label>
+  <apr>42.53</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>73-730-7549</code>
+  <label>Haysman</label>
+  <apr>65.72</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>16-497-0105</code>
+  <label>Eye</label>
+  <apr>74.39</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>83-355-6112</code>
+  <label>Redd</label>
+  <apr>53.92</apr>
+</com.tbf.Deposit>
+<com.tbf.Deposit>
+  <code>86-410-8667</code>
+  <label>Brandolini</label>
+  <apr>22.83</apr>
 </com.tbf.Deposit>
 <com.tbf.Stocks>
-  <code>WESYT129</code>
-  <label>Bank of America</label>
-  <quarterlyDividend>3.25</quarterlyDividend>
-  <baseRateOfReturn>2.4</baseRateOfReturn>
-  <betaMeasure>0.02</betaMeasure>
-  <stockSymbol>BOA</stockSymbol>
-  <sharePrice>143.18</sharePrice>
+  <code>87-020-0660</code>
+  <label>Lindup</label>
+  <quarterlyDividend>14.01</quarterlyDividend>
+  <baseRateOfReturn>0.09</baseRateOfReturn>
+  <betaMeasure>59.0</betaMeasure>
+  <stockSymbol>SSW^E</stockSymbol>
+  <sharePrice>9418.94</sharePrice>
 </com.tbf.Stocks>
 <com.tbf.Stocks>
-  <code>PWES912</code>
-  <label>PEPSI INC</label>
-  <quarterlyDividend>5.24</quarterlyDividend>
-  <baseRateOfReturn>8.14</baseRateOfReturn>
-  <betaMeasure>0.03</betaMeasure>
-  <stockSymbol>PEP</stockSymbol>
-  <sharePrice>87.25</sharePrice>
+  <code>33-524-6777</code>
+  <label>Jennens</label>
+  <quarterlyDividend>11.01</quarterlyDividend>
+  <baseRateOfReturn>0.5</baseRateOfReturn>
+  <betaMeasure>97.0</betaMeasure>
+  <stockSymbol>RILYL</stockSymbol>
+  <sharePrice>3816.19</sharePrice>
 </com.tbf.Stocks>
-<com.tbf.PrivateInvestments>
-  <code>YUOPCT</code>
-  <label>WALMART</label>
-  <quarterlyDividend>4789.32</quarterlyDividend>
-  <baseRateOfReturn>0.32</baseRateOfReturn>
-  <baseOmegaMeasure>0.17</baseOmegaMeasure>
-  <totalValue>1004780.66</totalValue>
-</com.tbf.PrivateInvestments>
-<com.tbf.PrivateInvestments>
-  <code>DR0U7Z5TW</code>
-  <label>TARGET</label>
-  <quarterlyDividend>7812.41</quarterlyDividend>
-  <baseRateOfReturn>2.5</baseRateOfReturn>
-  <baseOmegaMeasure>0.39</baseOmegaMeasure>
-  <totalValue>58963.27</totalValue>
-</com.tbf.PrivateInvestments>
-<com.tbf.PrivateInvestments>
-  <code>TEWS4A1MO</code>
-  <label>AMAZON</label>
-  <quarterlyDividend>9631.45</quarterlyDividend>
+<com.tbf.Stocks>
+  <code>30-599-6798</code>
+  <label>Gateshill</label>
+  <quarterlyDividend>5.91</quarterlyDividend>
+  <baseRateOfReturn>0.18</baseRateOfReturn>
+  <betaMeasure>85.0</betaMeasure>
+  <stockSymbol>EGY</stockSymbol>
+  <sharePrice>4780.11</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>62-854-4921</code>
+  <label>Whyborn</label>
+  <quarterlyDividend>16.64</quarterlyDividend>
+  <baseRateOfReturn>0.92</baseRateOfReturn>
+  <betaMeasure>41.0</betaMeasure>
+  <stockSymbol>BPT</stockSymbol>
+  <sharePrice>3245.58</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>10-779-3018</code>
+  <label>Soigne</label>
+  <quarterlyDividend>19.3</quarterlyDividend>
+  <baseRateOfReturn>0.89</baseRateOfReturn>
+  <betaMeasure>68.0</betaMeasure>
+  <stockSymbol>DVD</stockSymbol>
+  <sharePrice>7909.04</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>15-361-0369</code>
+  <label>Broschek</label>
+  <quarterlyDividend>19.07</quarterlyDividend>
+  <baseRateOfReturn>0.13</baseRateOfReturn>
+  <betaMeasure>47.0</betaMeasure>
+  <stockSymbol>GLRE</stockSymbol>
+  <sharePrice>9618.74</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>66-454-4060</code>
+  <label>Fryatt</label>
+  <quarterlyDividend>13.64</quarterlyDividend>
+  <baseRateOfReturn>0.69</baseRateOfReturn>
+  <betaMeasure>21.0</betaMeasure>
+  <stockSymbol>WHLRW</stockSymbol>
+  <sharePrice>4418.29</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>51-126-3250</code>
+  <label>Mosten</label>
+  <quarterlyDividend>17.18</quarterlyDividend>
+  <baseRateOfReturn>0.74</baseRateOfReturn>
+  <betaMeasure>99.0</betaMeasure>
+  <stockSymbol>ERIC</stockSymbol>
+  <sharePrice>9640.68</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>35-225-7103</code>
+  <label>Jantet</label>
+  <quarterlyDividend>17.79</quarterlyDividend>
+  <baseRateOfReturn>0.42</baseRateOfReturn>
+  <betaMeasure>14.0</betaMeasure>
+  <stockSymbol>PICO</stockSymbol>
+  <sharePrice>5103.96</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>36-026-7783</code>
+  <label>Aughtie</label>
+  <quarterlyDividend>12.5</quarterlyDividend>
+  <baseRateOfReturn>0.12</baseRateOfReturn>
+  <betaMeasure>29.0</betaMeasure>
+  <stockSymbol>FOX</stockSymbol>
+  <sharePrice>5802.08</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>54-997-8920</code>
+  <label>Webland</label>
+  <quarterlyDividend>11.82</quarterlyDividend>
+  <baseRateOfReturn>0.59</baseRateOfReturn>
+  <betaMeasure>79.0</betaMeasure>
+  <stockSymbol>BML^I</stockSymbol>
+  <sharePrice>9145.41</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>08-700-6254</code>
+  <label>Brushfield</label>
+  <quarterlyDividend>12.65</quarterlyDividend>
+  <baseRateOfReturn>0.36</baseRateOfReturn>
+  <betaMeasure>79.0</betaMeasure>
+  <stockSymbol>VTWV</stockSymbol>
+  <sharePrice>9603.38</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>98-651-2611</code>
+  <label>Ridding</label>
+  <quarterlyDividend>17.12</quarterlyDividend>
+  <baseRateOfReturn>0.65</baseRateOfReturn>
+  <betaMeasure>83.0</betaMeasure>
+  <stockSymbol>OPHT</stockSymbol>
+  <sharePrice>5270.17</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>16-684-9867</code>
+  <label>Duplan</label>
+  <quarterlyDividend>19.64</quarterlyDividend>
+  <baseRateOfReturn>0.56</baseRateOfReturn>
+  <betaMeasure>51.0</betaMeasure>
+  <stockSymbol>AGO</stockSymbol>
+  <sharePrice>7216.22</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>19-528-7400</code>
+  <label>Mordan</label>
+  <quarterlyDividend>3.5</quarterlyDividend>
+  <baseRateOfReturn>0.28</baseRateOfReturn>
+  <betaMeasure>98.0</betaMeasure>
+  <stockSymbol>JSYNR</stockSymbol>
+  <sharePrice>1770.74</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>67-063-0397</code>
+  <label>von Nassau</label>
+  <quarterlyDividend>7.03</quarterlyDividend>
+  <baseRateOfReturn>0.18</baseRateOfReturn>
+  <betaMeasure>89.0</betaMeasure>
+  <stockSymbol>RNG</stockSymbol>
+  <sharePrice>3805.99</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>09-401-2542</code>
+  <label>Derges</label>
+  <quarterlyDividend>13.36</quarterlyDividend>
+  <baseRateOfReturn>0.34</baseRateOfReturn>
+  <betaMeasure>95.0</betaMeasure>
+  <stockSymbol>PAAS</stockSymbol>
+  <sharePrice>9156.86</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>18-430-5894</code>
+  <label>MacFadin</label>
+  <quarterlyDividend>13.89</quarterlyDividend>
+  <baseRateOfReturn>0.02</baseRateOfReturn>
+  <betaMeasure>65.0</betaMeasure>
+  <stockSymbol>XCRA</stockSymbol>
+  <sharePrice>1814.68</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>75-103-1895</code>
+  <label>Courtman</label>
+  <quarterlyDividend>6.92</quarterlyDividend>
+  <baseRateOfReturn>0.56</baseRateOfReturn>
+  <betaMeasure>39.0</betaMeasure>
+  <stockSymbol>PUMP</stockSymbol>
+  <sharePrice>6123.74</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>14-103-4822</code>
+  <label>Calvey</label>
+  <quarterlyDividend>4.9</quarterlyDividend>
+  <baseRateOfReturn>0.56</baseRateOfReturn>
+  <betaMeasure>64.0</betaMeasure>
+  <stockSymbol>WTW</stockSymbol>
+  <sharePrice>8679.41</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>73-970-2783</code>
+  <label>Radloff</label>
+  <quarterlyDividend>8.54</quarterlyDividend>
+  <baseRateOfReturn>0.65</baseRateOfReturn>
+  <betaMeasure>74.0</betaMeasure>
+  <stockSymbol>FRC^G</stockSymbol>
+  <sharePrice>4199.89</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>79-664-8289</code>
+  <label>Dallender</label>
+  <quarterlyDividend>4.56</quarterlyDividend>
+  <baseRateOfReturn>0.66</baseRateOfReturn>
+  <betaMeasure>29.0</betaMeasure>
+  <stockSymbol>XONE</stockSymbol>
+  <sharePrice>145.33</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>19-138-7717</code>
+  <label>Sirman</label>
+  <quarterlyDividend>19.46</quarterlyDividend>
+  <baseRateOfReturn>0.44</baseRateOfReturn>
+  <betaMeasure>98.0</betaMeasure>
+  <stockSymbol>SAP</stockSymbol>
+  <sharePrice>8621.24</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>32-699-0353</code>
+  <label>Silverson</label>
+  <quarterlyDividend>16.16</quarterlyDividend>
+  <baseRateOfReturn>0.45</baseRateOfReturn>
+  <betaMeasure>25.0</betaMeasure>
+  <stockSymbol>BA</stockSymbol>
+  <sharePrice>5189.62</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>15-722-4859</code>
+  <label>Moorey</label>
+  <quarterlyDividend>16.36</quarterlyDividend>
+  <baseRateOfReturn>0.97</baseRateOfReturn>
+  <betaMeasure>3.0</betaMeasure>
+  <stockSymbol>SDR</stockSymbol>
+  <sharePrice>673.35</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>83-581-9378</code>
+  <label>Jacobs</label>
+  <quarterlyDividend>5.68</quarterlyDividend>
+  <baseRateOfReturn>0.14</baseRateOfReturn>
+  <betaMeasure>31.0</betaMeasure>
+  <stockSymbol>VRNT</stockSymbol>
+  <sharePrice>3317.72</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>21-994-4310</code>
+  <label>Mosdall</label>
+  <quarterlyDividend>15.29</quarterlyDividend>
   <baseRateOfReturn>0.64</baseRateOfReturn>
-  <baseOmegaMeasure>0.25</baseOmegaMeasure>
-  <totalValue>296352.87</totalValue>
+  <betaMeasure>33.0</betaMeasure>
+  <stockSymbol>AFT</stockSymbol>
+  <sharePrice>8099.16</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>64-052-7924</code>
+  <label>Burgoin</label>
+  <quarterlyDividend>8.7</quarterlyDividend>
+  <baseRateOfReturn>0.88</baseRateOfReturn>
+  <betaMeasure>31.0</betaMeasure>
+  <stockSymbol>CVBF</stockSymbol>
+  <sharePrice>6683.33</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>18-606-2938</code>
+  <label>Chretien</label>
+  <quarterlyDividend>20.0</quarterlyDividend>
+  <baseRateOfReturn>0.75</baseRateOfReturn>
+  <betaMeasure>15.0</betaMeasure>
+  <stockSymbol>GG</stockSymbol>
+  <sharePrice>5225.66</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>09-243-6914</code>
+  <label>McIlherran</label>
+  <quarterlyDividend>13.56</quarterlyDividend>
+  <baseRateOfReturn>0.42</baseRateOfReturn>
+  <betaMeasure>13.0</betaMeasure>
+  <stockSymbol>OTTW</stockSymbol>
+  <sharePrice>625.28</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>59-655-5023</code>
+  <label>Bilham</label>
+  <quarterlyDividend>5.73</quarterlyDividend>
+  <baseRateOfReturn>0.89</baseRateOfReturn>
+  <betaMeasure>54.0</betaMeasure>
+  <stockSymbol>CEMI</stockSymbol>
+  <sharePrice>6786.73</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>89-935-4307</code>
+  <label>Duthie</label>
+  <quarterlyDividend>1.0</quarterlyDividend>
+  <baseRateOfReturn>0.47</baseRateOfReturn>
+  <betaMeasure>81.0</betaMeasure>
+  <stockSymbol>EARS</stockSymbol>
+  <sharePrice>7925.13</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>50-433-5725</code>
+  <label>Thornebarrow</label>
+  <quarterlyDividend>7.12</quarterlyDividend>
+  <baseRateOfReturn>0.18</baseRateOfReturn>
+  <betaMeasure>59.0</betaMeasure>
+  <stockSymbol>NCTY</stockSymbol>
+  <sharePrice>8707.72</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>95-520-5070</code>
+  <label>Lorinez</label>
+  <quarterlyDividend>5.23</quarterlyDividend>
+  <baseRateOfReturn>0.76</baseRateOfReturn>
+  <betaMeasure>13.0</betaMeasure>
+  <stockSymbol>ENDP</stockSymbol>
+  <sharePrice>5976.08</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>06-326-7406</code>
+  <label>Beadnell</label>
+  <quarterlyDividend>17.37</quarterlyDividend>
+  <baseRateOfReturn>0.04</baseRateOfReturn>
+  <betaMeasure>68.0</betaMeasure>
+  <stockSymbol>MCEP</stockSymbol>
+  <sharePrice>2215.86</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>10-474-9932</code>
+  <label>Jelfs</label>
+  <quarterlyDividend>7.96</quarterlyDividend>
+  <baseRateOfReturn>0.99</baseRateOfReturn>
+  <betaMeasure>16.0</betaMeasure>
+  <stockSymbol>OCIP</stockSymbol>
+  <sharePrice>2707.06</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>36-896-6507</code>
+  <label>Eck</label>
+  <quarterlyDividend>12.16</quarterlyDividend>
+  <baseRateOfReturn>0.21</baseRateOfReturn>
+  <betaMeasure>36.0</betaMeasure>
+  <stockSymbol>DGLD</stockSymbol>
+  <sharePrice>5117.77</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>62-704-7436</code>
+  <label>Lackie</label>
+  <quarterlyDividend>15.39</quarterlyDividend>
+  <baseRateOfReturn>0.18</baseRateOfReturn>
+  <betaMeasure>59.0</betaMeasure>
+  <stockSymbol>JMBA</stockSymbol>
+  <sharePrice>9316.81</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>24-457-3557</code>
+  <label>Bardnam</label>
+  <quarterlyDividend>14.21</quarterlyDividend>
+  <baseRateOfReturn>0.91</baseRateOfReturn>
+  <betaMeasure>92.0</betaMeasure>
+  <stockSymbol>MDLZ</stockSymbol>
+  <sharePrice>5417.09</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>51-335-2195</code>
+  <label>Teager</label>
+  <quarterlyDividend>10.95</quarterlyDividend>
+  <baseRateOfReturn>0.38</baseRateOfReturn>
+  <betaMeasure>81.0</betaMeasure>
+  <stockSymbol>LSCC</stockSymbol>
+  <sharePrice>7427.62</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>59-588-7577</code>
+  <label>Brunotti</label>
+  <quarterlyDividend>12.25</quarterlyDividend>
+  <baseRateOfReturn>0.5</baseRateOfReturn>
+  <betaMeasure>3.0</betaMeasure>
+  <stockSymbol>NCS</stockSymbol>
+  <sharePrice>4439.0</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>31-763-9215</code>
+  <label>MacColm</label>
+  <quarterlyDividend>4.08</quarterlyDividend>
+  <baseRateOfReturn>0.02</baseRateOfReturn>
+  <betaMeasure>47.0</betaMeasure>
+  <stockSymbol>OCC</stockSymbol>
+  <sharePrice>3155.16</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>35-929-8984</code>
+  <label>Regardsoe</label>
+  <quarterlyDividend>4.45</quarterlyDividend>
+  <baseRateOfReturn>0.37</baseRateOfReturn>
+  <betaMeasure>40.0</betaMeasure>
+  <stockSymbol>APRI</stockSymbol>
+  <sharePrice>1534.99</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>59-042-3878</code>
+  <label>Houldin</label>
+  <quarterlyDividend>8.67</quarterlyDividend>
+  <baseRateOfReturn>0.57</baseRateOfReturn>
+  <betaMeasure>92.0</betaMeasure>
+  <stockSymbol>FNGN</stockSymbol>
+  <sharePrice>7959.06</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>15-826-0130</code>
+  <label>Ramsden</label>
+  <quarterlyDividend>13.25</quarterlyDividend>
+  <baseRateOfReturn>0.33</baseRateOfReturn>
+  <betaMeasure>26.0</betaMeasure>
+  <stockSymbol>IART</stockSymbol>
+  <sharePrice>5710.7</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>75-750-8314</code>
+  <label>Barrows</label>
+  <quarterlyDividend>4.86</quarterlyDividend>
+  <baseRateOfReturn>0.5</baseRateOfReturn>
+  <betaMeasure>52.0</betaMeasure>
+  <stockSymbol>CBL^E</stockSymbol>
+  <sharePrice>3592.4</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>89-496-3031</code>
+  <label>Mapples</label>
+  <quarterlyDividend>3.3</quarterlyDividend>
+  <baseRateOfReturn>0.22</baseRateOfReturn>
+  <betaMeasure>57.0</betaMeasure>
+  <stockSymbol>PHII</stockSymbol>
+  <sharePrice>4374.9</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>54-793-8070</code>
+  <label>McTeer</label>
+  <quarterlyDividend>8.45</quarterlyDividend>
+  <baseRateOfReturn>0.61</baseRateOfReturn>
+  <betaMeasure>92.0</betaMeasure>
+  <stockSymbol>CVX</stockSymbol>
+  <sharePrice>2019.96</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>41-516-7553</code>
+  <label>Avon</label>
+  <quarterlyDividend>18.66</quarterlyDividend>
+  <baseRateOfReturn>0.3</baseRateOfReturn>
+  <betaMeasure>45.0</betaMeasure>
+  <stockSymbol>FBNC</stockSymbol>
+  <sharePrice>6302.34</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>67-970-5930</code>
+  <label>Wison</label>
+  <quarterlyDividend>17.62</quarterlyDividend>
+  <baseRateOfReturn>0.26</baseRateOfReturn>
+  <betaMeasure>92.0</betaMeasure>
+  <stockSymbol>HOG</stockSymbol>
+  <sharePrice>2503.67</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>61-251-2326</code>
+  <label>Hallihane</label>
+  <quarterlyDividend>8.31</quarterlyDividend>
+  <baseRateOfReturn>0.59</baseRateOfReturn>
+  <betaMeasure>31.0</betaMeasure>
+  <stockSymbol>SPA</stockSymbol>
+  <sharePrice>1270.55</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>30-658-7313</code>
+  <label>Denecamp</label>
+  <quarterlyDividend>5.65</quarterlyDividend>
+  <baseRateOfReturn>0.27</baseRateOfReturn>
+  <betaMeasure>55.0</betaMeasure>
+  <stockSymbol>TCX</stockSymbol>
+  <sharePrice>8129.31</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>00-814-0775</code>
+  <label>Alfonsetti</label>
+  <quarterlyDividend>9.59</quarterlyDividend>
+  <baseRateOfReturn>0.79</baseRateOfReturn>
+  <betaMeasure>15.0</betaMeasure>
+  <stockSymbol>TDE</stockSymbol>
+  <sharePrice>9320.84</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>32-416-9009</code>
+  <label>McColgan</label>
+  <quarterlyDividend>2.8</quarterlyDividend>
+  <baseRateOfReturn>0.74</baseRateOfReturn>
+  <betaMeasure>74.0</betaMeasure>
+  <stockSymbol>TLYS</stockSymbol>
+  <sharePrice>3585.56</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>27-463-9567</code>
+  <label>Turmall</label>
+  <quarterlyDividend>12.39</quarterlyDividend>
+  <baseRateOfReturn>0.21</baseRateOfReturn>
+  <betaMeasure>1.0</betaMeasure>
+  <stockSymbol>FCVT</stockSymbol>
+  <sharePrice>5302.31</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>74-010-0382</code>
+  <label>Mossman</label>
+  <quarterlyDividend>17.22</quarterlyDividend>
+  <baseRateOfReturn>0.71</baseRateOfReturn>
+  <betaMeasure>24.0</betaMeasure>
+  <stockSymbol>TYL</stockSymbol>
+  <sharePrice>9268.01</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>61-736-1678</code>
+  <label>Rouby</label>
+  <quarterlyDividend>15.81</quarterlyDividend>
+  <baseRateOfReturn>0.53</baseRateOfReturn>
+  <betaMeasure>6.0</betaMeasure>
+  <stockSymbol>PBIB</stockSymbol>
+  <sharePrice>1420.51</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>31-564-7422</code>
+  <label>Skewes</label>
+  <quarterlyDividend>8.06</quarterlyDividend>
+  <baseRateOfReturn>0.5</baseRateOfReturn>
+  <betaMeasure>32.0</betaMeasure>
+  <stockSymbol>GCI</stockSymbol>
+  <sharePrice>1093.3</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>82-214-7972</code>
+  <label>Blackborow</label>
+  <quarterlyDividend>14.53</quarterlyDividend>
+  <baseRateOfReturn>0.67</baseRateOfReturn>
+  <betaMeasure>85.0</betaMeasure>
+  <stockSymbol>ZTR</stockSymbol>
+  <sharePrice>5747.83</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>51-505-2411</code>
+  <label>McNickle</label>
+  <quarterlyDividend>19.56</quarterlyDividend>
+  <baseRateOfReturn>0.71</baseRateOfReturn>
+  <betaMeasure>4.0</betaMeasure>
+  <stockSymbol>WMT</stockSymbol>
+  <sharePrice>5563.48</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>66-079-1466</code>
+  <label>Wheelband</label>
+  <quarterlyDividend>16.06</quarterlyDividend>
+  <baseRateOfReturn>0.36</baseRateOfReturn>
+  <betaMeasure>19.0</betaMeasure>
+  <stockSymbol>DFVS</stockSymbol>
+  <sharePrice>5444.87</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>45-158-5998</code>
+  <label>Filasov</label>
+  <quarterlyDividend>18.18</quarterlyDividend>
+  <baseRateOfReturn>0.71</baseRateOfReturn>
+  <betaMeasure>10.0</betaMeasure>
+  <stockSymbol>MMDMR</stockSymbol>
+  <sharePrice>2003.31</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>45-443-2772</code>
+  <label>Chavrin</label>
+  <quarterlyDividend>1.44</quarterlyDividend>
+  <baseRateOfReturn>0.85</baseRateOfReturn>
+  <betaMeasure>86.0</betaMeasure>
+  <stockSymbol>YRD</stockSymbol>
+  <sharePrice>3284.3</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>50-405-0515</code>
+  <label>Cotty</label>
+  <quarterlyDividend>1.89</quarterlyDividend>
+  <baseRateOfReturn>0.91</baseRateOfReturn>
+  <betaMeasure>78.0</betaMeasure>
+  <stockSymbol>NVEE</stockSymbol>
+  <sharePrice>2198.0</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>18-202-8584</code>
+  <label>Pratley</label>
+  <quarterlyDividend>8.54</quarterlyDividend>
+  <baseRateOfReturn>0.96</baseRateOfReturn>
+  <betaMeasure>90.0</betaMeasure>
+  <stockSymbol>VUSE</stockSymbol>
+  <sharePrice>5517.97</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>61-558-2382</code>
+  <label>Loughton</label>
+  <quarterlyDividend>13.83</quarterlyDividend>
+  <baseRateOfReturn>0.15</baseRateOfReturn>
+  <betaMeasure>69.0</betaMeasure>
+  <stockSymbol>CP</stockSymbol>
+  <sharePrice>845.35</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>08-816-4667</code>
+  <label>Ollington</label>
+  <quarterlyDividend>14.99</quarterlyDividend>
+  <baseRateOfReturn>0.54</baseRateOfReturn>
+  <betaMeasure>54.0</betaMeasure>
+  <stockSymbol>HRMNW</stockSymbol>
+  <sharePrice>5269.63</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>58-544-6646</code>
+  <label>Comrie</label>
+  <quarterlyDividend>13.46</quarterlyDividend>
+  <baseRateOfReturn>0.47</baseRateOfReturn>
+  <betaMeasure>54.0</betaMeasure>
+  <stockSymbol>THRM</stockSymbol>
+  <sharePrice>2797.82</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>56-276-9625</code>
+  <label>Hosby</label>
+  <quarterlyDividend>15.24</quarterlyDividend>
+  <baseRateOfReturn>0.69</baseRateOfReturn>
+  <betaMeasure>32.0</betaMeasure>
+  <stockSymbol>TAP</stockSymbol>
+  <sharePrice>9722.78</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>71-606-9309</code>
+  <label>Driffe</label>
+  <quarterlyDividend>11.1</quarterlyDividend>
+  <baseRateOfReturn>0.18</baseRateOfReturn>
+  <betaMeasure>79.0</betaMeasure>
+  <stockSymbol>WGL</stockSymbol>
+  <sharePrice>2016.77</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>71-798-3762</code>
+  <label>Blissett</label>
+  <quarterlyDividend>1.6</quarterlyDividend>
+  <baseRateOfReturn>0.07</baseRateOfReturn>
+  <betaMeasure>17.0</betaMeasure>
+  <stockSymbol>INN^C</stockSymbol>
+  <sharePrice>5319.97</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>39-061-1395</code>
+  <label>Seemmonds</label>
+  <quarterlyDividend>15.44</quarterlyDividend>
+  <baseRateOfReturn>0.65</baseRateOfReturn>
+  <betaMeasure>60.0</betaMeasure>
+  <stockSymbol>WLFC</stockSymbol>
+  <sharePrice>1917.08</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>98-401-5624</code>
+  <label>Arnao</label>
+  <quarterlyDividend>7.82</quarterlyDividend>
+  <baseRateOfReturn>0.19</baseRateOfReturn>
+  <betaMeasure>97.0</betaMeasure>
+  <stockSymbol>SRCL</stockSymbol>
+  <sharePrice>1721.68</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>74-045-1742</code>
+  <label>Coulthard</label>
+  <quarterlyDividend>16.19</quarterlyDividend>
+  <baseRateOfReturn>0.32</baseRateOfReturn>
+  <betaMeasure>89.0</betaMeasure>
+  <stockSymbol>ACLS</stockSymbol>
+  <sharePrice>7014.43</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>12-661-5914</code>
+  <label>Faires</label>
+  <quarterlyDividend>9.67</quarterlyDividend>
+  <baseRateOfReturn>0.96</baseRateOfReturn>
+  <betaMeasure>25.0</betaMeasure>
+  <stockSymbol>AGII</stockSymbol>
+  <sharePrice>6009.62</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>04-511-5614</code>
+  <label>Tolossi</label>
+  <quarterlyDividend>16.29</quarterlyDividend>
+  <baseRateOfReturn>0.06</baseRateOfReturn>
+  <betaMeasure>67.0</betaMeasure>
+  <stockSymbol>HUNTW</stockSymbol>
+  <sharePrice>1252.79</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>17-621-5747</code>
+  <label>Amberg</label>
+  <quarterlyDividend>10.05</quarterlyDividend>
+  <baseRateOfReturn>0.04</baseRateOfReturn>
+  <betaMeasure>100.0</betaMeasure>
+  <stockSymbol>INN^B</stockSymbol>
+  <sharePrice>4629.54</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>68-439-2679</code>
+  <label>Crocumbe</label>
+  <quarterlyDividend>15.49</quarterlyDividend>
+  <baseRateOfReturn>0.04</baseRateOfReturn>
+  <betaMeasure>99.0</betaMeasure>
+  <stockSymbol>FTR</stockSymbol>
+  <sharePrice>3664.08</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>65-012-3877</code>
+  <label>Klimko</label>
+  <quarterlyDividend>19.56</quarterlyDividend>
+  <baseRateOfReturn>0.26</baseRateOfReturn>
+  <betaMeasure>64.0</betaMeasure>
+  <stockSymbol>VRSN</stockSymbol>
+  <sharePrice>4526.99</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.Stocks>
+  <code>25-591-8885</code>
+  <label>Lyttle</label>
+  <quarterlyDividend>17.74</quarterlyDividend>
+  <baseRateOfReturn>0.26</baseRateOfReturn>
+  <betaMeasure>45.0</betaMeasure>
+  <stockSymbol>BRKL</stockSymbol>
+  <sharePrice>9606.17</sharePrice>
+</com.tbf.Stocks>
+<com.tbf.PrivateInvestments>
+  <code>06-947-6119</code>
+  <label>Padgham</label>
+  <quarterlyDividend>10.15</quarterlyDividend>
+  <baseRateOfReturn>0.98</baseRateOfReturn>
+  <baseOmegaMeasure>16.0</baseOmegaMeasure>
+  <totalValue>3800.49</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>73-480-4166</code>
+  <label>Glanvill</label>
+  <quarterlyDividend>19.44</quarterlyDividend>
+  <baseRateOfReturn>0.13</baseRateOfReturn>
+  <baseOmegaMeasure>55.0</baseOmegaMeasure>
+  <totalValue>6403.27</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>28-998-0359</code>
+  <label>Suero</label>
+  <quarterlyDividend>6.35</quarterlyDividend>
+  <baseRateOfReturn>0.72</baseRateOfReturn>
+  <baseOmegaMeasure>1.0</baseOmegaMeasure>
+  <totalValue>4664.19</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>93-030-2465</code>
+  <label>Cudworth</label>
+  <quarterlyDividend>17.01</quarterlyDividend>
+  <baseRateOfReturn>0.7</baseRateOfReturn>
+  <baseOmegaMeasure>76.0</baseOmegaMeasure>
+  <totalValue>116.1</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>47-909-5185</code>
+  <label>Heddon</label>
+  <quarterlyDividend>10.29</quarterlyDividend>
+  <baseRateOfReturn>0.41</baseRateOfReturn>
+  <baseOmegaMeasure>58.0</baseOmegaMeasure>
+  <totalValue>3754.26</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>09-443-9459</code>
+  <label>Gaffon</label>
+  <quarterlyDividend>10.05</quarterlyDividend>
+  <baseRateOfReturn>0.24</baseRateOfReturn>
+  <baseOmegaMeasure>99.0</baseOmegaMeasure>
+  <totalValue>305.18</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>55-379-6633</code>
+  <label>Deadman</label>
+  <quarterlyDividend>18.49</quarterlyDividend>
+  <baseRateOfReturn>0.86</baseRateOfReturn>
+  <baseOmegaMeasure>84.0</baseOmegaMeasure>
+  <totalValue>5582.79</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>59-430-0301</code>
+  <label>Volage</label>
+  <quarterlyDividend>13.02</quarterlyDividend>
+  <baseRateOfReturn>0.5</baseRateOfReturn>
+  <baseOmegaMeasure>18.0</baseOmegaMeasure>
+  <totalValue>846.85</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>04-295-7730</code>
+  <label>Slogrove</label>
+  <quarterlyDividend>3.25</quarterlyDividend>
+  <baseRateOfReturn>0.88</baseRateOfReturn>
+  <baseOmegaMeasure>19.0</baseOmegaMeasure>
+  <totalValue>4793.29</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>16-959-6974</code>
+  <label>Tweedell</label>
+  <quarterlyDividend>13.74</quarterlyDividend>
+  <baseRateOfReturn>0.16</baseRateOfReturn>
+  <baseOmegaMeasure>85.0</baseOmegaMeasure>
+  <totalValue>1957.68</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>08-145-1327</code>
+  <label>Brader</label>
+  <quarterlyDividend>6.38</quarterlyDividend>
+  <baseRateOfReturn>0.17</baseRateOfReturn>
+  <baseOmegaMeasure>98.0</baseOmegaMeasure>
+  <totalValue>2480.66</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>49-737-6730</code>
+  <label>Edgars</label>
+  <quarterlyDividend>11.74</quarterlyDividend>
+  <baseRateOfReturn>0.77</baseRateOfReturn>
+  <baseOmegaMeasure>93.0</baseOmegaMeasure>
+  <totalValue>791.07</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>55-941-4340</code>
+  <label>Conibear</label>
+  <quarterlyDividend>9.04</quarterlyDividend>
+  <baseRateOfReturn>0.15</baseRateOfReturn>
+  <baseOmegaMeasure>40.0</baseOmegaMeasure>
+  <totalValue>5094.02</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>03-491-9007</code>
+  <label>Genery</label>
+  <quarterlyDividend>13.65</quarterlyDividend>
+  <baseRateOfReturn>0.7</baseRateOfReturn>
+  <baseOmegaMeasure>71.0</baseOmegaMeasure>
+  <totalValue>9246.0</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>66-598-7581</code>
+  <label>Heskins</label>
+  <quarterlyDividend>18.0</quarterlyDividend>
+  <baseRateOfReturn>0.67</baseRateOfReturn>
+  <baseOmegaMeasure>86.0</baseOmegaMeasure>
+  <totalValue>2929.57</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>24-943-4409</code>
+  <label>Bumpus</label>
+  <quarterlyDividend>2.76</quarterlyDividend>
+  <baseRateOfReturn>0.87</baseRateOfReturn>
+  <baseOmegaMeasure>96.0</baseOmegaMeasure>
+  <totalValue>4123.58</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>30-704-4973</code>
+  <label>Wilden</label>
+  <quarterlyDividend>14.96</quarterlyDividend>
+  <baseRateOfReturn>0.52</baseRateOfReturn>
+  <baseOmegaMeasure>64.0</baseOmegaMeasure>
+  <totalValue>7497.02</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>29-646-7228</code>
+  <label>Frame</label>
+  <quarterlyDividend>8.42</quarterlyDividend>
+  <baseRateOfReturn>0.45</baseRateOfReturn>
+  <baseOmegaMeasure>23.0</baseOmegaMeasure>
+  <totalValue>8634.33</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>29-144-2369</code>
+  <label>Lownes</label>
+  <quarterlyDividend>17.21</quarterlyDividend>
+  <baseRateOfReturn>0.38</baseRateOfReturn>
+  <baseOmegaMeasure>46.0</baseOmegaMeasure>
+  <totalValue>2294.22</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>48-198-4115</code>
+  <label>O&apos;Hartigan</label>
+  <quarterlyDividend>15.52</quarterlyDividend>
+  <baseRateOfReturn>0.53</baseRateOfReturn>
+  <baseOmegaMeasure>100.0</baseOmegaMeasure>
+  <totalValue>4040.49</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>17-349-1875</code>
+  <label>Aarons</label>
+  <quarterlyDividend>8.55</quarterlyDividend>
+  <baseRateOfReturn>0.62</baseRateOfReturn>
+  <baseOmegaMeasure>23.0</baseOmegaMeasure>
+  <totalValue>4974.75</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>86-276-8990</code>
+  <label>Cremin</label>
+  <quarterlyDividend>16.14</quarterlyDividend>
+  <baseRateOfReturn>0.46</baseRateOfReturn>
+  <baseOmegaMeasure>50.0</baseOmegaMeasure>
+  <totalValue>9167.81</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>84-854-9013</code>
+  <label>Saxelby</label>
+  <quarterlyDividend>11.09</quarterlyDividend>
+  <baseRateOfReturn>0.88</baseRateOfReturn>
+  <baseOmegaMeasure>4.0</baseOmegaMeasure>
+  <totalValue>1474.17</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>58-194-2818</code>
+  <label>Kosel</label>
+  <quarterlyDividend>17.76</quarterlyDividend>
+  <baseRateOfReturn>0.98</baseRateOfReturn>
+  <baseOmegaMeasure>96.0</baseOmegaMeasure>
+  <totalValue>5830.14</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>03-918-7327</code>
+  <label>Casperri</label>
+  <quarterlyDividend>11.56</quarterlyDividend>
+  <baseRateOfReturn>0.64</baseRateOfReturn>
+  <baseOmegaMeasure>38.0</baseOmegaMeasure>
+  <totalValue>7130.13</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>60-079-4830</code>
+  <label>Stroton</label>
+  <quarterlyDividend>3.14</quarterlyDividend>
+  <baseRateOfReturn>0.24</baseRateOfReturn>
+  <baseOmegaMeasure>71.0</baseOmegaMeasure>
+  <totalValue>1647.32</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>83-302-2770</code>
+  <label>Dislee</label>
+  <quarterlyDividend>8.38</quarterlyDividend>
+  <baseRateOfReturn>0.96</baseRateOfReturn>
+  <baseOmegaMeasure>47.0</baseOmegaMeasure>
+  <totalValue>9533.53</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>60-120-2650</code>
+  <label>Freegard</label>
+  <quarterlyDividend>11.16</quarterlyDividend>
+  <baseRateOfReturn>0.71</baseRateOfReturn>
+  <baseOmegaMeasure>53.0</baseOmegaMeasure>
+  <totalValue>3759.64</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>50-892-3560</code>
+  <label>Luparto</label>
+  <quarterlyDividend>7.24</quarterlyDividend>
+  <baseRateOfReturn>0.96</baseRateOfReturn>
+  <baseOmegaMeasure>72.0</baseOmegaMeasure>
+  <totalValue>58.45</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>56-365-0984</code>
+  <label>Dornan</label>
+  <quarterlyDividend>15.26</quarterlyDividend>
+  <baseRateOfReturn>0.28</baseRateOfReturn>
+  <baseOmegaMeasure>5.0</baseOmegaMeasure>
+  <totalValue>5552.03</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>77-673-7096</code>
+  <label>Wheatcroft</label>
+  <quarterlyDividend>12.75</quarterlyDividend>
+  <baseRateOfReturn>0.71</baseRateOfReturn>
+  <baseOmegaMeasure>28.0</baseOmegaMeasure>
+  <totalValue>2251.54</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>76-235-3364</code>
+  <label>O&apos;Hara</label>
+  <quarterlyDividend>19.66</quarterlyDividend>
+  <baseRateOfReturn>0.28</baseRateOfReturn>
+  <baseOmegaMeasure>13.0</baseOmegaMeasure>
+  <totalValue>4449.86</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>01-692-8427</code>
+  <label>Dik</label>
+  <quarterlyDividend>9.26</quarterlyDividend>
+  <baseRateOfReturn>0.22</baseRateOfReturn>
+  <baseOmegaMeasure>25.0</baseOmegaMeasure>
+  <totalValue>7165.59</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>35-349-2614</code>
+  <label>Burgott</label>
+  <quarterlyDividend>10.93</quarterlyDividend>
+  <baseRateOfReturn>0.2</baseRateOfReturn>
+  <baseOmegaMeasure>12.0</baseOmegaMeasure>
+  <totalValue>6572.7</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>25-235-9242</code>
+  <label>Jennins</label>
+  <quarterlyDividend>7.79</quarterlyDividend>
+  <baseRateOfReturn>0.25</baseRateOfReturn>
+  <baseOmegaMeasure>20.0</baseOmegaMeasure>
+  <totalValue>9855.34</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>15-961-2938</code>
+  <label>Dunsmuir</label>
+  <quarterlyDividend>16.75</quarterlyDividend>
+  <baseRateOfReturn>0.74</baseRateOfReturn>
+  <baseOmegaMeasure>82.0</baseOmegaMeasure>
+  <totalValue>6007.78</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>20-823-0622</code>
+  <label>Drew-Clifton</label>
+  <quarterlyDividend>10.02</quarterlyDividend>
+  <baseRateOfReturn>0.84</baseRateOfReturn>
+  <baseOmegaMeasure>72.0</baseOmegaMeasure>
+  <totalValue>9517.03</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>13-919-1290</code>
+  <label>Dorracott</label>
+  <quarterlyDividend>3.61</quarterlyDividend>
+  <baseRateOfReturn>0.2</baseRateOfReturn>
+  <baseOmegaMeasure>69.0</baseOmegaMeasure>
+  <totalValue>9537.34</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>69-177-0844</code>
+  <label>Huthart</label>
+  <quarterlyDividend>10.05</quarterlyDividend>
+  <baseRateOfReturn>0.54</baseRateOfReturn>
+  <baseOmegaMeasure>76.0</baseOmegaMeasure>
+  <totalValue>3149.71</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>89-681-7450</code>
+  <label>Philipps</label>
+  <quarterlyDividend>18.79</quarterlyDividend>
+  <baseRateOfReturn>0.6</baseRateOfReturn>
+  <baseOmegaMeasure>43.0</baseOmegaMeasure>
+  <totalValue>3998.72</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>50-043-7379</code>
+  <label>Goodship</label>
+  <quarterlyDividend>17.81</quarterlyDividend>
+  <baseRateOfReturn>0.99</baseRateOfReturn>
+  <baseOmegaMeasure>44.0</baseOmegaMeasure>
+  <totalValue>2207.11</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>04-226-7509</code>
+  <label>Cosby</label>
+  <quarterlyDividend>15.77</quarterlyDividend>
+  <baseRateOfReturn>0.57</baseRateOfReturn>
+  <baseOmegaMeasure>97.0</baseOmegaMeasure>
+  <totalValue>2831.7</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>90-657-1148</code>
+  <label>Elson</label>
+  <quarterlyDividend>7.56</quarterlyDividend>
+  <baseRateOfReturn>0.43</baseRateOfReturn>
+  <baseOmegaMeasure>52.0</baseOmegaMeasure>
+  <totalValue>4774.42</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>74-016-1086</code>
+  <label>Rauprich</label>
+  <quarterlyDividend>1.87</quarterlyDividend>
+  <baseRateOfReturn>0.59</baseRateOfReturn>
+  <baseOmegaMeasure>18.0</baseOmegaMeasure>
+  <totalValue>8389.15</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>50-374-7132</code>
+  <label>Whitehall</label>
+  <quarterlyDividend>19.69</quarterlyDividend>
+  <baseRateOfReturn>0.8</baseRateOfReturn>
+  <baseOmegaMeasure>62.0</baseOmegaMeasure>
+  <totalValue>8277.14</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>98-860-2499</code>
+  <label>Cogley</label>
+  <quarterlyDividend>3.37</quarterlyDividend>
+  <baseRateOfReturn>0.51</baseRateOfReturn>
+  <baseOmegaMeasure>92.0</baseOmegaMeasure>
+  <totalValue>8025.78</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>90-299-5270</code>
+  <label>Lorey</label>
+  <quarterlyDividend>19.06</quarterlyDividend>
+  <baseRateOfReturn>0.86</baseRateOfReturn>
+  <baseOmegaMeasure>10.0</baseOmegaMeasure>
+  <totalValue>9517.58</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>78-678-7452</code>
+  <label>Beevor</label>
+  <quarterlyDividend>9.97</quarterlyDividend>
+  <baseRateOfReturn>0.41</baseRateOfReturn>
+  <baseOmegaMeasure>10.0</baseOmegaMeasure>
+  <totalValue>568.57</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>72-701-5333</code>
+  <label>Boyett</label>
+  <quarterlyDividend>5.23</quarterlyDividend>
+  <baseRateOfReturn>0.41</baseRateOfReturn>
+  <baseOmegaMeasure>87.0</baseOmegaMeasure>
+  <totalValue>2103.68</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>78-872-8843</code>
+  <label>Galbreath</label>
+  <quarterlyDividend>11.42</quarterlyDividend>
+  <baseRateOfReturn>0.06</baseRateOfReturn>
+  <baseOmegaMeasure>34.0</baseOmegaMeasure>
+  <totalValue>6646.53</totalValue>
+</com.tbf.PrivateInvestments>
+<com.tbf.PrivateInvestments>
+  <code>57-697-6038</code>
+  <label>Conlon</label>
+  <quarterlyDividend>17.27</quarterlyDividend>
+  <baseRateOfReturn>0.68</baseRateOfReturn>
+  <baseOmegaMeasure>51.0</baseOmegaMeasure>
+  <totalValue>7487.69</totalValue>
 </com.tbf.PrivateInvestments>

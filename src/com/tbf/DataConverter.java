@@ -118,7 +118,7 @@ public class DataConverter {
 					result += xml;
 				}
 			}
-			System.out.println(result);
+
 			//Opens PrintWriter in order to output the xml string
 			File output = new File("data/Assets.xml");
 			PrintWriter pw = new PrintWriter(output);
