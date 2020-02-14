@@ -3,6 +3,12 @@ package com.tbf;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * This class represents a User
+ * 
+ * @authors Jayden Carlon and Parker Zach
+ *
+ */
 public class User {
 
 	protected String personCode;
@@ -14,7 +20,17 @@ public class User {
 	protected Set<String> email;
 	protected List<Accounts> bankAccounts;
 	
-	
+	/**
+	 * This constructs a User class
+	 * 
+	 * @param personCode
+	 * @param address
+	 * @param firstName
+	 * @param lastName
+	 * @param brokerStatus
+	 * @param secIdentity
+	 * @param email
+	 */
 	public User(String personCode, Address address, String firstName, String lastName, String brokerStatus,
 				String secIdentity, Set<String> email) {
 		super();

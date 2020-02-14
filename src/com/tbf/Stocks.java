@@ -1,5 +1,11 @@
 package com.tbf;
 
+/**
+ * This is a subclass of Accounts that creates a Stocks Account
+ * 
+ * @authors Jayden Carlon and Parker Zach
+ *
+ */
 public class Stocks extends Accounts {
 
 	private String label;
@@ -9,6 +15,17 @@ public class Stocks extends Accounts {
 	private String stockSymbol;
 	private double sharePrice;
 	
+	/**
+	 * This constructs a Stocks Account
+	 * 
+	 * @param code
+	 * @param label
+	 * @param quarterlyDividend
+	 * @param baseRateOfReturn
+	 * @param betaMeasure
+	 * @param stockSymbol
+	 * @param sharePrice
+	 */
 	public Stocks(String code, String label, double quarterlyDividend, double baseRateOfReturn, double betaMeasure,
 			String stockSymbol, double sharePrice) {
 		super(code);

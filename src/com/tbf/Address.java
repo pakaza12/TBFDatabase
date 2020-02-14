@@ -20,7 +20,7 @@ public class Address {
 	 * @param String street
 	 * @param String city
 	 * @param String state
-	 * @param String zip
+	 * @param String zip 
 	 * @param String country
 	 */
 	public Address(String street, String city, String state, String zip, String country) {
