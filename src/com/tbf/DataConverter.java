@@ -4,23 +4,16 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.HashSet;
-import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.converters.basic.IntConverter;
-import com.thoughtworks.xstream.converters.basic.StringConverter;
-import com.thoughtworks.xstream.converters.collections.CollectionConverter;
-import com.thoughtworks.xstream.converters.reflection.ReflectionConverter;
-import com.thoughtworks.xstream.io.xml.StaxDriver;
 
 public class DataConverter {
 
 	public static void main(String[] args) {
 		
-		//Persons();
+		Persons();
 		Assets();
 		
 	}
@@ -112,16 +105,7 @@ public class DataConverter {
 			
 			//Calls XStream in order to change each user to an xml string
 			String result = "";
-			//XStream xstream = new XStream();
-			XStream xstream = new XStream(new StaxDriver()) {
-			      @Override
-			      protected void setupConverters() {
-			      }
-			    };
-			    xstream.registerConverter(new ReflectionConverter(xstream.getMapper(), xstream.getReflectionProvider()), XStream.PRIORITY_VERY_LOW);
-			    xstream.registerConverter(new IntConverter(), XStream.PRIORITY_NORMAL);
-			    xstream.registerConverter(new StringConverter(), XStream.PRIORITY_NORMAL);
-			    xstream.registerConverter(new CollectionConverter(xstream.getMapper()), XStream.PRIORITY_NORMAL);
+			XStream xstream = new XStream();
 			for(int i = 0; i < size; i++) {
 				String xml = xstream.toXML(inputUsers[i]);
 				if(i != size-1) {
