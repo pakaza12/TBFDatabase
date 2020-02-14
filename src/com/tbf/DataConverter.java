@@ -97,15 +97,15 @@ public class DataConverter {
 				temp += input.nextLine();
 				if(temp.contains(";D;")) {
 					String token[] = temp.split(";", -4);
-					Deposit tempB = new Deposit(token[0], token[2], Double.parseDouble(token[3]));
+					Deposit tempB = new Deposit(token[0], token[2], Double.parseDouble(token[3])/100);
 					inputUsers[i] = tempB;
 				} else if(temp.contains(";S;")) {
 					String token[] = temp.split(";", -8);
-					Stocks tempB = new Stocks(token[0], token[2], Double.parseDouble(token[3]), Double.parseDouble(token[4]), Double.parseDouble(token[5]), token[6], Double.parseDouble(token[7]));
+					Stocks tempB = new Stocks(token[0], token[2], Double.parseDouble(token[3]), Double.parseDouble(token[4])/100, Double.parseDouble(token[5]), token[6], Double.parseDouble(token[7]));
 					inputUsers[i] = tempB;	
 				} else if(temp.contains(";P;")) {
 					String token[] = temp.split(";", -7);
-					PrivateInvestments tempB = new PrivateInvestments(token[0], token[2], Double.parseDouble(token[3]), Double.parseDouble(token[4]), Double.parseDouble(token[5]), Double.parseDouble(token[6]));
+					PrivateInvestments tempB = new PrivateInvestments(token[0], token[2], Double.parseDouble(token[3]), Double.parseDouble(token[4])/100, Double.parseDouble(token[5]), Double.parseDouble(token[6]));
 					inputUsers[i] = tempB;
 				}
 			}
