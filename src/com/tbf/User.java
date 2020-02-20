@@ -43,6 +43,14 @@ public class User {
 		this.email = email;
 	}
 	
+	public List<Accounts> getBankAccounts() {
+		return bankAccounts;
+	}
+
+	public void addBankAccounts(Accounts bankAccounts) {
+		this.bankAccounts.add(bankAccounts);
+	}
+
 	public String getPersonCode(){
 		return this.personCode;
 	}
