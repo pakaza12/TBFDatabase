@@ -1,11 +1,14 @@
 package com.tbf;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 /**
  * This class is a subclass of Asset, it represents a Deposit Account
  * 
  * @authors Jayden Carlon and Parker Zach
  *
  */
+@XStreamAlias("deposit")
 public class Deposit extends Asset {
 
 	private double apr;
@@ -21,14 +24,6 @@ public class Deposit extends Asset {
 
 	public void setApr(double apr) {
 		this.apr = apr;
-	}
-
-	public String getLabel() {
-		return label;
-	}
-
-	public void setLabel(String label) {
-		this.label = label;
 	}
 	
 }

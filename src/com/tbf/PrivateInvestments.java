@@ -1,14 +1,16 @@
 package com.tbf;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 /**
  * This is a subclass of Asset that creates a PrivateInvestments Account
  * 
  * @authors Jayden Carlon and Parker Zach
  *
  */
+@XStreamAlias("privateInvestment")
 public class PrivateInvestments extends Asset {
 	
-	private String label;
 	private double quarterlyDividend;
 	private double baseRateOfReturn;
 	private double baseOmegaMeasure;
@@ -20,14 +22,6 @@ public class PrivateInvestments extends Asset {
 		this.baseRateOfReturn = baseRateOfReturn;
 		this.baseOmegaMeasure = baseOmegaMeasure;
 		this.totalValue = totalValue;
-	}
-	
-	public String getLabel() {
-		return label;
-	}
-	
-	public void setLabel(String label) {
-		this.label = label;
 	}
 	
 	public double getQuarterlyDividend() {

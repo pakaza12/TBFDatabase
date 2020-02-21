@@ -1,14 +1,16 @@
 package com.tbf;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 /**
  * This is a subclass of Asset that creates a Stocks Account
  * 
  * @authors Jayden Carlon and Parker Zach
  *
  */
+@XStreamAlias("stock")
 public class Stocks extends Asset {
 
-	private String label;
 	private double quarterlyDividend;
 	private double baseRateOfReturn;
 	private double betaMeasure;
@@ -23,14 +25,6 @@ public class Stocks extends Asset {
 		this.betaMeasure = betaMeasure;
 		this.stockSymbol = stockSymbol;
 		this.sharePrice = sharePrice;
-	}
-	
-	
-	public String getLabel() {
-		return label;
-	}
-	public void setLabel(String label) {
-		this.label = label;
 	}
 	
 	public double getQuarterlyDividend() {

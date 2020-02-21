@@ -1,5 +1,7 @@
 package com.tbf;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 /**
  * This abstract class represents an account
  * with the subclasses: Deposit, PrivateInvestments, and Stocks
@@ -7,6 +9,7 @@ package com.tbf;
  * @authors Jayden Carlon and Parker Zach
  *
  */
+@XStreamAlias("asset")
 public abstract class Asset {
 
 	protected String code;
