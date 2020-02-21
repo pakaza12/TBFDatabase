@@ -7,12 +7,14 @@ package com.tbf;
  * @authors Jayden Carlon and Parker Zach
  *
  */
-public abstract class Accounts {
+public abstract class Asset {
 
 	protected String code;
+	protected String label;
 	
-	public Accounts(String code) {
+	public Asset(String code, String label) {
 		this.code = code;
+		this.label = label;
 	}
 	
 	public String getCode() {
@@ -21,6 +23,14 @@ public abstract class Accounts {
 
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	public String getLabel() {
+		return label;
+	}
+
+	public void setLabel(String label) {
+		this.label = label;
 	}
 	
 }

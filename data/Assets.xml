@@ -490,7 +490,7 @@
 </com.tbf.Deposit>
 <com.tbf.Stocks>
   <code>87-020-0660</code>
-  <label>Lindup</label>
+  <label defined-in="com.tbf.Asset">Lindup</label>
   <quarterlyDividend>14.01</quarterlyDividend>
   <baseRateOfReturn>9.0E-4</baseRateOfReturn>
   <betaMeasure>59.0</betaMeasure>
@@ -499,7 +499,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>33-524-6777</code>
-  <label>Jennens</label>
+  <label defined-in="com.tbf.Asset">Jennens</label>
   <quarterlyDividend>11.01</quarterlyDividend>
   <baseRateOfReturn>0.005</baseRateOfReturn>
   <betaMeasure>97.0</betaMeasure>
@@ -508,7 +508,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>30-599-6798</code>
-  <label>Gateshill</label>
+  <label defined-in="com.tbf.Asset">Gateshill</label>
   <quarterlyDividend>5.91</quarterlyDividend>
   <baseRateOfReturn>0.0018</baseRateOfReturn>
   <betaMeasure>85.0</betaMeasure>
@@ -517,7 +517,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>62-854-4921</code>
-  <label>Whyborn</label>
+  <label defined-in="com.tbf.Asset">Whyborn</label>
   <quarterlyDividend>16.64</quarterlyDividend>
   <baseRateOfReturn>0.0092</baseRateOfReturn>
   <betaMeasure>41.0</betaMeasure>
@@ -526,7 +526,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>10-779-3018</code>
-  <label>Soigne</label>
+  <label defined-in="com.tbf.Asset">Soigne</label>
   <quarterlyDividend>19.3</quarterlyDividend>
   <baseRateOfReturn>0.0089</baseRateOfReturn>
   <betaMeasure>68.0</betaMeasure>
@@ -535,7 +535,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>15-361-0369</code>
-  <label>Broschek</label>
+  <label defined-in="com.tbf.Asset">Broschek</label>
   <quarterlyDividend>19.07</quarterlyDividend>
   <baseRateOfReturn>0.0013</baseRateOfReturn>
   <betaMeasure>47.0</betaMeasure>
@@ -544,7 +544,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>66-454-4060</code>
-  <label>Fryatt</label>
+  <label defined-in="com.tbf.Asset">Fryatt</label>
   <quarterlyDividend>13.64</quarterlyDividend>
   <baseRateOfReturn>0.0069</baseRateOfReturn>
   <betaMeasure>21.0</betaMeasure>
@@ -553,7 +553,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>51-126-3250</code>
-  <label>Mosten</label>
+  <label defined-in="com.tbf.Asset">Mosten</label>
   <quarterlyDividend>17.18</quarterlyDividend>
   <baseRateOfReturn>0.0074</baseRateOfReturn>
   <betaMeasure>99.0</betaMeasure>
@@ -562,7 +562,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>35-225-7103</code>
-  <label>Jantet</label>
+  <label defined-in="com.tbf.Asset">Jantet</label>
   <quarterlyDividend>17.79</quarterlyDividend>
   <baseRateOfReturn>0.0042</baseRateOfReturn>
   <betaMeasure>14.0</betaMeasure>
@@ -571,7 +571,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>36-026-7783</code>
-  <label>Aughtie</label>
+  <label defined-in="com.tbf.Asset">Aughtie</label>
   <quarterlyDividend>12.5</quarterlyDividend>
   <baseRateOfReturn>0.0012</baseRateOfReturn>
   <betaMeasure>29.0</betaMeasure>
@@ -580,7 +580,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>54-997-8920</code>
-  <label>Webland</label>
+  <label defined-in="com.tbf.Asset">Webland</label>
   <quarterlyDividend>11.82</quarterlyDividend>
   <baseRateOfReturn>0.0059</baseRateOfReturn>
   <betaMeasure>79.0</betaMeasure>
@@ -589,7 +589,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>08-700-6254</code>
-  <label>Brushfield</label>
+  <label defined-in="com.tbf.Asset">Brushfield</label>
   <quarterlyDividend>12.65</quarterlyDividend>
   <baseRateOfReturn>0.0036</baseRateOfReturn>
   <betaMeasure>79.0</betaMeasure>
@@ -598,7 +598,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>98-651-2611</code>
-  <label>Ridding</label>
+  <label defined-in="com.tbf.Asset">Ridding</label>
   <quarterlyDividend>17.12</quarterlyDividend>
   <baseRateOfReturn>0.006500000000000001</baseRateOfReturn>
   <betaMeasure>83.0</betaMeasure>
@@ -607,7 +607,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>16-684-9867</code>
-  <label>Duplan</label>
+  <label defined-in="com.tbf.Asset">Duplan</label>
   <quarterlyDividend>19.64</quarterlyDividend>
   <baseRateOfReturn>0.005600000000000001</baseRateOfReturn>
   <betaMeasure>51.0</betaMeasure>
@@ -616,7 +616,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>19-528-7400</code>
-  <label>Mordan</label>
+  <label defined-in="com.tbf.Asset">Mordan</label>
   <quarterlyDividend>3.5</quarterlyDividend>
   <baseRateOfReturn>0.0028000000000000004</baseRateOfReturn>
   <betaMeasure>98.0</betaMeasure>
@@ -625,7 +625,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>67-063-0397</code>
-  <label>von Nassau</label>
+  <label defined-in="com.tbf.Asset">von Nassau</label>
   <quarterlyDividend>7.03</quarterlyDividend>
   <baseRateOfReturn>0.0018</baseRateOfReturn>
   <betaMeasure>89.0</betaMeasure>
@@ -634,7 +634,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>09-401-2542</code>
-  <label>Derges</label>
+  <label defined-in="com.tbf.Asset">Derges</label>
   <quarterlyDividend>13.36</quarterlyDividend>
   <baseRateOfReturn>0.0034000000000000002</baseRateOfReturn>
   <betaMeasure>95.0</betaMeasure>
@@ -643,7 +643,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>18-430-5894</code>
-  <label>MacFadin</label>
+  <label defined-in="com.tbf.Asset">MacFadin</label>
   <quarterlyDividend>13.89</quarterlyDividend>
   <baseRateOfReturn>2.0E-4</baseRateOfReturn>
   <betaMeasure>65.0</betaMeasure>
@@ -652,7 +652,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>75-103-1895</code>
-  <label>Courtman</label>
+  <label defined-in="com.tbf.Asset">Courtman</label>
   <quarterlyDividend>6.92</quarterlyDividend>
   <baseRateOfReturn>0.005600000000000001</baseRateOfReturn>
   <betaMeasure>39.0</betaMeasure>
@@ -661,7 +661,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>14-103-4822</code>
-  <label>Calvey</label>
+  <label defined-in="com.tbf.Asset">Calvey</label>
   <quarterlyDividend>4.9</quarterlyDividend>
   <baseRateOfReturn>0.005600000000000001</baseRateOfReturn>
   <betaMeasure>64.0</betaMeasure>
@@ -670,7 +670,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>73-970-2783</code>
-  <label>Radloff</label>
+  <label defined-in="com.tbf.Asset">Radloff</label>
   <quarterlyDividend>8.54</quarterlyDividend>
   <baseRateOfReturn>0.006500000000000001</baseRateOfReturn>
   <betaMeasure>74.0</betaMeasure>
@@ -679,7 +679,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>79-664-8289</code>
-  <label>Dallender</label>
+  <label defined-in="com.tbf.Asset">Dallender</label>
   <quarterlyDividend>4.56</quarterlyDividend>
   <baseRateOfReturn>0.0066</baseRateOfReturn>
   <betaMeasure>29.0</betaMeasure>
@@ -688,7 +688,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>19-138-7717</code>
-  <label>Sirman</label>
+  <label defined-in="com.tbf.Asset">Sirman</label>
   <quarterlyDividend>19.46</quarterlyDividend>
   <baseRateOfReturn>0.0044</baseRateOfReturn>
   <betaMeasure>98.0</betaMeasure>
@@ -697,7 +697,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>32-699-0353</code>
-  <label>Silverson</label>
+  <label defined-in="com.tbf.Asset">Silverson</label>
   <quarterlyDividend>16.16</quarterlyDividend>
   <baseRateOfReturn>0.0045000000000000005</baseRateOfReturn>
   <betaMeasure>25.0</betaMeasure>
@@ -706,7 +706,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>15-722-4859</code>
-  <label>Moorey</label>
+  <label defined-in="com.tbf.Asset">Moorey</label>
   <quarterlyDividend>16.36</quarterlyDividend>
   <baseRateOfReturn>0.0097</baseRateOfReturn>
   <betaMeasure>3.0</betaMeasure>
@@ -715,7 +715,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>83-581-9378</code>
-  <label>Jacobs</label>
+  <label defined-in="com.tbf.Asset">Jacobs</label>
   <quarterlyDividend>5.68</quarterlyDividend>
   <baseRateOfReturn>0.0014000000000000002</baseRateOfReturn>
   <betaMeasure>31.0</betaMeasure>
@@ -724,7 +724,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>21-994-4310</code>
-  <label>Mosdall</label>
+  <label defined-in="com.tbf.Asset">Mosdall</label>
   <quarterlyDividend>15.29</quarterlyDividend>
   <baseRateOfReturn>0.0064</baseRateOfReturn>
   <betaMeasure>33.0</betaMeasure>
@@ -733,7 +733,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>64-052-7924</code>
-  <label>Burgoin</label>
+  <label defined-in="com.tbf.Asset">Burgoin</label>
   <quarterlyDividend>8.7</quarterlyDividend>
   <baseRateOfReturn>0.0088</baseRateOfReturn>
   <betaMeasure>31.0</betaMeasure>
@@ -742,7 +742,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>18-606-2938</code>
-  <label>Chretien</label>
+  <label defined-in="com.tbf.Asset">Chretien</label>
   <quarterlyDividend>20.0</quarterlyDividend>
   <baseRateOfReturn>0.0075</baseRateOfReturn>
   <betaMeasure>15.0</betaMeasure>
@@ -751,7 +751,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>09-243-6914</code>
-  <label>McIlherran</label>
+  <label defined-in="com.tbf.Asset">McIlherran</label>
   <quarterlyDividend>13.56</quarterlyDividend>
   <baseRateOfReturn>0.0042</baseRateOfReturn>
   <betaMeasure>13.0</betaMeasure>
@@ -760,7 +760,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>59-655-5023</code>
-  <label>Bilham</label>
+  <label defined-in="com.tbf.Asset">Bilham</label>
   <quarterlyDividend>5.73</quarterlyDividend>
   <baseRateOfReturn>0.0089</baseRateOfReturn>
   <betaMeasure>54.0</betaMeasure>
@@ -769,7 +769,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>89-935-4307</code>
-  <label>Duthie</label>
+  <label defined-in="com.tbf.Asset">Duthie</label>
   <quarterlyDividend>1.0</quarterlyDividend>
   <baseRateOfReturn>0.004699999999999999</baseRateOfReturn>
   <betaMeasure>81.0</betaMeasure>
@@ -778,7 +778,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>50-433-5725</code>
-  <label>Thornebarrow</label>
+  <label defined-in="com.tbf.Asset">Thornebarrow</label>
   <quarterlyDividend>7.12</quarterlyDividend>
   <baseRateOfReturn>0.0018</baseRateOfReturn>
   <betaMeasure>59.0</betaMeasure>
@@ -787,7 +787,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>95-520-5070</code>
-  <label>Lorinez</label>
+  <label defined-in="com.tbf.Asset">Lorinez</label>
   <quarterlyDividend>5.23</quarterlyDividend>
   <baseRateOfReturn>0.0076</baseRateOfReturn>
   <betaMeasure>13.0</betaMeasure>
@@ -796,7 +796,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>06-326-7406</code>
-  <label>Beadnell</label>
+  <label defined-in="com.tbf.Asset">Beadnell</label>
   <quarterlyDividend>17.37</quarterlyDividend>
   <baseRateOfReturn>4.0E-4</baseRateOfReturn>
   <betaMeasure>68.0</betaMeasure>
@@ -805,7 +805,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>10-474-9932</code>
-  <label>Jelfs</label>
+  <label defined-in="com.tbf.Asset">Jelfs</label>
   <quarterlyDividend>7.96</quarterlyDividend>
   <baseRateOfReturn>0.009899999999999999</baseRateOfReturn>
   <betaMeasure>16.0</betaMeasure>
@@ -814,7 +814,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>36-896-6507</code>
-  <label>Eck</label>
+  <label defined-in="com.tbf.Asset">Eck</label>
   <quarterlyDividend>12.16</quarterlyDividend>
   <baseRateOfReturn>0.0021</baseRateOfReturn>
   <betaMeasure>36.0</betaMeasure>
@@ -823,7 +823,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>62-704-7436</code>
-  <label>Lackie</label>
+  <label defined-in="com.tbf.Asset">Lackie</label>
   <quarterlyDividend>15.39</quarterlyDividend>
   <baseRateOfReturn>0.0018</baseRateOfReturn>
   <betaMeasure>59.0</betaMeasure>
@@ -832,7 +832,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>24-457-3557</code>
-  <label>Bardnam</label>
+  <label defined-in="com.tbf.Asset">Bardnam</label>
   <quarterlyDividend>14.21</quarterlyDividend>
   <baseRateOfReturn>0.0091</baseRateOfReturn>
   <betaMeasure>92.0</betaMeasure>
@@ -841,7 +841,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>51-335-2195</code>
-  <label>Teager</label>
+  <label defined-in="com.tbf.Asset">Teager</label>
   <quarterlyDividend>10.95</quarterlyDividend>
   <baseRateOfReturn>0.0038</baseRateOfReturn>
   <betaMeasure>81.0</betaMeasure>
@@ -850,7 +850,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>59-588-7577</code>
-  <label>Brunotti</label>
+  <label defined-in="com.tbf.Asset">Brunotti</label>
   <quarterlyDividend>12.25</quarterlyDividend>
   <baseRateOfReturn>0.005</baseRateOfReturn>
   <betaMeasure>3.0</betaMeasure>
@@ -859,7 +859,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>31-763-9215</code>
-  <label>MacColm</label>
+  <label defined-in="com.tbf.Asset">MacColm</label>
   <quarterlyDividend>4.08</quarterlyDividend>
   <baseRateOfReturn>2.0E-4</baseRateOfReturn>
   <betaMeasure>47.0</betaMeasure>
@@ -868,7 +868,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>35-929-8984</code>
-  <label>Regardsoe</label>
+  <label defined-in="com.tbf.Asset">Regardsoe</label>
   <quarterlyDividend>4.45</quarterlyDividend>
   <baseRateOfReturn>0.0037</baseRateOfReturn>
   <betaMeasure>40.0</betaMeasure>
@@ -877,7 +877,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>59-042-3878</code>
-  <label>Houldin</label>
+  <label defined-in="com.tbf.Asset">Houldin</label>
   <quarterlyDividend>8.67</quarterlyDividend>
   <baseRateOfReturn>0.005699999999999999</baseRateOfReturn>
   <betaMeasure>92.0</betaMeasure>
@@ -886,7 +886,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>15-826-0130</code>
-  <label>Ramsden</label>
+  <label defined-in="com.tbf.Asset">Ramsden</label>
   <quarterlyDividend>13.25</quarterlyDividend>
   <baseRateOfReturn>0.0033</baseRateOfReturn>
   <betaMeasure>26.0</betaMeasure>
@@ -895,7 +895,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>75-750-8314</code>
-  <label>Barrows</label>
+  <label defined-in="com.tbf.Asset">Barrows</label>
   <quarterlyDividend>4.86</quarterlyDividend>
   <baseRateOfReturn>0.005</baseRateOfReturn>
   <betaMeasure>52.0</betaMeasure>
@@ -904,7 +904,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>89-496-3031</code>
-  <label>Mapples</label>
+  <label defined-in="com.tbf.Asset">Mapples</label>
   <quarterlyDividend>3.3</quarterlyDividend>
   <baseRateOfReturn>0.0022</baseRateOfReturn>
   <betaMeasure>57.0</betaMeasure>
@@ -913,7 +913,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>54-793-8070</code>
-  <label>McTeer</label>
+  <label defined-in="com.tbf.Asset">McTeer</label>
   <quarterlyDividend>8.45</quarterlyDividend>
   <baseRateOfReturn>0.0060999999999999995</baseRateOfReturn>
   <betaMeasure>92.0</betaMeasure>
@@ -922,7 +922,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>41-516-7553</code>
-  <label>Avon</label>
+  <label defined-in="com.tbf.Asset">Avon</label>
   <quarterlyDividend>18.66</quarterlyDividend>
   <baseRateOfReturn>0.003</baseRateOfReturn>
   <betaMeasure>45.0</betaMeasure>
@@ -931,7 +931,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>67-970-5930</code>
-  <label>Wison</label>
+  <label defined-in="com.tbf.Asset">Wison</label>
   <quarterlyDividend>17.62</quarterlyDividend>
   <baseRateOfReturn>0.0026</baseRateOfReturn>
   <betaMeasure>92.0</betaMeasure>
@@ -940,7 +940,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>61-251-2326</code>
-  <label>Hallihane</label>
+  <label defined-in="com.tbf.Asset">Hallihane</label>
   <quarterlyDividend>8.31</quarterlyDividend>
   <baseRateOfReturn>0.0059</baseRateOfReturn>
   <betaMeasure>31.0</betaMeasure>
@@ -949,7 +949,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>30-658-7313</code>
-  <label>Denecamp</label>
+  <label defined-in="com.tbf.Asset">Denecamp</label>
   <quarterlyDividend>5.65</quarterlyDividend>
   <baseRateOfReturn>0.0027</baseRateOfReturn>
   <betaMeasure>55.0</betaMeasure>
@@ -958,7 +958,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>00-814-0775</code>
-  <label>Alfonsetti</label>
+  <label defined-in="com.tbf.Asset">Alfonsetti</label>
   <quarterlyDividend>9.59</quarterlyDividend>
   <baseRateOfReturn>0.0079</baseRateOfReturn>
   <betaMeasure>15.0</betaMeasure>
@@ -967,7 +967,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>32-416-9009</code>
-  <label>McColgan</label>
+  <label defined-in="com.tbf.Asset">McColgan</label>
   <quarterlyDividend>2.8</quarterlyDividend>
   <baseRateOfReturn>0.0074</baseRateOfReturn>
   <betaMeasure>74.0</betaMeasure>
@@ -976,7 +976,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>27-463-9567</code>
-  <label>Turmall</label>
+  <label defined-in="com.tbf.Asset">Turmall</label>
   <quarterlyDividend>12.39</quarterlyDividend>
   <baseRateOfReturn>0.0021</baseRateOfReturn>
   <betaMeasure>1.0</betaMeasure>
@@ -985,7 +985,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>74-010-0382</code>
-  <label>Mossman</label>
+  <label defined-in="com.tbf.Asset">Mossman</label>
   <quarterlyDividend>17.22</quarterlyDividend>
   <baseRateOfReturn>0.0070999999999999995</baseRateOfReturn>
   <betaMeasure>24.0</betaMeasure>
@@ -994,7 +994,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>61-736-1678</code>
-  <label>Rouby</label>
+  <label defined-in="com.tbf.Asset">Rouby</label>
   <quarterlyDividend>15.81</quarterlyDividend>
   <baseRateOfReturn>0.0053</baseRateOfReturn>
   <betaMeasure>6.0</betaMeasure>
@@ -1003,7 +1003,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>31-564-7422</code>
-  <label>Skewes</label>
+  <label defined-in="com.tbf.Asset">Skewes</label>
   <quarterlyDividend>8.06</quarterlyDividend>
   <baseRateOfReturn>0.005</baseRateOfReturn>
   <betaMeasure>32.0</betaMeasure>
@@ -1012,7 +1012,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>82-214-7972</code>
-  <label>Blackborow</label>
+  <label defined-in="com.tbf.Asset">Blackborow</label>
   <quarterlyDividend>14.53</quarterlyDividend>
   <baseRateOfReturn>0.0067</baseRateOfReturn>
   <betaMeasure>85.0</betaMeasure>
@@ -1021,7 +1021,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>51-505-2411</code>
-  <label>McNickle</label>
+  <label defined-in="com.tbf.Asset">McNickle</label>
   <quarterlyDividend>19.56</quarterlyDividend>
   <baseRateOfReturn>0.0070999999999999995</baseRateOfReturn>
   <betaMeasure>4.0</betaMeasure>
@@ -1030,7 +1030,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>66-079-1466</code>
-  <label>Wheelband</label>
+  <label defined-in="com.tbf.Asset">Wheelband</label>
   <quarterlyDividend>16.06</quarterlyDividend>
   <baseRateOfReturn>0.0036</baseRateOfReturn>
   <betaMeasure>19.0</betaMeasure>
@@ -1039,7 +1039,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>45-158-5998</code>
-  <label>Filasov</label>
+  <label defined-in="com.tbf.Asset">Filasov</label>
   <quarterlyDividend>18.18</quarterlyDividend>
   <baseRateOfReturn>0.0070999999999999995</baseRateOfReturn>
   <betaMeasure>10.0</betaMeasure>
@@ -1048,7 +1048,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>45-443-2772</code>
-  <label>Chavrin</label>
+  <label defined-in="com.tbf.Asset">Chavrin</label>
   <quarterlyDividend>1.44</quarterlyDividend>
   <baseRateOfReturn>0.0085</baseRateOfReturn>
   <betaMeasure>86.0</betaMeasure>
@@ -1057,7 +1057,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>50-405-0515</code>
-  <label>Cotty</label>
+  <label defined-in="com.tbf.Asset">Cotty</label>
   <quarterlyDividend>1.89</quarterlyDividend>
   <baseRateOfReturn>0.0091</baseRateOfReturn>
   <betaMeasure>78.0</betaMeasure>
@@ -1066,7 +1066,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>18-202-8584</code>
-  <label>Pratley</label>
+  <label defined-in="com.tbf.Asset">Pratley</label>
   <quarterlyDividend>8.54</quarterlyDividend>
   <baseRateOfReturn>0.0096</baseRateOfReturn>
   <betaMeasure>90.0</betaMeasure>
@@ -1075,7 +1075,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>61-558-2382</code>
-  <label>Loughton</label>
+  <label defined-in="com.tbf.Asset">Loughton</label>
   <quarterlyDividend>13.83</quarterlyDividend>
   <baseRateOfReturn>0.0015</baseRateOfReturn>
   <betaMeasure>69.0</betaMeasure>
@@ -1084,7 +1084,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>08-816-4667</code>
-  <label>Ollington</label>
+  <label defined-in="com.tbf.Asset">Ollington</label>
   <quarterlyDividend>14.99</quarterlyDividend>
   <baseRateOfReturn>0.0054</baseRateOfReturn>
   <betaMeasure>54.0</betaMeasure>
@@ -1093,7 +1093,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>58-544-6646</code>
-  <label>Comrie</label>
+  <label defined-in="com.tbf.Asset">Comrie</label>
   <quarterlyDividend>13.46</quarterlyDividend>
   <baseRateOfReturn>0.004699999999999999</baseRateOfReturn>
   <betaMeasure>54.0</betaMeasure>
@@ -1102,7 +1102,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>56-276-9625</code>
-  <label>Hosby</label>
+  <label defined-in="com.tbf.Asset">Hosby</label>
   <quarterlyDividend>15.24</quarterlyDividend>
   <baseRateOfReturn>0.0069</baseRateOfReturn>
   <betaMeasure>32.0</betaMeasure>
@@ -1111,7 +1111,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>71-606-9309</code>
-  <label>Driffe</label>
+  <label defined-in="com.tbf.Asset">Driffe</label>
   <quarterlyDividend>11.1</quarterlyDividend>
   <baseRateOfReturn>0.0018</baseRateOfReturn>
   <betaMeasure>79.0</betaMeasure>
@@ -1120,7 +1120,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>71-798-3762</code>
-  <label>Blissett</label>
+  <label defined-in="com.tbf.Asset">Blissett</label>
   <quarterlyDividend>1.6</quarterlyDividend>
   <baseRateOfReturn>7.000000000000001E-4</baseRateOfReturn>
   <betaMeasure>17.0</betaMeasure>
@@ -1129,7 +1129,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>39-061-1395</code>
-  <label>Seemmonds</label>
+  <label defined-in="com.tbf.Asset">Seemmonds</label>
   <quarterlyDividend>15.44</quarterlyDividend>
   <baseRateOfReturn>0.006500000000000001</baseRateOfReturn>
   <betaMeasure>60.0</betaMeasure>
@@ -1138,7 +1138,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>98-401-5624</code>
-  <label>Arnao</label>
+  <label defined-in="com.tbf.Asset">Arnao</label>
   <quarterlyDividend>7.82</quarterlyDividend>
   <baseRateOfReturn>0.0019</baseRateOfReturn>
   <betaMeasure>97.0</betaMeasure>
@@ -1147,7 +1147,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>74-045-1742</code>
-  <label>Coulthard</label>
+  <label defined-in="com.tbf.Asset">Coulthard</label>
   <quarterlyDividend>16.19</quarterlyDividend>
   <baseRateOfReturn>0.0032</baseRateOfReturn>
   <betaMeasure>89.0</betaMeasure>
@@ -1156,7 +1156,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>12-661-5914</code>
-  <label>Faires</label>
+  <label defined-in="com.tbf.Asset">Faires</label>
   <quarterlyDividend>9.67</quarterlyDividend>
   <baseRateOfReturn>0.0096</baseRateOfReturn>
   <betaMeasure>25.0</betaMeasure>
@@ -1165,7 +1165,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>04-511-5614</code>
-  <label>Tolossi</label>
+  <label defined-in="com.tbf.Asset">Tolossi</label>
   <quarterlyDividend>16.29</quarterlyDividend>
   <baseRateOfReturn>6.0E-4</baseRateOfReturn>
   <betaMeasure>67.0</betaMeasure>
@@ -1174,7 +1174,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>17-621-5747</code>
-  <label>Amberg</label>
+  <label defined-in="com.tbf.Asset">Amberg</label>
   <quarterlyDividend>10.05</quarterlyDividend>
   <baseRateOfReturn>4.0E-4</baseRateOfReturn>
   <betaMeasure>100.0</betaMeasure>
@@ -1183,7 +1183,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>68-439-2679</code>
-  <label>Crocumbe</label>
+  <label defined-in="com.tbf.Asset">Crocumbe</label>
   <quarterlyDividend>15.49</quarterlyDividend>
   <baseRateOfReturn>4.0E-4</baseRateOfReturn>
   <betaMeasure>99.0</betaMeasure>
@@ -1192,7 +1192,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>65-012-3877</code>
-  <label>Klimko</label>
+  <label defined-in="com.tbf.Asset">Klimko</label>
   <quarterlyDividend>19.56</quarterlyDividend>
   <baseRateOfReturn>0.0026</baseRateOfReturn>
   <betaMeasure>64.0</betaMeasure>
@@ -1201,7 +1201,7 @@
 </com.tbf.Stocks>
 <com.tbf.Stocks>
   <code>25-591-8885</code>
-  <label>Lyttle</label>
+  <label defined-in="com.tbf.Asset">Lyttle</label>
   <quarterlyDividend>17.74</quarterlyDividend>
   <baseRateOfReturn>0.0026</baseRateOfReturn>
   <betaMeasure>45.0</betaMeasure>
@@ -1210,7 +1210,7 @@
 </com.tbf.Stocks>
 <com.tbf.PrivateInvestments>
   <code>06-947-6119</code>
-  <label>Padgham</label>
+  <label defined-in="com.tbf.Asset">Padgham</label>
   <quarterlyDividend>10.15</quarterlyDividend>
   <baseRateOfReturn>0.0098</baseRateOfReturn>
   <baseOmegaMeasure>16.0</baseOmegaMeasure>
@@ -1218,7 +1218,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>73-480-4166</code>
-  <label>Glanvill</label>
+  <label defined-in="com.tbf.Asset">Glanvill</label>
   <quarterlyDividend>19.44</quarterlyDividend>
   <baseRateOfReturn>0.0013</baseRateOfReturn>
   <baseOmegaMeasure>55.0</baseOmegaMeasure>
@@ -1226,7 +1226,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>28-998-0359</code>
-  <label>Suero</label>
+  <label defined-in="com.tbf.Asset">Suero</label>
   <quarterlyDividend>6.35</quarterlyDividend>
   <baseRateOfReturn>0.0072</baseRateOfReturn>
   <baseOmegaMeasure>1.0</baseOmegaMeasure>
@@ -1234,7 +1234,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>93-030-2465</code>
-  <label>Cudworth</label>
+  <label defined-in="com.tbf.Asset">Cudworth</label>
   <quarterlyDividend>17.01</quarterlyDividend>
   <baseRateOfReturn>0.006999999999999999</baseRateOfReturn>
   <baseOmegaMeasure>76.0</baseOmegaMeasure>
@@ -1242,7 +1242,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>47-909-5185</code>
-  <label>Heddon</label>
+  <label defined-in="com.tbf.Asset">Heddon</label>
   <quarterlyDividend>10.29</quarterlyDividend>
   <baseRateOfReturn>0.0040999999999999995</baseRateOfReturn>
   <baseOmegaMeasure>58.0</baseOmegaMeasure>
@@ -1250,7 +1250,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>09-443-9459</code>
-  <label>Gaffon</label>
+  <label defined-in="com.tbf.Asset">Gaffon</label>
   <quarterlyDividend>10.05</quarterlyDividend>
   <baseRateOfReturn>0.0024</baseRateOfReturn>
   <baseOmegaMeasure>99.0</baseOmegaMeasure>
@@ -1258,7 +1258,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>55-379-6633</code>
-  <label>Deadman</label>
+  <label defined-in="com.tbf.Asset">Deadman</label>
   <quarterlyDividend>18.49</quarterlyDividend>
   <baseRateOfReturn>0.0086</baseRateOfReturn>
   <baseOmegaMeasure>84.0</baseOmegaMeasure>
@@ -1266,7 +1266,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>59-430-0301</code>
-  <label>Volage</label>
+  <label defined-in="com.tbf.Asset">Volage</label>
   <quarterlyDividend>13.02</quarterlyDividend>
   <baseRateOfReturn>0.005</baseRateOfReturn>
   <baseOmegaMeasure>18.0</baseOmegaMeasure>
@@ -1274,7 +1274,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>04-295-7730</code>
-  <label>Slogrove</label>
+  <label defined-in="com.tbf.Asset">Slogrove</label>
   <quarterlyDividend>3.25</quarterlyDividend>
   <baseRateOfReturn>0.0088</baseRateOfReturn>
   <baseOmegaMeasure>19.0</baseOmegaMeasure>
@@ -1282,7 +1282,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>16-959-6974</code>
-  <label>Tweedell</label>
+  <label defined-in="com.tbf.Asset">Tweedell</label>
   <quarterlyDividend>13.74</quarterlyDividend>
   <baseRateOfReturn>0.0016</baseRateOfReturn>
   <baseOmegaMeasure>85.0</baseOmegaMeasure>
@@ -1290,7 +1290,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>08-145-1327</code>
-  <label>Brader</label>
+  <label defined-in="com.tbf.Asset">Brader</label>
   <quarterlyDividend>6.38</quarterlyDividend>
   <baseRateOfReturn>0.0017000000000000001</baseRateOfReturn>
   <baseOmegaMeasure>98.0</baseOmegaMeasure>
@@ -1298,7 +1298,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>49-737-6730</code>
-  <label>Edgars</label>
+  <label defined-in="com.tbf.Asset">Edgars</label>
   <quarterlyDividend>11.74</quarterlyDividend>
   <baseRateOfReturn>0.0077</baseRateOfReturn>
   <baseOmegaMeasure>93.0</baseOmegaMeasure>
@@ -1306,7 +1306,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>55-941-4340</code>
-  <label>Conibear</label>
+  <label defined-in="com.tbf.Asset">Conibear</label>
   <quarterlyDividend>9.04</quarterlyDividend>
   <baseRateOfReturn>0.0015</baseRateOfReturn>
   <baseOmegaMeasure>40.0</baseOmegaMeasure>
@@ -1314,7 +1314,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>03-491-9007</code>
-  <label>Genery</label>
+  <label defined-in="com.tbf.Asset">Genery</label>
   <quarterlyDividend>13.65</quarterlyDividend>
   <baseRateOfReturn>0.006999999999999999</baseRateOfReturn>
   <baseOmegaMeasure>71.0</baseOmegaMeasure>
@@ -1322,7 +1322,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>66-598-7581</code>
-  <label>Heskins</label>
+  <label defined-in="com.tbf.Asset">Heskins</label>
   <quarterlyDividend>18.0</quarterlyDividend>
   <baseRateOfReturn>0.0067</baseRateOfReturn>
   <baseOmegaMeasure>86.0</baseOmegaMeasure>
@@ -1330,7 +1330,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>24-943-4409</code>
-  <label>Bumpus</label>
+  <label defined-in="com.tbf.Asset">Bumpus</label>
   <quarterlyDividend>2.76</quarterlyDividend>
   <baseRateOfReturn>0.0087</baseRateOfReturn>
   <baseOmegaMeasure>96.0</baseOmegaMeasure>
@@ -1338,7 +1338,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>30-704-4973</code>
-  <label>Wilden</label>
+  <label defined-in="com.tbf.Asset">Wilden</label>
   <quarterlyDividend>14.96</quarterlyDividend>
   <baseRateOfReturn>0.0052</baseRateOfReturn>
   <baseOmegaMeasure>64.0</baseOmegaMeasure>
@@ -1346,7 +1346,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>29-646-7228</code>
-  <label>Frame</label>
+  <label defined-in="com.tbf.Asset">Frame</label>
   <quarterlyDividend>8.42</quarterlyDividend>
   <baseRateOfReturn>0.0045000000000000005</baseRateOfReturn>
   <baseOmegaMeasure>23.0</baseOmegaMeasure>
@@ -1354,7 +1354,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>29-144-2369</code>
-  <label>Lownes</label>
+  <label defined-in="com.tbf.Asset">Lownes</label>
   <quarterlyDividend>17.21</quarterlyDividend>
   <baseRateOfReturn>0.0038</baseRateOfReturn>
   <baseOmegaMeasure>46.0</baseOmegaMeasure>
@@ -1362,7 +1362,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>48-198-4115</code>
-  <label>O&apos;Hartigan</label>
+  <label defined-in="com.tbf.Asset">O&apos;Hartigan</label>
   <quarterlyDividend>15.52</quarterlyDividend>
   <baseRateOfReturn>0.0053</baseRateOfReturn>
   <baseOmegaMeasure>100.0</baseOmegaMeasure>
@@ -1370,7 +1370,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>17-349-1875</code>
-  <label>Aarons</label>
+  <label defined-in="com.tbf.Asset">Aarons</label>
   <quarterlyDividend>8.55</quarterlyDividend>
   <baseRateOfReturn>0.0062</baseRateOfReturn>
   <baseOmegaMeasure>23.0</baseOmegaMeasure>
@@ -1378,7 +1378,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>86-276-8990</code>
-  <label>Cremin</label>
+  <label defined-in="com.tbf.Asset">Cremin</label>
   <quarterlyDividend>16.14</quarterlyDividend>
   <baseRateOfReturn>0.0046</baseRateOfReturn>
   <baseOmegaMeasure>50.0</baseOmegaMeasure>
@@ -1386,7 +1386,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>84-854-9013</code>
-  <label>Saxelby</label>
+  <label defined-in="com.tbf.Asset">Saxelby</label>
   <quarterlyDividend>11.09</quarterlyDividend>
   <baseRateOfReturn>0.0088</baseRateOfReturn>
   <baseOmegaMeasure>4.0</baseOmegaMeasure>
@@ -1394,7 +1394,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>58-194-2818</code>
-  <label>Kosel</label>
+  <label defined-in="com.tbf.Asset">Kosel</label>
   <quarterlyDividend>17.76</quarterlyDividend>
   <baseRateOfReturn>0.0098</baseRateOfReturn>
   <baseOmegaMeasure>96.0</baseOmegaMeasure>
@@ -1402,7 +1402,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>03-918-7327</code>
-  <label>Casperri</label>
+  <label defined-in="com.tbf.Asset">Casperri</label>
   <quarterlyDividend>11.56</quarterlyDividend>
   <baseRateOfReturn>0.0064</baseRateOfReturn>
   <baseOmegaMeasure>38.0</baseOmegaMeasure>
@@ -1410,7 +1410,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>60-079-4830</code>
-  <label>Stroton</label>
+  <label defined-in="com.tbf.Asset">Stroton</label>
   <quarterlyDividend>3.14</quarterlyDividend>
   <baseRateOfReturn>0.0024</baseRateOfReturn>
   <baseOmegaMeasure>71.0</baseOmegaMeasure>
@@ -1418,7 +1418,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>83-302-2770</code>
-  <label>Dislee</label>
+  <label defined-in="com.tbf.Asset">Dislee</label>
   <quarterlyDividend>8.38</quarterlyDividend>
   <baseRateOfReturn>0.0096</baseRateOfReturn>
   <baseOmegaMeasure>47.0</baseOmegaMeasure>
@@ -1426,7 +1426,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>60-120-2650</code>
-  <label>Freegard</label>
+  <label defined-in="com.tbf.Asset">Freegard</label>
   <quarterlyDividend>11.16</quarterlyDividend>
   <baseRateOfReturn>0.0070999999999999995</baseRateOfReturn>
   <baseOmegaMeasure>53.0</baseOmegaMeasure>
@@ -1434,7 +1434,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>50-892-3560</code>
-  <label>Luparto</label>
+  <label defined-in="com.tbf.Asset">Luparto</label>
   <quarterlyDividend>7.24</quarterlyDividend>
   <baseRateOfReturn>0.0096</baseRateOfReturn>
   <baseOmegaMeasure>72.0</baseOmegaMeasure>
@@ -1442,7 +1442,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>56-365-0984</code>
-  <label>Dornan</label>
+  <label defined-in="com.tbf.Asset">Dornan</label>
   <quarterlyDividend>15.26</quarterlyDividend>
   <baseRateOfReturn>0.0028000000000000004</baseRateOfReturn>
   <baseOmegaMeasure>5.0</baseOmegaMeasure>
@@ -1450,7 +1450,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>77-673-7096</code>
-  <label>Wheatcroft</label>
+  <label defined-in="com.tbf.Asset">Wheatcroft</label>
   <quarterlyDividend>12.75</quarterlyDividend>
   <baseRateOfReturn>0.0070999999999999995</baseRateOfReturn>
   <baseOmegaMeasure>28.0</baseOmegaMeasure>
@@ -1458,7 +1458,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>76-235-3364</code>
-  <label>O&apos;Hara</label>
+  <label defined-in="com.tbf.Asset">O&apos;Hara</label>
   <quarterlyDividend>19.66</quarterlyDividend>
   <baseRateOfReturn>0.0028000000000000004</baseRateOfReturn>
   <baseOmegaMeasure>13.0</baseOmegaMeasure>
@@ -1466,7 +1466,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>01-692-8427</code>
-  <label>Dik</label>
+  <label defined-in="com.tbf.Asset">Dik</label>
   <quarterlyDividend>9.26</quarterlyDividend>
   <baseRateOfReturn>0.0022</baseRateOfReturn>
   <baseOmegaMeasure>25.0</baseOmegaMeasure>
@@ -1474,7 +1474,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>35-349-2614</code>
-  <label>Burgott</label>
+  <label defined-in="com.tbf.Asset">Burgott</label>
   <quarterlyDividend>10.93</quarterlyDividend>
   <baseRateOfReturn>0.002</baseRateOfReturn>
   <baseOmegaMeasure>12.0</baseOmegaMeasure>
@@ -1482,7 +1482,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>25-235-9242</code>
-  <label>Jennins</label>
+  <label defined-in="com.tbf.Asset">Jennins</label>
   <quarterlyDividend>7.79</quarterlyDividend>
   <baseRateOfReturn>0.0025</baseRateOfReturn>
   <baseOmegaMeasure>20.0</baseOmegaMeasure>
@@ -1490,7 +1490,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>15-961-2938</code>
-  <label>Dunsmuir</label>
+  <label defined-in="com.tbf.Asset">Dunsmuir</label>
   <quarterlyDividend>16.75</quarterlyDividend>
   <baseRateOfReturn>0.0074</baseRateOfReturn>
   <baseOmegaMeasure>82.0</baseOmegaMeasure>
@@ -1498,7 +1498,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>20-823-0622</code>
-  <label>Drew-Clifton</label>
+  <label defined-in="com.tbf.Asset">Drew-Clifton</label>
   <quarterlyDividend>10.02</quarterlyDividend>
   <baseRateOfReturn>0.0084</baseRateOfReturn>
   <baseOmegaMeasure>72.0</baseOmegaMeasure>
@@ -1506,7 +1506,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>13-919-1290</code>
-  <label>Dorracott</label>
+  <label defined-in="com.tbf.Asset">Dorracott</label>
   <quarterlyDividend>3.61</quarterlyDividend>
   <baseRateOfReturn>0.002</baseRateOfReturn>
   <baseOmegaMeasure>69.0</baseOmegaMeasure>
@@ -1514,7 +1514,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>69-177-0844</code>
-  <label>Huthart</label>
+  <label defined-in="com.tbf.Asset">Huthart</label>
   <quarterlyDividend>10.05</quarterlyDividend>
   <baseRateOfReturn>0.0054</baseRateOfReturn>
   <baseOmegaMeasure>76.0</baseOmegaMeasure>
@@ -1522,7 +1522,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>89-681-7450</code>
-  <label>Philipps</label>
+  <label defined-in="com.tbf.Asset">Philipps</label>
   <quarterlyDividend>18.79</quarterlyDividend>
   <baseRateOfReturn>0.006</baseRateOfReturn>
   <baseOmegaMeasure>43.0</baseOmegaMeasure>
@@ -1530,7 +1530,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>50-043-7379</code>
-  <label>Goodship</label>
+  <label defined-in="com.tbf.Asset">Goodship</label>
   <quarterlyDividend>17.81</quarterlyDividend>
   <baseRateOfReturn>0.009899999999999999</baseRateOfReturn>
   <baseOmegaMeasure>44.0</baseOmegaMeasure>
@@ -1538,7 +1538,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>04-226-7509</code>
-  <label>Cosby</label>
+  <label defined-in="com.tbf.Asset">Cosby</label>
   <quarterlyDividend>15.77</quarterlyDividend>
   <baseRateOfReturn>0.005699999999999999</baseRateOfReturn>
   <baseOmegaMeasure>97.0</baseOmegaMeasure>
@@ -1546,7 +1546,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>90-657-1148</code>
-  <label>Elson</label>
+  <label defined-in="com.tbf.Asset">Elson</label>
   <quarterlyDividend>7.56</quarterlyDividend>
   <baseRateOfReturn>0.0043</baseRateOfReturn>
   <baseOmegaMeasure>52.0</baseOmegaMeasure>
@@ -1554,7 +1554,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>74-016-1086</code>
-  <label>Rauprich</label>
+  <label defined-in="com.tbf.Asset">Rauprich</label>
   <quarterlyDividend>1.87</quarterlyDividend>
   <baseRateOfReturn>0.0059</baseRateOfReturn>
   <baseOmegaMeasure>18.0</baseOmegaMeasure>
@@ -1562,7 +1562,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>50-374-7132</code>
-  <label>Whitehall</label>
+  <label defined-in="com.tbf.Asset">Whitehall</label>
   <quarterlyDividend>19.69</quarterlyDividend>
   <baseRateOfReturn>0.008</baseRateOfReturn>
   <baseOmegaMeasure>62.0</baseOmegaMeasure>
@@ -1570,7 +1570,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>98-860-2499</code>
-  <label>Cogley</label>
+  <label defined-in="com.tbf.Asset">Cogley</label>
   <quarterlyDividend>3.37</quarterlyDividend>
   <baseRateOfReturn>0.0051</baseRateOfReturn>
   <baseOmegaMeasure>92.0</baseOmegaMeasure>
@@ -1578,7 +1578,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>90-299-5270</code>
-  <label>Lorey</label>
+  <label defined-in="com.tbf.Asset">Lorey</label>
   <quarterlyDividend>19.06</quarterlyDividend>
   <baseRateOfReturn>0.0086</baseRateOfReturn>
   <baseOmegaMeasure>10.0</baseOmegaMeasure>
@@ -1586,7 +1586,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>78-678-7452</code>
-  <label>Beevor</label>
+  <label defined-in="com.tbf.Asset">Beevor</label>
   <quarterlyDividend>9.97</quarterlyDividend>
   <baseRateOfReturn>0.0040999999999999995</baseRateOfReturn>
   <baseOmegaMeasure>10.0</baseOmegaMeasure>
@@ -1594,7 +1594,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>72-701-5333</code>
-  <label>Boyett</label>
+  <label defined-in="com.tbf.Asset">Boyett</label>
   <quarterlyDividend>5.23</quarterlyDividend>
   <baseRateOfReturn>0.0040999999999999995</baseRateOfReturn>
   <baseOmegaMeasure>87.0</baseOmegaMeasure>
@@ -1602,7 +1602,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>78-872-8843</code>
-  <label>Galbreath</label>
+  <label defined-in="com.tbf.Asset">Galbreath</label>
   <quarterlyDividend>11.42</quarterlyDividend>
   <baseRateOfReturn>6.0E-4</baseRateOfReturn>
   <baseOmegaMeasure>34.0</baseOmegaMeasure>
@@ -1610,7 +1610,7 @@
 </com.tbf.PrivateInvestments>
 <com.tbf.PrivateInvestments>
   <code>57-697-6038</code>
-  <label>Conlon</label>
+  <label defined-in="com.tbf.Asset">Conlon</label>
   <quarterlyDividend>17.27</quarterlyDividend>
   <baseRateOfReturn>0.0068000000000000005</baseRateOfReturn>
   <baseOmegaMeasure>51.0</baseOmegaMeasure>

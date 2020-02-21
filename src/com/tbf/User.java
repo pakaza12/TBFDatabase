@@ -3,34 +3,26 @@ package com.tbf;
 import java.util.List;
 import java.util.Set;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 /**
  * This class represents a User
  * 
  * @authors Jayden Carlon and Parker Zach
  *
  */
+@XStreamAlias("person")
 public class User {
 
-	protected String personCode;
-	protected Address address;
-	protected String firstName;
-	protected String lastName;
-	protected String brokerStatus;
-	protected String secIdentity;
-	protected Set<String> email;
-	protected List<Accounts> bankAccounts;
+	private String personCode;
+	private Address address;
+	private String firstName;
+	private String lastName;
+	private String brokerStatus;
+	private String secIdentity;
+	private Set<String> email;
+	private List<Asset> asset;
 	
-	/**
-	 * This constructs a User class
-	 * 
-	 * @param personCode
-	 * @param address
-	 * @param firstName
-	 * @param lastName
-	 * @param brokerStatus
-	 * @param secIdentity
-	 * @param email
-	 */
 	public User(String personCode, Address address, String firstName, String lastName, String brokerStatus,
 				String secIdentity, Set<String> email) {
 		super();
@@ -43,12 +35,12 @@ public class User {
 		this.email = email;
 	}
 	
-	public List<Accounts> getBankAccounts() {
-		return bankAccounts;
+	public List<Asset> getAsset() {
+		return this.asset;
 	}
 
-	public void addBankAccounts(Accounts bankAccounts) {
-		this.bankAccounts.add(bankAccounts);
+	public void addAsset(Asset asset) {
+		this.asset.add(asset);
 	}
 
 	public String getPersonCode(){

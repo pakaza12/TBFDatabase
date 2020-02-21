@@ -1,12 +1,12 @@
 package com.tbf;
 
 /**
- * This is a subclass of Accounts that creates a PrivateInvestments Account
+ * This is a subclass of Asset that creates a PrivateInvestments Account
  * 
  * @authors Jayden Carlon and Parker Zach
  *
  */
-public class PrivateInvestments extends Accounts {
+public class PrivateInvestments extends Asset {
 	
 	private String label;
 	private double quarterlyDividend;
@@ -14,19 +14,8 @@ public class PrivateInvestments extends Accounts {
 	private double baseOmegaMeasure;
 	private double totalValue;
 	
-	/**
-	 * Constructs a PrivateInvestments class
-	 * 
-	 * @param code
-	 * @param label
-	 * @param quarterlyDividend
-	 * @param baseRateOfReturn
-	 * @param baseOmegaMeasure
-	 * @param totalValue
-	 */
 	public PrivateInvestments(String code, String label, double quarterlyDividend, double baseRateOfReturn, double baseOmegaMeasure, double totalValue) {
-		super(code);
-		this.label = label;
+		super(code, label);
 		this.quarterlyDividend = quarterlyDividend;
 		this.baseRateOfReturn = baseRateOfReturn;
 		this.baseOmegaMeasure = baseOmegaMeasure;
