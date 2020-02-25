@@ -6,6 +6,12 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
+/**
+ * This is a class to handle the input of data
+ * 
+ * @authors Jayden Carlon and Parker Zach
+ *
+ */
 public class dataInput {
 
 	public static User[] parsePersons(String file) {
@@ -83,7 +89,7 @@ public class dataInput {
 				inputUsers[i] = tempB;
 			} else if (temp.contains(";P;")) {
 				String token[] = temp.split(";", -7);
-				PrivateInvestments tempB = new PrivateInvestments(token[0], token[2], Double.parseDouble(token[3]),
+				PrivateInvestment tempB = new PrivateInvestment(token[0], token[2], Double.parseDouble(token[3]),
 						Double.parseDouble(token[4]) / 100, Double.parseDouble(token[5]), Double.parseDouble(token[6]));
 				inputUsers[i] = tempB;
 			}

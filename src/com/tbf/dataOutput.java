@@ -5,6 +5,12 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import com.thoughtworks.xstream.XStream;
 
+/**
+ * This is a class to handle the output of data
+ * 
+ * @authors Jayden Carlon and Parker Zach
+ *
+ */
 public class dataOutput {
 
 	public static void peopleToXML(User[] users, String outputFile) {
@@ -34,7 +40,7 @@ public class dataOutput {
 		XStream xstream = new XStream();
 		xstream.processAnnotations(Asset.class);
 		xstream.processAnnotations(Deposit.class);
-		xstream.processAnnotations(PrivateInvestments.class);
+		xstream.processAnnotations(PrivateInvestment.class);
 		xstream.processAnnotations(Stocks.class);
 		String result = xstream.toXML(assets);
 

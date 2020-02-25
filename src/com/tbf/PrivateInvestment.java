@@ -9,14 +9,14 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
  *
  */
 @XStreamAlias("privateInvestment")
-public class PrivateInvestments extends Asset {
+public class PrivateInvestment extends Asset {
 	
 	private double quarterlyDividend;
 	private double baseRateOfReturn;
 	private double baseOmegaMeasure;
 	private double totalValue;
 	
-	public PrivateInvestments(String code, String label, double quarterlyDividend, double baseRateOfReturn, double baseOmegaMeasure, double totalValue) {
+	public PrivateInvestment(String code, String label, double quarterlyDividend, double baseRateOfReturn, double baseOmegaMeasure, double totalValue) {
 		super(code, label);
 		this.quarterlyDividend = quarterlyDividend;
 		this.baseRateOfReturn = baseRateOfReturn;
