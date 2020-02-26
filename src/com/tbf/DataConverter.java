@@ -25,8 +25,7 @@ public class DataConverter {
 		dataOutput.peopleToXML(person, "data/Persons.xml");
 		Asset[] assets = dataInput.parseAssets("data/Assets.dat");
 		dataOutput.assetsToXML(assets, "data/Assets.xml");
-		//dataOutput.peopleToXML(dataInput.parsePersons("data/Persons.dat"), "data/Persons.xml");
-		//dataOutput.assetsToXML(dataInput.parseAssets("data/Assets.dat"), "data/Assets.xml");		
+		Portfolio[] portfolios = dataInput.parsePortfolio("data/Portfolios.dat");
 		
 	}
 
