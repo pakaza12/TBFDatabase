@@ -21,8 +21,12 @@ public class DataConverter {
 
 	public static void main(String[] args) {
 
-		dataOutput.peopleToXML(dataInput.parsePersons("data/Persons.dat"), "data/Persons.xml");
-		dataOutput.assetsToXML(dataInput.parseAssets("data/Assets.dat"), "data/Assets.xml");		
+		User[] person = dataInput.parsePersons("data/Persons.dat");
+		dataOutput.peopleToXML(person, "data/Persons.xml");
+		Asset[] assets = dataInput.parseAssets("data/Assets.dat");
+		dataOutput.assetsToXML(assets, "data/Assets.xml");
+		//dataOutput.peopleToXML(dataInput.parsePersons("data/Persons.dat"), "data/Persons.xml");
+		//dataOutput.assetsToXML(dataInput.parseAssets("data/Assets.dat"), "data/Assets.xml");		
 		
 	}
 
