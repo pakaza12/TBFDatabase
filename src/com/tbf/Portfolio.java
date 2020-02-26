@@ -9,7 +9,7 @@ import java.util.List;
  * @authors Jayden Carlon and Parker Zach
  *
  */
-public class Porfolio {
+public class Portfolio {
 
 	private String portfolioCode;
 	private String OwnerCode;
@@ -17,13 +17,22 @@ public class Porfolio {
 	private String beneficiaryCode;
 	private List<HashMap<String, Double>> assetList;
 	
-	public Porfolio(String portfolioCode, String ownerCode, String managerCode, String beneficiaryCode,
+	public Portfolio(String portfolioCode, String ownerCode, String managerCode, String beneficiaryCode,
 			List<HashMap<String, Double>> assetList) {
 		super();
 		this.portfolioCode = portfolioCode;
 		OwnerCode = ownerCode;
 		this.managerCode = managerCode;
 		this.beneficiaryCode = beneficiaryCode;
+		this.assetList = assetList;
+	}
+	
+	public Portfolio(String portfolioCode, String ownerCode, String managerCode,
+			List<HashMap<String, Double>> assetList) {
+		super();
+		this.portfolioCode = portfolioCode;
+		OwnerCode = ownerCode;
+		this.managerCode = managerCode;
 		this.assetList = assetList;
 	}
 	

@@ -98,4 +98,8 @@ public class dataInput {
 
 		return inputUsers;
 	}
+	
+	public static Portfolio[] parsePortfolio(String file) {
+		
+	}
 }
