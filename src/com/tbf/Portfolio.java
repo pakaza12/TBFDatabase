@@ -1,7 +1,7 @@
 package com.tbf;
 
 import java.util.HashMap;
-import java.util.List;
+import java.util.Set;
 
 /**
  * This is a class that will connect the User class and the Asset class
@@ -15,23 +15,23 @@ public class Portfolio {
 	private String OwnerCode;
 	private String managerCode;
 	private String beneficiaryCode;
-	private List<HashMap<String, Double>> assetList;
+	private Set<HashMap<String, Double>> assetList;
 	
 	public Portfolio(String portfolioCode, String ownerCode, String managerCode, String beneficiaryCode,
-			List<HashMap<String, Double>> assetList) {
+			Set<HashMap<String, Double>> assetList) {
 		super();
 		this.portfolioCode = portfolioCode;
-		OwnerCode = ownerCode;
+		this.OwnerCode = ownerCode;
 		this.managerCode = managerCode;
 		this.beneficiaryCode = beneficiaryCode;
 		this.assetList = assetList;
 	}
 	
 	public Portfolio(String portfolioCode, String ownerCode, String managerCode,
-			List<HashMap<String, Double>> assetList) {
+			Set<HashMap<String, Double>> assetList) {
 		super();
 		this.portfolioCode = portfolioCode;
-		OwnerCode = ownerCode;
+		this.OwnerCode = ownerCode;
 		this.managerCode = managerCode;
 		this.assetList = assetList;
 	}
@@ -68,11 +68,11 @@ public class Portfolio {
 		this.beneficiaryCode = beneficiaryCode;
 	}
 	
-	public List<HashMap<String, Double>> getAssetList() {
+	public Set<HashMap<String, Double>> getAssetList() {
 		return assetList;
 	}
 	
-	public void setAssetList(List<HashMap<String, Double>> assetList) {
+	public void setAssetList(Set<HashMap<String, Double>> assetList) {
 		this.assetList = assetList;
 	}
 	

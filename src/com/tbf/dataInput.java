@@ -2,7 +2,9 @@ package com.tbf;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -101,5 +103,48 @@ public class dataInput {
 	
 	public static Portfolio[] parsePortfolio(String file) {
 		
+		Scanner input = null;
+
+		try {
+			input = new Scanner(new File(file));
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+
+		// Get the size of the file (how many lines of data there are an initialize an
+		// array of Portfolios
+		int size = Integer.parseInt(input.nextLine());
+		Portfolio portfolios[] = new Portfolio[size];
+		
+		for(int i = 0; i < size; i++) {
+			String temp = input.nextLine();
+			
+			String token[] = temp.split(";", -5);
+			if(token.length == 5) {
+				String portfolioCode = token[0];
+				String ownerCode = token[1];
+				String managerCode = token[2];
+				String beneficiaryCode = token[3]; //test for empty string with .isEmpty()
+				
+				Set<HashMap<String, Double>> assets = new HashSet<HashMap<String, Double>>();
+				String tokenB[] = temp.split(",");
+				for(int j = 0; j < tokenB.length; j += 2) {
+					for(int k = 0; k < 2; k++) {
+						HashMap<String, Double> asset = new HashMap<>();
+						asset.put(tokenB[j], Double.parseDouble(tokenB[j+1]));
+						assets.add(asset);
+					}
+				}
+				
+				if(beneficiaryCode.isEmpty()) {
+					portfolios[i] = new Portfolio(portfolioCode, ownerCode, managerCode, assets);
+				} else {
+					portfolios[i] = new Portfolio(portfolioCode, ownerCode, managerCode, beneficiaryCode, assets);
+				}
+			}
+		}
+		
+		return portfolios;
 	}
+
 }
