@@ -15,10 +15,10 @@ public class Portfolio {
 	private String OwnerCode;
 	private String managerCode;
 	private String beneficiaryCode;
-	private Set<HashMap<String, Double>> assetList;
+	private HashMap<String, Double> assetList;
 	
 	public Portfolio(String portfolioCode, String ownerCode, String managerCode, String beneficiaryCode,
-			Set<HashMap<String, Double>> assetList) {
+			HashMap<String, Double> assetList) {
 		super();
 		this.portfolioCode = portfolioCode;
 		this.OwnerCode = ownerCode;
@@ -28,7 +28,7 @@ public class Portfolio {
 	}
 	
 	public Portfolio(String portfolioCode, String ownerCode, String managerCode,
-			Set<HashMap<String, Double>> assetList) {
+			HashMap<String, Double> assetList) {
 		super();
 		this.portfolioCode = portfolioCode;
 		this.OwnerCode = ownerCode;
@@ -68,11 +68,11 @@ public class Portfolio {
 		this.beneficiaryCode = beneficiaryCode;
 	}
 	
-	public Set<HashMap<String, Double>> getAssetList() {
+	public HashMap<String, Double> getAssetList() {
 		return assetList;
 	}
 	
-	public void setAssetList(Set<HashMap<String, Double>> assetList) {
+	public void setAssetList(HashMap<String, Double> assetList) {
 		this.assetList = assetList;
 	}
 	

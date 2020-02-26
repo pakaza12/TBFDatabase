@@ -126,13 +126,12 @@ public class dataInput {
 				String managerCode = token[2];
 				String beneficiaryCode = token[3]; //test for empty string with .isEmpty()
 				
-				Set<HashMap<String, Double>> assets = new HashSet<HashMap<String, Double>>();
+				HashMap<String, Double> assets = new HashMap<String, Double>();
 				String tokenB[] = temp.split(",");
-				for(int j = 0; j < tokenB.length; j += 2) {
+				for(int j = 0; j < tokenB.length; j++) {
 					for(int k = 0; k < 2; k++) {
-						HashMap<String, Double> asset = new HashMap<>();
-						asset.put(tokenB[j], Double.parseDouble(tokenB[j+1]));
-						assets.add(asset);
+						String tokenC[] = tokenB[j].split(":", -2);
+						assets.put(tokenC[k], Double.parseDouble(tokenC[k+1]));
 					}
 				}
 				
