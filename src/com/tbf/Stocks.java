@@ -66,5 +66,15 @@ public class Stocks extends Asset {
 	public void setSharePrice(double sharePrice) {
 		this.sharePrice = sharePrice;
 	}
+
+	@Override
+	public double getValue() {
+		return this.value;
+	}
+
+	@Override
+	public void setValue(Double value) {
+		this.value = value;
+	}
 	
 }

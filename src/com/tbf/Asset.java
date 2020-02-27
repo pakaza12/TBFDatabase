@@ -14,6 +14,7 @@ public abstract class Asset {
 
 	protected String code;
 	protected String label;
+	protected double value;
 	
 	public Asset(String code, String label) {
 		this.code = code;
@@ -35,5 +36,11 @@ public abstract class Asset {
 	public void setLabel(String label) {
 		this.label = label;
 	}
+
+	public abstract double getValue();
+
+	public abstract void setValue(Double value);
+	
+	
 	
 }

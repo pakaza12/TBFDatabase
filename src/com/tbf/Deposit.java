@@ -26,4 +26,14 @@ public class Deposit extends Asset {
 		this.apr = apr;
 	}
 	
+	@Override
+	public void setValue(Double value) {
+		this.value = value;
+	}
+
+	@Override
+	public double getValue() {
+		return this.value;
+	}
+	
 }
