@@ -87,6 +87,8 @@ public class PortfolioReport {
 	public static void summary(Portfolio[] report, User[] person, Asset[] assets) {
 		HashMap<String, Integer> portfolioToAsset = assetCodeMap(assets);
 		HashMap<String, Integer> portfolioToUser = userCodeMap(person);
+		System.out.println("Portfolio Code \t\tPortfolio Owner \t\tPortfolio Manager \t\tTotal Fees \t\tTotal Commissions \t\tAggregate Risk \t\tAnnual Returns \t\tTotal Value");
+		System.out.println("===========================================================================================================================================================================================================");
 		for (Portfolio s : report) {
 			double totalValue = getTotalValue(s.getAssetList(), assets, portfolioToAsset);
 			double aggregateRisk = getAggregateRisk(s.getAssetList(), assets, totalValue, portfolioToAsset);
@@ -95,7 +97,8 @@ public class PortfolioReport {
 			double totalCommissions = getTotalCommission(s.getAssetList(), person, portfolioToUser, s.getOwnerCode(), annualReturn);
 			
 			//Prints out one line at a time/one portfolio per loop
-			System.out.println();
+			//System.out.printf("\n", );
 		}
 	}
+
 }
