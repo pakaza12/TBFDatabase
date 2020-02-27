@@ -8,15 +8,6 @@
 
 package com.tbf;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
-
-import com.thoughtworks.xstream.XStream;
-
 public class DataConverter {
 
 	public static void main(String[] args) {
