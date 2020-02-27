@@ -35,5 +35,10 @@ public class Deposit extends Asset {
 	public double getValue() {
 		return this.value;
 	}
+
+	@Override
+	public double getTotalWorth() {
+		return this.value;
+	}
 	
 }

@@ -48,6 +48,6 @@ public abstract class Asset {
 
 	public abstract void setValue(Double value);
 	
-	
+	public abstract double getTotalWorth();
 	
 }

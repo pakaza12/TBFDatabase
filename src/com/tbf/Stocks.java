@@ -76,5 +76,10 @@ public class Stocks extends Asset {
 	public void setValue(Double value) {
 		this.value = value;
 	}
+
+	@Override
+	public double getTotalWorth() {
+		return (this.value * this.sharePrice);
+	}
 	
 }
