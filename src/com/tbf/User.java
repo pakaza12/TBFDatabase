@@ -73,8 +73,17 @@ public class User {
 	
 	public double getFees() {
 		if(this.brokerStatus.equals("J")) {
-		return 75;
-	}else
-		return 0;
+			return 75;
+		} else {
+			return 0;
+		}
+	}	
+	public double getCommission(double annualReturn) {
+		if(this.brokerStatus.contains("J")) {
+			return annualReturn *.0125;
+		}else if(this.brokerStatus.contains("E")){
+			return annualReturn * .0375;
+		} else
+			return 0;
 	}
 }
