@@ -70,7 +70,15 @@ public class PrivateInvestment extends Asset {
 	public double getTotalWorth() {
 		return (this.value / 100.0 * this.totalValue);
 	}
-	
-	
+
+	@Override
+	public double getRisk(double totalValue) {
+		return (this.baseOmegaMeasure + Math.exp(-125500/totalValue));
+	}
+
+	@Override
+	public double getAnnualReturn() {
+		return (this.baseRateOfReturn * this.totalValue + 4 * this.quarterlyDividend); //Not sure if you want to multiply by the actual total value or by the worth
+	}
 	
 }

@@ -50,4 +50,7 @@ public abstract class Asset {
 	
 	public abstract double getTotalWorth();
 	
+	public abstract double getRisk(double totalValue);
+	
+	public abstract double getAnnualReturn();
 }

@@ -40,5 +40,16 @@ public class Deposit extends Asset {
 	public double getTotalWorth() {
 		return this.value;
 	}
-	
+
+	@Override
+	public double getRisk(double totalValue) {
+		return 0.0;
+	}
+
+	@Override
+	public double getAnnualReturn() {
+		double apy = Math.exp(this.apr) - 1;
+		return (apy * this.value);
+	}
+
 }

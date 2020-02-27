@@ -81,5 +81,15 @@ public class Stocks extends Asset {
 	public double getTotalWorth() {
 		return (this.value * this.sharePrice);
 	}
+
+	@Override
+	public double getRisk(double totalValue) {
+		return (this.baseRateOfReturn * this.sharePrice * this.value + 4 * this.quarterlyDividend * this.value);
+	}
+	
+	@Override
+	public double getAnnualReturn() {
+		return (this.baseRateOfReturn * this.sharePrice + 4 * this.quarterlyDividend); //Not sure if you want to multiply by the actual total value or by the worth
+	}
 	
 }
