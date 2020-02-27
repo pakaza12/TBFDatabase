@@ -14,6 +14,13 @@ public abstract class Asset {
 
 	protected String code;
 	protected String label;
+	/**
+	 * Value represents a different value in each subclass
+	 * which allows us to calculate the asset value:
+	 * In Deposit, it represents the balance
+	 * In PrivateInvestment it represents the percentage ownership
+	 * In Stocks it represents the number of stocks owned
+	 */
 	protected double value;
 	
 	public Asset(String code, String label) {
