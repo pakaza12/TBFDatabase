@@ -46,18 +46,18 @@ public class portfolioReport {
 
 		return risk;
 	}
-
+	
 	public static double getAnnualReturns(HashMap<String, Double> a, Asset[] i) {
 		double annualReturn = 0;
-
+		
 		for(HashMap.Entry<String, Double> c : a.entrySet()) {
 			for(int j = 0; j < i.length; j++) {
 				if (c.getKey().contains(i[j].getCode())) {
-
+					
 				}
 			}
 		}
-
+		
 		return annualReturn;
 	}
 	
@@ -68,7 +68,7 @@ public class portfolioReport {
 		for (Portfolio s : report) {
 			double totalValue = getTotalValue(s.getAssetList(), a);
 			double aggregateRisk = getAggregateRisk(s.getAssetList(), a, totalValue);
-
+			
 			System.out.println();
 		}
 	}
