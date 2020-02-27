@@ -71,5 +71,10 @@ public class User {
 		return this.email;
 	}
 	
-	
+	public double getFees() {
+		if(this.brokerStatus.equals("J")) {
+		return 75;
+	}else
+		return 0;
+	}
 }

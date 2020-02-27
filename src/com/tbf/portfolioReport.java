@@ -60,6 +60,9 @@ public class portfolioReport {
 
 		return annualReturn;
 	}
+	
+	
+	
 
 	public static void summary(Portfolio[] report, User[] p, Asset[] a) {
 		for (Portfolio s : report) {
