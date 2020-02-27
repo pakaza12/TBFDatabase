@@ -61,10 +61,24 @@ public class portfolioReport {
 		return annualReturn;
 	}
 	
-	
+	/**
+	 * 
+	 * 
+	 * 
+	 */
+	public static HashMap<String, Integer> assetCodeMap(Asset[] assets) {
+		HashMap<String, Integer> codeMap = new HashMap<>();
+		int counter = 0;
+		for(Asset a : assets) {
+			codeMap.put(a.getCode(), counter);
+			counter++;
+		}
+		return codeMap;
+	}
 	
 
 	public static void summary(Portfolio[] report, User[] p, Asset[] a) {
+		HashMap<String, Integer> portfolioToAsset = assetCodeMap(a);
 		for (Portfolio s : report) {
 			double totalValue = getTotalValue(s.getAssetList(), a);
 			double aggregateRisk = getAggregateRisk(s.getAssetList(), a, totalValue);
