@@ -124,17 +124,19 @@ public class dataInput {
 				String portfolioCode = token[0];
 				String ownerCode = token[1];
 				String managerCode = token[2];
-				String beneficiaryCode = token[3]; //test for empty string with .isEmpty()
+				String beneficiaryCode = token[3];
 				
 				HashMap<String, Double> assets = new HashMap<String, Double>();
-				String tokenB[] = temp.split(",");
-				for(int j = 0; j < tokenB.length; j++) {
-					for(int k = 0; k < 2; k++) {
-						String tokenC[] = tokenB[j].split(":", -2);
-						assets.put(tokenC[k], Double.parseDouble(tokenC[k+1]));
+				if(!token[4].isEmpty()) {
+					String tokenB[] = token[4].split(",");
+					for(int j = 0; j < tokenB.length; j++) {
+						for(int k = 0; k < 1; k++) {
+							String tokenC[] = tokenB[j].split(":", -2);
+							assets.put(tokenC[k], Double.parseDouble(tokenC[k+1]));
+						}
 					}
 				}
-				
+
 				if(beneficiaryCode.isEmpty()) {
 					portfolios[i] = new Portfolio(portfolioCode, ownerCode, managerCode, assets);
 				} else {
