@@ -17,7 +17,6 @@ public class DataConverter {
 		Asset[] assets = dataInput.parseAssets("data/Assets.dat");
 		dataOutput.assetsToXML(assets, "data/Assets.xml");
 		Portfolio[] portfolios = dataInput.parsePortfolio("data/Portfolios.dat");
-		Portfolio.summary(portfolios, person, assets);
 	}
 
 }

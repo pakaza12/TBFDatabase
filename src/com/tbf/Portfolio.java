@@ -84,6 +84,7 @@ public class Portfolio {
 		HashMap<String, Integer> codeMap = new HashMap<>();
 		int counter = 0;
 		for(Asset a : assets) {
+			//Gets the code from the asset and puts which spot it is in Asset[]
 			codeMap.put(a.getCode(), counter);
 			counter++;
 		}
@@ -154,7 +155,7 @@ public class Portfolio {
 	}
 	
 
-	public static void summary(Portfolio[] report, User[] person, Asset[] assets) {
+	public static void summaryReport(Portfolio[] report, User[] person, Asset[] assets) {
 		double value = 0, anReturn = 0, fees = 0, commissions = 0;
 		
 		HashMap<String, Integer> portfolioToAsset = assetCodeMap(assets);
@@ -172,7 +173,7 @@ public class Portfolio {
 			double totalCommissions = getTotalCommission(person, portfolioToUser, s.getManagerCode(), annualReturn);
 			commissions += totalCommissions;
 			
-			//Prints out one line at a time/one portfolio per loop
+			//Prints out one portfolio per loop
 			String userName = person[portfolioToUser.get(s.getOwnerCode())].getLastName() + ", " + person[portfolioToUser.get(s.getOwnerCode())].getFirstName();
 			String managerName = person[portfolioToUser.get(s.getManagerCode())].getLastName() + ", " + person[portfolioToUser.get(s.getManagerCode())].getFirstName();
 			
@@ -180,6 +181,40 @@ public class Portfolio {
 		}
 		System.out.println("===========================================================================================================================================================================================================");
 		System.out.printf("\t\t\t\t\t\t\t\t\t      Results = $%-22.2f $%-54.2f $%-22.2f $%-32.2f\n", fees, commissions, anReturn, value);
+	}
+	
+	public static void detailReport(Portfolio[] report, User[] person, Asset[] assets) {
+		HashMap<String, Integer> portfolioToAsset = assetCodeMap(assets);
+		HashMap<String, Integer> portfolioToUser = userCodeMap(person);
+		
+		System.out.printf("\n\nPortfolio Details\n============================================================================================================================================================================\n");
+		for(Portfolio s : report) {
+			double totalValue = getTotalValue(s.getAssetList(), assets, portfolioToAsset);
+			double aggregateRisk = getAggregateRisk(s.getAssetList(), assets, portfolioToAsset, totalValue);
+			double annualReturn = getAnnualReturn(s.getAssetList(), assets, portfolioToAsset);
+			double totalFees = getTotalFee(s.getAssetList(), person, portfolioToUser, s.getManagerCode());
+			double totalCommissions = getTotalCommission(person, portfolioToUser, s.getManagerCode(), annualReturn);
+			String managerName = person[portfolioToUser.get(s.getManagerCode())].getLastName() + ", " + person[portfolioToUser.get(s.getManagerCode())].getFirstName();
+			
+			System.out.printf("Portfolio %s\n-----------------------------------------------------------------------------------\n", s.getPortfolioCode());
+			if(!(s.getBeneficiaryCode() == null) && !(s.getManagerCode() == null)) {
+				
+				System.out.printf("Owner:\n%s \nManager:\n%s \nBeneficiary:\n%s \nAssets:\n", person[portfolioToUser.get(s.getOwnerCode())].toString(), managerName, person[portfolioToUser.get(s.getBeneficiaryCode())].toString());
+				System.out.printf("Code \t\tAsset \t\t\t\t\tReturn Rate \t\tRisk \t\tAnnual Return \t\tValue\n");
+				
+				for(HashMap.Entry<String, Double> c : s.assetList.entrySet()) {
+					int place = portfolioToAsset.get(c.getKey());
+					
+					String label = assets[place].getLabel();
+					double anReturn = assets[place].getAnnualReturn();
+					double anReturnRate = (anReturn/assets[place].getTotalWorth()) * 100.0;
+					double risk = assets[place].getRisk(totalValue);
+					double value = assets[place].getTotalWorth();
+					
+					System.out.printf("%-15s %-31s %18.2f%% %16.2f \t\t$%-22.2f $%-20.2f\n", c.getKey(), label, anReturnRate, risk, anReturn, value);
+				}
+			}
+		}
 	}
 	
 }
