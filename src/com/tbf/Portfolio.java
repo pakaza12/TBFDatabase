@@ -254,7 +254,7 @@ public class Portfolio {
 				System.out.printf("%-15s %-31s %18.2f%% %16.2f \t\t$%-22.2f $%-20.2f\n", c.getKey(), label, anReturnRate, risk, anReturn, value);
 			}
 			System.out.printf("\t\t\t\t\t\t\t----------------------------------------------------------------------------------\n");
-			System.out.printf("\t\t\t\t\t\t\t Totals %20.4f%% \t\t$%-22.2f $%-20.2f\n\n", aggregateRisk, annualReturn, totalValue);
+			System.out.printf("\t\t\t\t\t\t\t Totals %20.4f \t\t$%-22.2f $%-20.2f\n\n", aggregateRisk, annualReturn, totalValue);
 		}
 	}
 	

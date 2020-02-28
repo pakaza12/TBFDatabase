@@ -1,421 +1,123 @@
 <asset-array>
   <deposit>
-    <code>BX001-23</code>
-    <label>Money Market Savings</label>
+    <code>1BB</code>
+    <label>1-year CD</label>
     <value>0.0</value>
-    <apr>0.0105</apr>
-  </deposit>
-  <deposit>
-    <code>AGTSAV</code>
-    <label>Savings Account</label>
-    <value>0.0</value>
-    <apr>0.0025</apr>
-  </deposit>
-  <deposit>
-    <code>CD99312</code>
-    <label>5-year CD</label>
-    <value>0.0</value>
-    <apr>0.0435</apr>
-  </deposit>
-  <deposit>
-    <code>CD1Y3X</code>
-    <label>1-year Rollover CD</label>
-    <value>0.0</value>
-    <apr>0.0275</apr>
-  </deposit>
-  <deposit>
-    <code>CD1Y3Y</code>
-    <label>1-year Rollover CD</label>
-    <value>0.0</value>
-    <apr>0.0275</apr>
-  </deposit>
-  <deposit>
-    <code>RIRA01</code>
-    <label>Roth IRA</label>
-    <value>0.0</value>
-    <apr>0.034</apr>
+    <apr>0.024</apr>
   </deposit>
   <stock>
-    <code>GOOG001</code>
-    <label>Google Inc.</label>
-    <value>0.0</value>
-    <quarterlyDividend>0.0</quarterlyDividend>
-    <baseRateOfReturn>0.055999999999999994</baseRateOfReturn>
-    <betaMeasure>-0.05</betaMeasure>
-    <stockSymbol>GOOG</stockSymbol>
-    <sharePrice>814.708</sharePrice>
-  </stock>
-  <stock>
-    <code>DIAGEO12</code>
-    <label>Diageo PLC</label>
-    <value>0.0</value>
-    <quarterlyDividend>12.0</quarterlyDividend>
-    <baseRateOfReturn>0.032</baseRateOfReturn>
-    <betaMeasure>0.01</betaMeasure>
-    <stockSymbol>DEO</stockSymbol>
-    <sharePrice>122.75</sharePrice>
-  </stock>
-  <stock>
-    <code>123APP</code>
-    <label>Apple</label>
-    <value>0.0</value>
-    <quarterlyDividend>24.5</quarterlyDividend>
-    <baseRateOfReturn>0.043</baseRateOfReturn>
-    <betaMeasure>-0.07</betaMeasure>
-    <stockSymbol>AAPL</stockSymbol>
-    <sharePrice>429.8</sharePrice>
-  </stock>
-  <stock>
-    <code>321CC</code>
-    <label>Coca-Cola</label>
-    <value>0.0</value>
-    <quarterlyDividend>5.45</quarterlyDividend>
-    <baseRateOfReturn>0.031</baseRateOfReturn>
-    <betaMeasure>0.075</betaMeasure>
-    <stockSymbol>KO</stockSymbol>
-    <sharePrice>41.08</sharePrice>
-  </stock>
-  <stock>
-    <code>No1BURR</code>
-    <label>Chipotle Mexican Grill</label>
-    <value>0.0</value>
-    <quarterlyDividend>45.57</quarterlyDividend>
-    <baseRateOfReturn>0.0319</baseRateOfReturn>
-    <betaMeasure>0.0</betaMeasure>
-    <stockSymbol>CMG</stockSymbol>
-    <sharePrice>341.91</sharePrice>
-  </stock>
-  <stock>
-    <code>B0oWM</code>
-    <label>Costco</label>
-    <value>0.0</value>
-    <quarterlyDividend>10.0</quarterlyDividend>
-    <baseRateOfReturn>0.0225</baseRateOfReturn>
-    <betaMeasure>0.13</betaMeasure>
-    <stockSymbol>COST</stockSymbol>
-    <sharePrice>106.13</sharePrice>
-  </stock>
-  <stock>
-    <code>N0TPIX</code>
-    <label>3D Systems</label>
-    <value>0.0</value>
-    <quarterlyDividend>0.0</quarterlyDividend>
-    <baseRateOfReturn>0.0125</baseRateOfReturn>
-    <betaMeasure>0.08</betaMeasure>
-    <stockSymbol>DDD</stockSymbol>
-    <sharePrice>35.4</sharePrice>
-  </stock>
-  <stock>
-    <code>wOOWoo1S</code>
-    <label>Canadian National Railway</label>
-    <value>0.0</value>
-    <quarterlyDividend>2.75</quarterlyDividend>
-    <baseRateOfReturn>0.046</baseRateOfReturn>
-    <betaMeasure>0.12</betaMeasure>
-    <stockSymbol>CNI</stockSymbol>
-    <sharePrice>97.75</sharePrice>
-  </stock>
-  <stock>
-    <code>BERK-B</code>
-    <label>Berkshire Hathaway</label>
+    <code>2BB</code>
+    <label>Fitbit</label>
     <value>0.0</value>
     <quarterlyDividend>0.0</quarterlyDividend>
     <baseRateOfReturn>0.07200000000000001</baseRateOfReturn>
-    <betaMeasure>-0.1</betaMeasure>
-    <stockSymbol>BRK-B</stockSymbol>
-    <sharePrice>107.04</sharePrice>
+    <betaMeasure>-0.21</betaMeasure>
+    <stockSymbol>FIT</stockSymbol>
+    <sharePrice>6.3</sharePrice>
   </stock>
   <privateInvestment>
-    <code>RENT445</code>
-    <label>Rental Property</label>
+    <code>3BB</code>
+    <label>Rental Property 1</label>
     <value>0.0</value>
-    <quarterlyDividend>2400.0</quarterlyDividend>
-    <baseRateOfReturn>0.0025</baseRateOfReturn>
-    <baseOmegaMeasure>0.15</baseOmegaMeasure>
-    <totalValue>120000.0</totalValue>
-  </privateInvestment>
-  <privateInvestment>
-    <code>CMPROP0121</code>
-    <label>Commercial Property-Red Oaks Mall</label>
-    <value>0.0</value>
-    <quarterlyDividend>14240.0</quarterlyDividend>
-    <baseRateOfReturn>0.0535</baseRateOfReturn>
-    <baseOmegaMeasure>0.25</baseOmegaMeasure>
-    <totalValue>1.0456E7</totalValue>
-  </privateInvestment>
-  <privateInvestment>
-    <code>FOOD12</code>
-    <label>Cluckin&apos;s restaurant chain</label>
-    <value>0.0</value>
-    <quarterlyDividend>35000.0</quarterlyDividend>
-    <baseRateOfReturn>0.03</baseRateOfReturn>
-    <baseOmegaMeasure>0.32</baseOmegaMeasure>
-    <totalValue>1212500.0</totalValue>
-  </privateInvestment>
-  <privateInvestment>
-    <code>REALStr12</code>
-    <label>Fred&apos;s Fabulous Hardware Store</label>
-    <value>0.0</value>
-    <quarterlyDividend>1232.0</quarterlyDividend>
-    <baseRateOfReturn>0.0123</baseRateOfReturn>
-    <baseOmegaMeasure>0.13</baseOmegaMeasure>
-    <totalValue>54300.0</totalValue>
-  </privateInvestment>
-  <privateInvestment>
-    <code>IND321</code>
-    <label>Industrial Widget Manufacturers Inc.</label>
-    <value>0.0</value>
-    <quarterlyDividend>10500.0</quarterlyDividend>
-    <baseRateOfReturn>0.02</baseRateOfReturn>
-    <baseOmegaMeasure>-0.15</baseOmegaMeasure>
-    <totalValue>4213333.0</totalValue>
-  </privateInvestment>
-  <privateInvestment>
-    <code>RSTOR322</code>
-    <label>7&quot; Vinyl Records</label>
-    <value>0.0</value>
-    <quarterlyDividend>2453.21</quarterlyDividend>
-    <baseRateOfReturn>0.021</baseRateOfReturn>
-    <baseOmegaMeasure>0.54</baseOmegaMeasure>
-    <totalValue>13500.0</totalValue>
+    <quarterlyDividend>10300.0</quarterlyDividend>
+    <baseRateOfReturn>0.125</baseRateOfReturn>
+    <baseOmegaMeasure>0.4</baseOmegaMeasure>
+    <totalValue>130500.0</totalValue>
   </privateInvestment>
   <deposit>
-    <code>SAVE01</code>
-    <label>Savings Account</label>
+    <code>4BB</code>
+    <label>IRA</label>
     <value>0.0</value>
-    <apr>0.0025</apr>
+    <apr>0.034</apr>
   </deposit>
   <deposit>
-    <code>MONMO1</code>
+    <code>5BB</code>
+    <label>5-year CD</label>
+    <value>0.0</value>
+    <apr>0.054000000000000006</apr>
+  </deposit>
+  <deposit>
+    <code>6BB</code>
     <label>Money Market Savings</label>
     <value>0.0</value>
-    <apr>0.0105</apr>
+    <apr>0.043</apr>
+  </deposit>
+  <stock>
+    <code>7BB</code>
+    <label>Plug Power</label>
+    <value>0.0</value>
+    <quarterlyDividend>0.0</quarterlyDividend>
+    <baseRateOfReturn>0.042</baseRateOfReturn>
+    <betaMeasure>0.44</betaMeasure>
+    <stockSymbol>PLUG</stockSymbol>
+    <sharePrice>4.25</sharePrice>
+  </stock>
+  <deposit>
+    <code>8BB</code>
+    <label>10-year CD</label>
+    <value>0.0</value>
+    <apr>0.10400000000000001</apr>
+  </deposit>
+  <stock>
+    <code>9BB</code>
+    <label>Altice USA</label>
+    <value>0.0</value>
+    <quarterlyDividend>3.24</quarterlyDividend>
+    <baseRateOfReturn>0.0023</baseRateOfReturn>
+    <betaMeasure>0.08</betaMeasure>
+    <stockSymbol>ATUS</stockSymbol>
+    <sharePrice>25.81</sharePrice>
+  </stock>
+  <deposit>
+    <code>10BB</code>
+    <label>Savings Account</label>
+    <value>0.0</value>
+    <apr>0.055</apr>
   </deposit>
   <deposit>
-    <code>CD5YER</code>
+    <code>11BB</code>
+    <label>Savings Account</label>
+    <value>0.0</value>
+    <apr>0.039</apr>
+  </deposit>
+  <privateInvestment>
+    <code>12BB</code>
+    <label>Rental Property 2</label>
+    <value>0.0</value>
+    <quarterlyDividend>15000.0</quarterlyDividend>
+    <baseRateOfReturn>0.105</baseRateOfReturn>
+    <baseOmegaMeasure>0.4</baseOmegaMeasure>
+    <totalValue>1300000.0</totalValue>
+  </privateInvestment>
+  <privateInvestment>
+    <code>13BB</code>
+    <label>Rental Property 3</label>
+    <value>0.0</value>
+    <quarterlyDividend>20300.0</quarterlyDividend>
+    <baseRateOfReturn>0.405</baseRateOfReturn>
+    <baseOmegaMeasure>0.4</baseOmegaMeasure>
+    <totalValue>155000.0</totalValue>
+  </privateInvestment>
+  <deposit>
+    <code>14BB</code>
     <label>5-year CD</label>
     <value>0.0</value>
     <apr>0.0435</apr>
   </deposit>
-  <deposit>
-    <code>CD1YER</code>
-    <label>1-year Rollover CD</label>
-    <value>0.0</value>
-    <apr>0.0275</apr>
-  </deposit>
-  <deposit>
-    <code>ROTIRA</code>
-    <label>Roth IRA</label>
-    <value>0.0</value>
-    <apr>0.034</apr>
-  </deposit>
   <stock>
-    <code>TABLET</code>
-    <label>Surface Inc</label>
+    <code>15BB</code>
+    <label>Enterprise Products</label>
     <value>0.0</value>
-    <quarterlyDividend>0.0</quarterlyDividend>
-    <baseRateOfReturn>0.055999999999999994</baseRateOfReturn>
-    <betaMeasure>-0.05</betaMeasure>
-    <stockSymbol>MIC</stockSymbol>
-    <sharePrice>814.708</sharePrice>
-  </stock>
-  <stock>
-    <code>SCHROK</code>
-    <label>Schrock Innovation</label>
-    <value>0.0</value>
-    <quarterlyDividend>12.0</quarterlyDividend>
-    <baseRateOfReturn>0.032</baseRateOfReturn>
-    <betaMeasure>0.01</betaMeasure>
-    <stockSymbol>SSI</stockSymbol>
-    <sharePrice>122.75</sharePrice>
-  </stock>
-  <stock>
-    <code>BUBBAG</code>
-    <label>BubbaGump Shrimp</label>
-    <value>0.0</value>
-    <quarterlyDividend>24.5</quarterlyDividend>
-    <baseRateOfReturn>0.043</baseRateOfReturn>
-    <betaMeasure>-0.07</betaMeasure>
-    <stockSymbol>BUB</stockSymbol>
-    <sharePrice>429.8</sharePrice>
-  </stock>
-  <stock>
-    <code>PEPSI1</code>
-    <label>Pepsi</label>
-    <value>0.0</value>
-    <quarterlyDividend>5.45</quarterlyDividend>
-    <baseRateOfReturn>0.031</baseRateOfReturn>
-    <betaMeasure>0.075</betaMeasure>
-    <stockSymbol>PEP</stockSymbol>
-    <sharePrice>41.08</sharePrice>
-  </stock>
-  <stock>
-    <code>MILTEC</code>
-    <label>US Army</label>
-    <value>0.0</value>
-    <quarterlyDividend>45.57</quarterlyDividend>
-    <baseRateOfReturn>0.0319</baseRateOfReturn>
-    <betaMeasure>0.0</betaMeasure>
-    <stockSymbol>USA</stockSymbol>
-    <sharePrice>341.91</sharePrice>
-  </stock>
-  <deposit>
-    <code>CD4523</code>
-    <label>10-year CD</label>
-    <value>0.0</value>
-    <apr>0.0876</apr>
-  </deposit>
-  <deposit>
-    <code>DTh38R</code>
-    <label>Money Market Account</label>
-    <value>0.0</value>
-    <apr>0.0096</apr>
-  </deposit>
-  <stock>
-    <code>YHOO003</code>
-    <label>Yahoo! Inc.</label>
-    <value>0.0</value>
-    <quarterlyDividend>0.0</quarterlyDividend>
-    <baseRateOfReturn>0.034</baseRateOfReturn>
+    <quarterlyDividend>0.445</quarterlyDividend>
+    <baseRateOfReturn>0.0089</baseRateOfReturn>
     <betaMeasure>-0.03</betaMeasure>
-    <stockSymbol>YHOO</stockSymbol>
-    <sharePrice>28.17</sharePrice>
+    <stockSymbol>EPD</stockSymbol>
+    <sharePrice>22.68</sharePrice>
   </stock>
-  <stock>
-    <code>MSFT007</code>
-    <label>Microsoft Corporation</label>
-    <value>0.0</value>
-    <quarterlyDividend>0.92</quarterlyDividend>
-    <baseRateOfReturn>0.040999999999999995</baseRateOfReturn>
-    <betaMeasure>0.17</betaMeasure>
-    <stockSymbol>MSFT</stockSymbol>
-    <sharePrice>31.15</sharePrice>
-  </stock>
-  <privateInvestment>
-    <code>THRE456</code>
-    <label>Three-14 Pi Shop</label>
-    <value>0.0</value>
-    <quarterlyDividend>1050.5</quarterlyDividend>
-    <baseRateOfReturn>0.055999999999999994</baseRateOfReturn>
-    <baseOmegaMeasure>0.33</baseOmegaMeasure>
-    <totalValue>23006.53</totalValue>
-  </privateInvestment>
-  <privateInvestment>
-    <code>BIKE035</code>
-    <label>Buck&apos;s Bike Store</label>
-    <value>0.0</value>
-    <quarterlyDividend>3678.19</quarterlyDividend>
-    <baseRateOfReturn>0.039</baseRateOfReturn>
-    <baseOmegaMeasure>0.48</baseOmegaMeasure>
-    <totalValue>47800.35</totalValue>
-  </privateInvestment>
   <deposit>
-    <code>SVSVNGS</code>
-    <label>Savings Account</label>
+    <code>16BB</code>
+    <label>1-year CD</label>
     <value>0.0</value>
-    <apr>8.0E-4</apr>
+    <apr>0.0345</apr>
   </deposit>
-  <stock>
-    <code>TWTTER01</code>
-    <label>Twitter Inc.</label>
-    <value>0.0</value>
-    <quarterlyDividend>23.0</quarterlyDividend>
-    <baseRateOfReturn>0.11</baseRateOfReturn>
-    <betaMeasure>-0.1</betaMeasure>
-    <stockSymbol>TWTR</stockSymbol>
-    <sharePrice>324.23</sharePrice>
-  </stock>
-  <privateInvestment>
-    <code>GLDSD03</code>
-    <label>Gold</label>
-    <value>0.0</value>
-    <quarterlyDividend>0.0</quarterlyDividend>
-    <baseRateOfReturn>0.0024</baseRateOfReturn>
-    <baseOmegaMeasure>0.12</baseOmegaMeasure>
-    <totalValue>2343212.0</totalValue>
-  </privateInvestment>
-  <stock>
-    <code>MSFT32</code>
-    <label>Microsoft Inc.</label>
-    <value>0.0</value>
-    <quarterlyDividend>12.0</quarterlyDividend>
-    <baseRateOfReturn>1.3E-4</baseRateOfReturn>
-    <betaMeasure>0.45</betaMeasure>
-    <stockSymbol>MSFT</stockSymbol>
-    <sharePrice>30.23</sharePrice>
-  </stock>
-  <privateInvestment>
-    <code>CPPRD03</code>
-    <label>Copper</label>
-    <value>0.0</value>
-    <quarterlyDividend>1.0</quarterlyDividend>
-    <baseRateOfReturn>0.0011</baseRateOfReturn>
-    <baseOmegaMeasure>0.15</baseOmegaMeasure>
-    <totalValue>1111.0</totalValue>
-  </privateInvestment>
-  <deposit>
-    <code>ESPN001</code>
-    <label>Huskers</label>
-    <value>0.0</value>
-    <apr>0.085</apr>
-  </deposit>
-  <deposit>
-    <code>SEARCH8</code>
-    <label>Yahoo</label>
-    <value>0.0</value>
-    <apr>0.0134</apr>
-  </deposit>
-  <deposit>
-    <code>VTST</code>
-    <label>Geigco</label>
-    <value>0.0</value>
-    <apr>0.0178</apr>
-  </deposit>
-  <stock>
-    <code>WESYT129</code>
-    <label>Bank of America</label>
-    <value>0.0</value>
-    <quarterlyDividend>3.25</quarterlyDividend>
-    <baseRateOfReturn>0.024</baseRateOfReturn>
-    <betaMeasure>0.02</betaMeasure>
-    <stockSymbol>BOA</stockSymbol>
-    <sharePrice>143.18</sharePrice>
-  </stock>
-  <stock>
-    <code>PWES912</code>
-    <label>PEPSI INC</label>
-    <value>0.0</value>
-    <quarterlyDividend>5.24</quarterlyDividend>
-    <baseRateOfReturn>0.0814</baseRateOfReturn>
-    <betaMeasure>0.03</betaMeasure>
-    <stockSymbol>PEP</stockSymbol>
-    <sharePrice>87.25</sharePrice>
-  </stock>
-  <privateInvestment>
-    <code>YUOPCT</code>
-    <label>WALMART</label>
-    <value>0.0</value>
-    <quarterlyDividend>4789.32</quarterlyDividend>
-    <baseRateOfReturn>0.0032</baseRateOfReturn>
-    <baseOmegaMeasure>0.17</baseOmegaMeasure>
-    <totalValue>1004780.66</totalValue>
-  </privateInvestment>
-  <privateInvestment>
-    <code>DR0U7Z5TW</code>
-    <label>TARGET</label>
-    <value>0.0</value>
-    <quarterlyDividend>7812.41</quarterlyDividend>
-    <baseRateOfReturn>0.025</baseRateOfReturn>
-    <baseOmegaMeasure>0.39</baseOmegaMeasure>
-    <totalValue>58963.27</totalValue>
-  </privateInvestment>
-  <privateInvestment>
-    <code>TEWS4A1MO</code>
-    <label>AMAZON</label>
-    <value>0.0</value>
-    <quarterlyDividend>9631.45</quarterlyDividend>
-    <baseRateOfReturn>0.0064</baseRateOfReturn>
-    <baseOmegaMeasure>0.25</baseOmegaMeasure>
-    <totalValue>296352.87</totalValue>
-  </privateInvestment>
 </asset-array>
