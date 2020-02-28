@@ -63,12 +63,12 @@ public class PrivateInvestment extends Asset {
 
 	@Override
 	public void setValue(Double value) {
-		this.value = value;
+		this.value = value / 100;
 	}
 
 	@Override
 	public double getTotalWorth() {
-		return (this.value / 100.0 * this.totalValue);
+		return (this.value * this.totalValue);
 	}
 
 	@Override

@@ -97,8 +97,7 @@ public class PortfolioReport {
 			double totalCommissions = getTotalCommission(s.getAssetList(), person, portfolioToUser, s.getOwnerCode(), annualReturn);
 			
 			//Prints out one line at a time/one portfolio per loop
-			
-			System.out.printf("%-23s %-31s %-31s %-23s %-31s %-23s %-23s %-32s\n", s.getPortfolioCode(), s.getOwnerCode(), s.getManagerCode(), totalFees, totalCommissions, aggregateRisk, annualReturn, totalValue);
+			System.out.printf("%-23s %-31s %-31s %-23.2f %-31.2f %-23.3f %-23.2f %-32.2f\n", s.getPortfolioCode(), s.getOwnerCode(), s.getManagerCode(), totalFees, totalCommissions, aggregateRisk, annualReturn, totalValue);
 		}
 	}
 
