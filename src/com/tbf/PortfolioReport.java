@@ -44,12 +44,12 @@ public class PortfolioReport {
 		return value;
 	}
 	
-	public static double getAggregateRisk(HashMap<String, Double> assetList, Asset[] assets, HashMap<String, Integer> portfolioToAsset) {
+	public static double getAggregateRisk(HashMap<String, Double> assetList, Asset[] assets, HashMap<String, Integer> portfolioToAsset, double totalValue) {
 		double risk = 0;
 		
 		for (HashMap.Entry<String, Double> c : assetList.entrySet()) {
 			int place = portfolioToAsset.get(c.getKey());
-			risk += assets[place].getRisk();
+			risk += assets[place].getRisk(totalValue);
 		}
 		return risk;
 	}
@@ -93,7 +93,7 @@ public class PortfolioReport {
 		for (Portfolio s : report) {
 			double totalValue = getTotalValue(s.getAssetList(), assets, portfolioToAsset);
 			value += totalValue;
-			double aggregateRisk = getAggregateRisk(s.getAssetList(), assets, portfolioToAsset);
+			double aggregateRisk = getAggregateRisk(s.getAssetList(), assets, portfolioToAsset, totalValue);
 			double annualReturn = getAnnualReturn(s.getAssetList(), assets, portfolioToAsset);
 			anReturn += annualReturn;
 			double totalFees = getTotalFee(s.getAssetList(), person, portfolioToUser, s.getManagerCode());
@@ -105,7 +105,7 @@ public class PortfolioReport {
 			String userName = person[portfolioToUser.get(s.getOwnerCode())].getLastName() + ", " + person[portfolioToUser.get(s.getOwnerCode())].getFirstName();
 			String managerName = person[portfolioToUser.get(s.getManagerCode())].getLastName() + ", " + person[portfolioToUser.get(s.getManagerCode())].getFirstName();
 			
-			System.out.printf("%-23s %-31s %-31s $%-22.2f $%-30.2f %-23.3f $%-22.2f $%-32.2f\n", s.getPortfolioCode(), userName, managerName, totalFees, totalCommissions, aggregateRisk, annualReturn, totalValue);
+			System.out.printf("%-23s %-31s %-31s $%-22.2f $%-30.2f %-23.4f $%-22.2f $%-32.2f\n", s.getPortfolioCode(), userName, managerName, totalFees, totalCommissions, aggregateRisk, annualReturn, totalValue);
 		}
 		System.out.println("===========================================================================================================================================================================================================");
 		System.out.printf("\t\t\t\t\t\t\t\t\t      Results = $%-22.2f $%-54.2f $%-22.2f $%-32.2f\n", fees, commissions, anReturn, value);
