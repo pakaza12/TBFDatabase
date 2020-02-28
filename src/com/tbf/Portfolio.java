@@ -204,25 +204,29 @@ public class Portfolio {
 			String managerName = person[portfolioToUser.get(s.getManagerCode())].getLastName() + ", " + person[portfolioToUser.get(s.getManagerCode())].getFirstName();
 			
 			System.out.printf("Portfolio %s\n-----------------------------------------------------------------------------------\n", s.getPortfolioCode());
-			if(!(s.getBeneficiaryCode() == null) && !(s.getManagerCode() == null)) {
-				
-				System.out.printf("Owner:\n%s \nManager:\n%s \nBeneficiary:\n%s \nAssets:\n", person[portfolioToUser.get(s.getOwnerCode())].toString(), managerName, person[portfolioToUser.get(s.getBeneficiaryCode())].toString());
-				System.out.printf("Code \t\tAsset \t\t\t\t\tReturn Rate \t\tRisk \t\tAnnual Return \t\tValue\n");
-				
-				for(HashMap.Entry<String, Double> c : s.assetList.entrySet()) {
-					int place = portfolioToAsset.get(c.getKey());
-					
-					String label = assets[place].getLabel();
-					double anReturn = assets[place].getAnnualReturn();
-					double anReturnRate = (anReturn/assets[place].getTotalWorth()) * 100.0;
-					double risk = assets[place].getRisk();
-					double value = assets[place].getTotalWorth();
-					
-					System.out.printf("%-15s %-31s %18.2f%% %16.2f \t\t$%-22.2f $%-20.2f\n", c.getKey(), label, anReturnRate, risk, anReturn, value);
-				}
-				System.out.printf("\t\t\t\t\t\t\t----------------------------------------------------------------------------------\n");
-				System.out.printf("\t\t\t\t\t\t\t Totals %20.4f%% \t\t$%-22.2f $%-20.2f\n\n", aggregateRisk, annualReturn, totalValue);
+			String beneficiaryInfo = "";
+			if(!(s.getBeneficiaryCode() == null)) {
+				beneficiaryInfo += person[portfolioToUser.get(s.getBeneficiaryCode())].toString();
+			} else {
+				beneficiaryInfo += "None";
 			}
+				
+			System.out.printf("Owner:\n%s \nManager:\n%s \nBeneficiary:\n%s \nAssets:\n", person[portfolioToUser.get(s.getOwnerCode())].toString(), managerName, beneficiaryInfo);
+			System.out.printf("Code \t\tAsset \t\t\t\t\tReturn Rate \t\tRisk \t\tAnnual Return \t\tValue\n");
+			
+			for(HashMap.Entry<String, Double> c : s.assetList.entrySet()) {
+				int place = portfolioToAsset.get(c.getKey());
+				
+				String label = assets[place].getLabel();
+				double anReturn = assets[place].getAnnualReturn();
+				double anReturnRate = (anReturn/assets[place].getTotalWorth()) * 100.0;
+				double risk = assets[place].getRisk();
+				double value = assets[place].getTotalWorth();
+				
+				System.out.printf("%-15s %-31s %18.2f%% %16.2f \t\t$%-22.2f $%-20.2f\n", c.getKey(), label, anReturnRate, risk, anReturn, value);
+			}
+			System.out.printf("\t\t\t\t\t\t\t----------------------------------------------------------------------------------\n");
+			System.out.printf("\t\t\t\t\t\t\t Totals %20.4f%% \t\t$%-22.2f $%-20.2f\n\n", aggregateRisk, annualReturn, totalValue);
 		}
 	}
 	
