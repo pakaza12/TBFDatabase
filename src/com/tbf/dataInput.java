@@ -48,10 +48,10 @@ public class dataInput {
 
 			// If/else statement to separate when the user is a broker or not
 			if (broker[0].contains("E") || broker[0].contains("J")) {
-				inputUsers[i] = new User(token[0], p1, names[1].replaceAll("\\s+", ""), names[0], broker[0], broker[1],
+				inputUsers[i] = new User(token[0], p1, names[1].trim(), names[0].trim(), broker[0], broker[1],
 						emails);
 			} else {
-				inputUsers[i] = new User(token[0], p1, names[1].replaceAll("\\s+", ""), names[0], "", "", emails);
+				inputUsers[i] = new User(token[0], p1, names[1].trim(), names[0].trim(), "", "", emails);
 			}
 		}
 		input.close();
