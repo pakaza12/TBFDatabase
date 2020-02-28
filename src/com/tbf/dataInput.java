@@ -37,7 +37,7 @@ public class dataInput {
 			String broker[] = token[1].split(",", -2);
 			String names[] = token[2].split(",", -2);
 			String address[] = token[3].split(",");
-			Address p1 = new Address(address[0], address[1], address[2], address[3], address[4]);
+			Address p1 = new Address(address[0].trim(), address[1].trim(), address[2].trim(), address[3].trim(), address[4].trim());
 			String email[] = token[4].split(",");
 			Set<String> emails = new HashSet<String>();
 

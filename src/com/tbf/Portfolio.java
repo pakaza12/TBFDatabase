@@ -78,7 +78,8 @@ public class Portfolio {
 	
 	/**
 	 * This method will return a map that maps an assets code
-	 * to its spot in the Asset[] assets array
+	 * to its spot in the Asset[] assets array. Used to connect
+	 * the Portfolio class to the Asset class.
 	 */
 	public static HashMap<String, Integer> assetCodeMap(Asset[] assets) {
 		HashMap<String, Integer> codeMap = new HashMap<>();
@@ -93,18 +94,24 @@ public class Portfolio {
 	
 	/**
 	 * This method will return a map that maps a users code
-	 * to its spot in the User[] assets array
+	 * to its spot in the User[] assets array. Used to connect
+	 * the Portfolio class to the User class.
 	 */
 	public static HashMap<String, Integer> userCodeMap(User[] person) {
 		HashMap<String, Integer> codeMap = new HashMap<>();
 		int counter = 0;
 		for(User a : person) {
+			//Gets the code from the person and puts which spot it is in User[]
 			codeMap.put(a.getPersonCode(), counter);
 			counter++;
 		}
 		return codeMap;
 	}
 	
+	/**
+	 * This method is used as a summation tool
+	 * for the total value of each asset in the portfolio
+	 */
 	public static double getTotalValue(HashMap<String, Double> assetList, Asset[] assets, HashMap<String, Integer> portfolioToAsset) {
 		double value = 0;
 
@@ -121,7 +128,7 @@ public class Portfolio {
 		
 		for (HashMap.Entry<String, Double> c : assetList.entrySet()) {
 			int place = portfolioToAsset.get(c.getKey());
-			risk += assets[place].getRisk(totalValue);
+			risk += assets[place].getAggregateRisk(totalValue);
 		}
 		return risk;
 	}
@@ -208,7 +215,7 @@ public class Portfolio {
 					String label = assets[place].getLabel();
 					double anReturn = assets[place].getAnnualReturn();
 					double anReturnRate = (anReturn/assets[place].getTotalWorth()) * 100.0;
-					double risk = assets[place].getRisk(totalValue);
+					double risk = assets[place].getRisk();
 					double value = assets[place].getTotalWorth();
 					
 					System.out.printf("%-15s %-31s %18.2f%% %16.2f \t\t$%-22.2f $%-20.2f\n", c.getKey(), label, anReturnRate, risk, anReturn, value);

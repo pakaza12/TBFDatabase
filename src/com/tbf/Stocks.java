@@ -83,13 +83,18 @@ public class Stocks extends Asset {
 	}
 
 	@Override
-	public double getRisk(double totalV) {
+	public double getAggregateRisk(double totalV) {
 		return (this.betaMeasure * (getTotalWorth()/totalV));
 	}
 	
 	@Override
 	public double getAnnualReturn() {
 		return (this.baseRateOfReturn * this.sharePrice * this.value + 4 * this.quarterlyDividend * this.value);
+	}
+
+	@Override
+	public double getRisk() {
+		return this.betaMeasure;
 	}
 	
 }

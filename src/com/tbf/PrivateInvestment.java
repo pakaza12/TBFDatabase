@@ -72,13 +72,18 @@ public class PrivateInvestment extends Asset {
 	}
 
 	@Override
-	public double getRisk(double totalV) {
+	public double getAggregateRisk(double totalV) {
 		return ((this.baseOmegaMeasure + Math.exp(-125500.0/this.totalValue)) * ((double) getTotalWorth()/totalV));
 	}
 
 	@Override
 	public double getAnnualReturn() {
 		return (this.baseRateOfReturn * getTotalWorth() + 4 * this.quarterlyDividend * this.value); //Not sure if you want to multiply by the actual total value or by the worth
+	}
+
+	@Override
+	public double getRisk() {
+		return (this.baseOmegaMeasure + Math.exp(-125500.0/this.totalValue));
 	}
 	
 }
