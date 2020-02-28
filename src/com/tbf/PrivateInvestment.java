@@ -78,7 +78,7 @@ public class PrivateInvestment extends Asset {
 
 	@Override
 	public double getAnnualReturn() {
-		return (this.baseRateOfReturn * this.totalValue + 4 * this.quarterlyDividend); //Not sure if you want to multiply by the actual total value or by the worth
+		return (this.baseRateOfReturn * getTotalWorth() + 4 * this.quarterlyDividend * this.value); //Not sure if you want to multiply by the actual total value or by the worth
 	}
 	
 }

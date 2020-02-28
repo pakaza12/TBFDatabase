@@ -71,18 +71,27 @@ public class User {
 		return this.email;
 	}
 	
-	public double getFees() {
+	public boolean isJuniorBroker() {
 		if(this.brokerStatus.equals("J")) {
-			return 75;
+			return true;
 		} else {
-			return 0;
+			return false;
 		}
-	}	
+	}
+	
+	public boolean isExpertBroker() {
+		if(this.brokerStatus.equals("E")) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	public double getCommission(double annualReturn) {
 		if(this.brokerStatus.contains("J")) {
-			return annualReturn *.0125;
+			return annualReturn * 0.0125;
 		}else if(this.brokerStatus.contains("E")){
-			return annualReturn * .0375;
+			return annualReturn * 0.0375;
 		} else
 			return 0;
 	}
