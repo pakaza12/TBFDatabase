@@ -44,12 +44,12 @@ public class PortfolioReport {
 		return value;
 	}
 	
-	public static double getAggregateRisk(HashMap<String, Double> assetList, Asset[] assets, double totalValue, HashMap<String, Integer> portfolioToAsset) {
+	public static double getAggregateRisk(HashMap<String, Double> assetList, Asset[] assets, HashMap<String, Integer> portfolioToAsset) {
 		double risk = 0;
 		
 		for (HashMap.Entry<String, Double> c : assetList.entrySet()) {
 			int place = portfolioToAsset.get(c.getKey());
-			risk += assets[place].getRisk(totalValue);
+			risk += assets[place].getRisk();
 		}
 		return risk;
 	}
@@ -84,20 +84,31 @@ public class PortfolioReport {
 	
 
 	public static void summary(Portfolio[] report, User[] person, Asset[] assets) {
+		double value = 0, anReturn = 0, fees = 0, commissions = 0;
+		
 		HashMap<String, Integer> portfolioToAsset = assetCodeMap(assets);
 		HashMap<String, Integer> portfolioToUser = userCodeMap(person);
 		System.out.println("Portfolio Code \t\tPortfolio Owner \t\tPortfolio Manager \t\tTotal Fees \t\tTotal Commissions \t\tAggregate Risk \t\tAnnual Returns \t\tTotal Value");
 		System.out.println("===========================================================================================================================================================================================================");
 		for (Portfolio s : report) {
 			double totalValue = getTotalValue(s.getAssetList(), assets, portfolioToAsset);
-			double aggregateRisk = getAggregateRisk(s.getAssetList(), assets, totalValue, portfolioToAsset);
+			value += totalValue;
+			double aggregateRisk = getAggregateRisk(s.getAssetList(), assets, portfolioToAsset);
 			double annualReturn = getAnnualReturn(s.getAssetList(), assets, portfolioToAsset);
+			anReturn += annualReturn;
 			double totalFees = getTotalFee(s.getAssetList(), person, portfolioToUser, s.getManagerCode());
+			fees += totalFees;
 			double totalCommissions = getTotalCommission(person, portfolioToUser, s.getManagerCode(), annualReturn);
+			commissions += totalCommissions;
 			
 			//Prints out one line at a time/one portfolio per loop
-			System.out.printf("%-23s %-31s %-31s %-23.2f %-31.2f %-23.3f %-23.2f %-32.2f\n", s.getPortfolioCode(), s.getOwnerCode(), s.getManagerCode(), totalFees, totalCommissions, aggregateRisk, annualReturn, totalValue);
+			String userName = person[portfolioToUser.get(s.getOwnerCode())].getLastName() + ", " + person[portfolioToUser.get(s.getOwnerCode())].getFirstName();
+			String managerName = person[portfolioToUser.get(s.getManagerCode())].getLastName() + ", " + person[portfolioToUser.get(s.getManagerCode())].getFirstName();
+			
+			System.out.printf("%-23s %-31s %-31s $%-22.2f $%-30.2f %-23.3f $%-22.2f $%-32.2f\n", s.getPortfolioCode(), userName, managerName, totalFees, totalCommissions, aggregateRisk, annualReturn, totalValue);
 		}
+		System.out.println("===========================================================================================================================================================================================================");
+		System.out.printf("\t\t\t\t\t\t\t\t\t      Results = $%-22.2f $%-54.2f $%-22.2f $%-32.2f\n", fees, commissions, anReturn, value);
 	}
 
 }

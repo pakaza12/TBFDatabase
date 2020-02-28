@@ -42,7 +42,7 @@ public class Deposit extends Asset {
 	}
 
 	@Override
-	public double getRisk(double totalValue) {
+	public double getRisk() {
 		return 0.0;
 	}
 

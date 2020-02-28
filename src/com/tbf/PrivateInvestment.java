@@ -72,8 +72,8 @@ public class PrivateInvestment extends Asset {
 	}
 
 	@Override
-	public double getRisk(double totalValue) {
-		return (this.baseOmegaMeasure + Math.exp(-125500/totalValue));
+	public double getRisk() {
+		return (this.baseOmegaMeasure + Math.exp(-125500/this.totalValue));
 	}
 
 	@Override
