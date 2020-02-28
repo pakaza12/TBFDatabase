@@ -231,7 +231,7 @@ public class Portfolio {
 
 			//Test case to check if there is a beneficiary
 			String beneficiaryInfo = "";
-			if(!(s.getBeneficiaryCode() == null)) {
+			if(!(s.getBeneficiaryCode() == null) && !(portfolioToUser.get(s.getBeneficiaryCode()) == null)) {
 				beneficiaryInfo += person[portfolioToUser.get(s.getBeneficiaryCode())].toString();
 			} else {
 				beneficiaryInfo += "None";
