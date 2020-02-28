@@ -115,6 +115,7 @@ public class Portfolio {
 	public static double getTotalValue(HashMap<String, Double> assetList, Asset[] assets, HashMap<String, Integer> portfolioToAsset) {
 		double value = 0;
 
+		//Iterates through the assets in the (code to position in array) hashmap
 		for (HashMap.Entry<String, Double> c : assetList.entrySet()) {
 			int place = portfolioToAsset.get(c.getKey());
 			assets[place].setValue(c.getValue());
@@ -123,9 +124,14 @@ public class Portfolio {
 		return value;
 	}
 	
+	/**
+	 * This method is used as a summation tool
+	 * for the total aggregate risk of each asset in the portfolio
+	 */
 	public static double getAggregateRisk(HashMap<String, Double> assetList, Asset[] assets, HashMap<String, Integer> portfolioToAsset, double totalValue) {
 		double risk = 0;
 		
+		//Iterates through the assets in the (code to position in array) hashmap
 		for (HashMap.Entry<String, Double> c : assetList.entrySet()) {
 			int place = portfolioToAsset.get(c.getKey());
 			risk += assets[place].getAggregateRisk(totalValue);
@@ -133,9 +139,14 @@ public class Portfolio {
 		return risk;
 	}
 	
+	/**
+	 * This method is used as a summation tool
+	 * for the total annual return of each asset in the portfolio
+	 */
 	public static double getAnnualReturn(HashMap<String, Double> assetList, Asset[] assets, HashMap<String, Integer> portfolioToAsset) {
 		double annualReturn = 0;
 		
+		//Iterates through the assets in the (code to position in array) hashmap
 		for (HashMap.Entry<String, Double> c : assetList.entrySet()) {
 			int place = portfolioToAsset.get(c.getKey());
 			annualReturn += assets[place].getAnnualReturn();
@@ -143,6 +154,9 @@ public class Portfolio {
 		return annualReturn;
 	}
 	
+	/**
+	 * This method is used to get the total fees per portfolio
+	 */
 	public static double getTotalFee(HashMap<String, Double> assetList, User[] person, HashMap<String, Integer> portfolioToUser, String managerId) {
 		if(person[portfolioToUser.get(managerId)].isJuniorBroker()) {
 			return assetList.size() * 75.0;
@@ -151,6 +165,9 @@ public class Portfolio {
 		}
 	}
 	
+	/**
+	 * This method is used to get the total commissions per portfolio
+	 */
 	public static double getTotalCommission(User[] person, HashMap<String, Integer> portfolioToUser, String managerId, double annualReturn) {
 		if(person[portfolioToUser.get(managerId)].isJuniorBroker()) {
 			return annualReturn * 0.0125;
@@ -161,14 +178,18 @@ public class Portfolio {
 		}
 	}
 	
-
 	public static void summaryReport(Portfolio[] report, User[] person, Asset[] assets) {
 		double value = 0, anReturn = 0, fees = 0, commissions = 0;
 		
+		//Creates two HashMaps to map the assetCode and userCode to their respective assets/users in the User/Asset arrays
+		//Ex: (key, value) would be (assetCode, spot in the array)
 		HashMap<String, Integer> portfolioToAsset = assetCodeMap(assets);
 		HashMap<String, Integer> portfolioToUser = userCodeMap(person);
+		
 		System.out.println("Portfolio Code \t\tPortfolio Owner \t\tPortfolio Manager \t\tTotal Fees \t\tTotal Commissions \t\tAggregate Risk \t\tAnnual Returns \t\tTotal Value");
 		System.out.println("===========================================================================================================================================================================================================");
+		
+		//Goes through the array portfolio by portfolio to print a line by line report of the values in the portfolio
 		for (Portfolio s : report) {
 			double totalValue = getTotalValue(s.getAssetList(), assets, portfolioToAsset);
 			value += totalValue;
@@ -180,10 +201,10 @@ public class Portfolio {
 			double totalCommissions = getTotalCommission(person, portfolioToUser, s.getManagerCode(), annualReturn);
 			commissions += totalCommissions;
 			
-			//Prints out one portfolio per loop
 			String userName = person[portfolioToUser.get(s.getOwnerCode())].getLastName() + ", " + person[portfolioToUser.get(s.getOwnerCode())].getFirstName();
 			String managerName = person[portfolioToUser.get(s.getManagerCode())].getLastName() + ", " + person[portfolioToUser.get(s.getManagerCode())].getFirstName();
 			
+			//Prints out one portfolio per loop
 			System.out.printf("%-23s %-31s %-31s $%-22.2f $%-30.2f %-23.4f $%-22.2f $%-32.2f\n", s.getPortfolioCode(), userName, managerName, totalFees, totalCommissions, aggregateRisk, annualReturn, totalValue);
 		}
 		System.out.println("===========================================================================================================================================================================================================");
@@ -191,19 +212,24 @@ public class Portfolio {
 	}
 	
 	public static void detailReport(Portfolio[] report, User[] person, Asset[] assets) {
+		
+		//Creates two HashMaps to map the assetCode and userCode to their respective assets/users in the User/Asset arrays
+		//Ex: (key, value) would be (assetCode, spot in the array)
 		HashMap<String, Integer> portfolioToAsset = assetCodeMap(assets);
 		HashMap<String, Integer> portfolioToUser = userCodeMap(person);
 		
 		System.out.printf("\n\nPortfolio Details\n============================================================================================================================================================================\n");
+		
+		//Iterates through the Portfolio array and prints the detailed report for each
 		for(Portfolio s : report) {
+			System.out.printf("Portfolio %s\n-----------------------------------------------------------------------------------\n", s.getPortfolioCode());
+			
 			double totalValue = getTotalValue(s.getAssetList(), assets, portfolioToAsset);
 			double aggregateRisk = getAggregateRisk(s.getAssetList(), assets, portfolioToAsset, totalValue);
 			double annualReturn = getAnnualReturn(s.getAssetList(), assets, portfolioToAsset);
-			double totalFees = getTotalFee(s.getAssetList(), person, portfolioToUser, s.getManagerCode());
-			double totalCommissions = getTotalCommission(person, portfolioToUser, s.getManagerCode(), annualReturn);
 			String managerName = person[portfolioToUser.get(s.getManagerCode())].getLastName() + ", " + person[portfolioToUser.get(s.getManagerCode())].getFirstName();
-			
-			System.out.printf("Portfolio %s\n-----------------------------------------------------------------------------------\n", s.getPortfolioCode());
+
+			//Test case to check if there is a beneficiary
 			String beneficiaryInfo = "";
 			if(!(s.getBeneficiaryCode() == null)) {
 				beneficiaryInfo += person[portfolioToUser.get(s.getBeneficiaryCode())].toString();
@@ -214,7 +240,9 @@ public class Portfolio {
 			System.out.printf("Owner:\n%s \nManager:\n%s \nBeneficiary:\n%s \nAssets:\n", person[portfolioToUser.get(s.getOwnerCode())].toString(), managerName, beneficiaryInfo);
 			System.out.printf("Code \t\tAsset \t\t\t\t\tReturn Rate \t\tRisk \t\tAnnual Return \t\tValue\n");
 			
+			//Iterates through each asset in the portfolio to print out the details for each asset
 			for(HashMap.Entry<String, Double> c : s.assetList.entrySet()) {
+				//Gets the spot in the Asset array that the assetCode corresponds to (shows up in)
 				int place = portfolioToAsset.get(c.getKey());
 				
 				String label = assets[place].getLabel();
