@@ -3,6 +3,7 @@
 drop table if exists AssetPortfolio;
 drop table if exists Asset;
 drop table if exists Portfolio;
+drop table if exists Email;
 drop table if exists Person;
 drop table if exists Address;
 drop table if exists City;
@@ -41,6 +42,13 @@ create table Person (
     brokerStatus varchar(255),
     secIdentity varchar(255),
     foreign key (addressId) references Address(addressId)
+    
+)engine=InnoDB,collate=latin1_general_cs;
+
+create table Email (
+	personId int not null,
+    email varchar(255),
+    foreign key (personId) references Person(personId)
     
 )engine=InnoDB,collate=latin1_general_cs;
 
@@ -121,6 +129,16 @@ insert into Person(personCode, addressId, firstName, lastName) values ('8AB', (S
 insert into Person(personCode, addressId, firstName, lastName) values ('9AB', (Select a.addressId from Address a left join City c on a.cityId = c.cityId where a.street = '91421 Karstens Street'), 'Madonna', 'Gatherell');
 insert into Person(personCode, addressId, firstName, lastName, brokerStatus, secIdentity) values ('10AB', (Select a.addressId from Address a left join City c on a.cityId = c.cityId where a.street = '8 Summerview Park'), 'Adolpho', 'Brabin', 'J', 'sec004');
 insert into Person(personCode, addressId, firstName, lastName) values ('11AB', (Select a.addressId from Address a left join City c on a.cityId = c.cityId where a.street = '10 Acker Court'), 'Randolph', 'Uccello');
+
+insert into Email(personId, email) values ((select p.personId from Person p where p.personCode = '1AB'), 'hsalazar0@apache.org');
+insert into Email(personId, email) values ((select p.personId from Person p where p.personCode = '2AB'), 'asparey1@examiner.com');
+insert into Email(personId, email) values ((select p.personId from Person p where p.personCode = '5AB'), 'ahitcham4@japanpost.jp');
+insert into Email(personId, email) values ((select p.personId from Person p where p.personCode = '5AB'), 'ahitc@gmail.com');
+insert into Email(personId, email) values ((select p.personId from Person p where p.personCode = '7AB'), 'geberlein6@tripod.com');
+insert into Email(personId, email) values ((select p.personId from Person p where p.personCode = '8AB'), 'lmacneill7@marketwatch.com');
+insert into Email(personId, email) values ((select p.personId from Person p where p.personCode = '10AB'), 'mbunstone8@wunderground.com');
+insert into Email(personId, email) values ((select p.personId from Person p where p.personCode = '11AB'), 'kdrewclifton9@msn.com');
+insert into Email(personId, email) values ((select p.personId from Person p where p.personCode = '11AB'), 'kdrewc9@gmail.com');
 
 insert into Portfolio(portfolioCode, ownerCode, managerCode, beneficiaryCode, personId) values ('1CB', '2AB', '1AB', '2AB', (select personId from Person p where p.personCode = '2AB'));
 insert into Portfolio(portfolioCode, ownerCode, managerCode, personId) values ('2CB', '4AB', '1AB', (select personId from Person p where p.personCode = '4AB'));
