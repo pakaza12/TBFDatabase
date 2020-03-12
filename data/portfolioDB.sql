@@ -79,10 +79,10 @@ create table Asset (
 )engine=InnoDB,collate=latin1_general_cs;
 
 create table AssetPortfolio (
-	portfolioId int not null,
+	portfolioId int,
     foreign key (portfolioId) references Portfolio(portfolioId),
-    assetValue double not null,
-    assetId int not null,
+    assetValue double,
+    assetId int,
     foreign key (assetId) references Asset(assetId)
     
 )engine=InnoDB,collate=latin1_general_cs;
