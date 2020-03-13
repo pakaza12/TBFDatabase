@@ -1,5 +1,7 @@
---# Assignment 4
---# show tables;
+-- Assignment 4
+-- Jayden Carlon and Parker Zach
+-- Created and putting data into portfolioDB
+
 drop table if exists AssetPortfolio;
 drop table if exists Asset;
 drop table if exists Portfolio;

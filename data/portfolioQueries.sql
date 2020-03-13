@@ -1,5 +1,12 @@
--- Query to retrieve major fields
+-- Jayden Carlon and Parker Zach
+-- Queries for portfolioDB
 
+-- Query to retrieve major fields
+select pm.firstName, pm.lastName, coalesce(pm.brokerStatus, ''), coalesce(pm.secIdentity, ''), ad.street, c.city, s.state, ad.zip, ad.country, coalesce(e.email, '') from Person pm 
+	left join Address ad on pm.addressId = ad.addressId 
+		left join City c on ad.cityId = c.cityId
+			left join State s on ad.stateId = s.stateId
+				left join Email e on e.personId = pm.personId; -- 'coalesce' replaces null with an empty string for output, purely aesthetic for now
 -- Query to return the email(s) for a person
 select e.email from Email e left join Person p on p.personId = e.personId where p.personCode = '1AB'; -- Replace 11AB with the desired userCode
 -- Query to add an email to a person
