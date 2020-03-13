@@ -10,11 +10,10 @@ update Email set email = 'hsalazar0@gmail.com' where email = 'hsalazar0@apache.o
 
 -- TO FIX
 -- delete from Email where personId = (select p.personId from Person p where p.personCode = '1AB');
-select p.managerCode from Person pm left join Portfolio p on p.personId = pm.personId where p.personId = '1AB';
-if ((select p.managerCode from Person pm left join Portfolio p on p.personId = pm.personId where p.personId = '1AB') = '1AB') then
-	delete from AssetPortfolio where portfolioId = (select p.portfolioId from Portfolio p left join Person pm on p.personId = pm.personId where p.managerCode = '1AB');
-end if;
+select p.portfolioCode from Person pm left join Portfolio p on p.personId = pm.personId where p.managerCode = '1AB';
+delete from AssetPortfolio where portfolioId = (select p.portfolioId from Portfolio p left join Person pm on p.personId = pm.personId where p.ownerCode = '1AB');
 delete from Portfolio where personId = (select p.personId from Person p where p.personCode = '1AB');
+delete p.managerCode from Portfolio p where p.personId = (select pm.personId from Person pm where p.personCode = '1AB');
 delete from Person where personCode = '1AB';
 
 -- A query to create a person record
