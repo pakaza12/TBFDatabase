@@ -31,12 +31,17 @@ insert into Asset(assetCode, label, quarterlyDividend, baseRateReturn, baseOmega
 -- A query to create a new portfolio record
 insert into Portfolio(portfolioCode, ownerCode, managerCode, personId) values ('10CB', '12AB', '3AB', (select p.personId from Person p where p.personCode = '12AB'));
 -- A query to associate a particular asset with a particular portfolio
-insert into AssetPortfolio(portfolioId, assetValue, assetId) values ((select p.portfolioId from Portfolio p where p.portfolioCode = '10CB'), 125, (select a.assetId from Asset a where a.assetCode = '17BB'));
+insert into AssetPortfolio(portfolioId, assetValue, assetId) values ((select p.portfolioId from Portfolio p where p.portfolioCode = '10CB'), 12.5, (select a.assetId from Asset a where a.assetCode = '17BB'));
+insert into AssetPortfolio(portfolioId, assetValue, assetId) values ((select p.portfolioId from Portfolio p where p.portfolioCode = '7CB'), 92.5, (select a.assetId from Asset a where a.assetCode = '17BB'));
 -- A query to find the total number of portfolios owned by each person
 select pm.firstName, pm.lastName, count(p.portfolioId) as numPortfolios from Person pm left join Portfolio p on p.personId = pm.personId group by pm.personCode;
 -- A query to find the total number of portfolios managed by each person
 select pm.firstName, pm.lastName, count(p.managerCode) as numManaged from Person pm left join Portfolio p on p.managerCode = pm.personCode group by pm.personCode; -- Since we removed 1AB earlier, Adolpho doesn't have any
 --  A query to find the total value of all stocks in each portfolio 
-select p.portfolioCode, sum(ap.assetValue * a.sharePrice) as stockValue from Portfolio p left join AssetPortfolio ap on p.portfolioId = ap.portfolioId left join Asset a on ap.assetId = a.assetId group by p.portfolioCode;
+select p.portfolioCode, round(coalesce(sum(ap.assetValue * a.sharePrice), 0), 2) as stockValue from Portfolio p -- 'coalesce' makes null value equal to 0 in this case, 'round' rounds to 2 decimals in this case
+	left join AssetPortfolio ap on p.portfolioId = ap.portfolioId 
+		left join Asset a on ap.assetId = a.assetId group by p.portfolioCode;
 -- A query to detect an invalid distribution of private investment assets
-select ap.assetId, ap.assetValue as invalidAsset from AssetPortfolio ap left join Asset a on ap.assetId = a.assetId where a.baseOmegaMeasure != null group by ap.assetId;
+select a.assetCode, a.label, sum(ap.assetValue) as StakePercentage from AssetPortfolio ap
+	left join Asset a on ap.assetId = a.assetId 
+		where a.baseOmegaMeasure > 0 group by assetCode having StakePercentage > 100; -- the 'having' keyword doesn't test the condition until after the sum is calculated
