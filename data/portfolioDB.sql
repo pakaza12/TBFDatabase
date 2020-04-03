@@ -41,15 +41,15 @@ create table Person (
     addressId int not null,
     firstName varchar(255) not null,
     lastName varchar(255) not null,
-    brokerStatus varchar(255),
-    secIdentity varchar(255),
+    brokerStatus varchar(255) default null,
+    secIdentity varchar(255) default null,
     foreign key (addressId) references Address(addressId)
     
 )engine=InnoDB,collate=latin1_general_cs;
 
 create table Email (
 	personId int not null,
-    email varchar(255),
+    email varchar(255) not null,
     foreign key (personId) references Person(personId)
     
 )engine=InnoDB,collate=latin1_general_cs;
@@ -69,22 +69,22 @@ create table Asset (
 	assetId int not null primary key auto_increment,
 	assetCode varchar(255) not null,
     label varchar(255) not null,
-    apr double,
-    quarterlyDividend double,
-    baseRateReturn double,
-    betaMeasure double,
-    stockSymbol varchar(10),
-    sharePrice double,
-    baseOmegaMeasure double,
-    totalValue double
+    apr double default null,
+    quarterlyDividend double default null,
+    baseRateReturn double default null,
+    betaMeasure double default null,
+    stockSymbol varchar(10) default null,
+    sharePrice double default null,
+    baseOmegaMeasure double default null,
+    totalValue double default null
     
 )engine=InnoDB,collate=latin1_general_cs;
 
 create table AssetPortfolio (
-	portfolioId int,
+	portfolioId int not null,
     foreign key (portfolioId) references Portfolio(portfolioId),
-    assetValue double,
-    assetId int,
+    assetValue double not null,
+    assetId int not null,
     foreign key (assetId) references Asset(assetId)
     
 )engine=InnoDB,collate=latin1_general_cs;

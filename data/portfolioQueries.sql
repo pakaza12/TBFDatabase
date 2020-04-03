@@ -1,8 +1,17 @@
 -- Jayden Carlon and Parker Zach
 -- Queries for portfolioDB
 
+-- Query to retrieve major fields for Portfolio
+select p.portfolioId, p.portfolioCode, p.ownerCode, p.managerCode, p.beneficiaryCode, a.assetCode, ap.assetValue from Portfolio p left join AssetPortfolio ap on ap.portfolioId = p.portfolioId
+	left join Asset a on a.assetId = ap.assetId;
+    
+    select a.assetCode, a.label, a.apr, a.quarterlyDividend, a.baseRateReturn, a.betaMeasure, a.stockSymbol, a.sharePrice, a.baseOmegaMeasure, a.totalValue from Asset a;
+-- Query to retrieve major fields for Assets
+select a.assetCode, a.label, a.apr, a.quarterlyDividend, a.baseRateReturn, a.betaMeasure, a.stockSymbol, a.sharePrice, a.baseOmegaMeasure, a.totalValue, ap.assetValue from Asset a
+	left join AssetPortfolio ap on ap.assetId = a.assetId;
+
 -- Query to retrieve major fields
-select pm.firstName, pm.lastName, coalesce(pm.brokerStatus, '') as brokerStatus, coalesce(pm.secIdentity, '') as secIdentity, ad.street, c.city, s.state, ad.zip, ad.country, coalesce(e.email, '') as 'email(s)' from Person pm 
+select pm.personCode, pm.firstName, pm.lastName, pm.brokerStatus as brokerStatus, pm.secIdentity as secIdentity, ad.street, c.city, s.state, ad.zip, ad.country, e.email as 'email(s)' from Person pm 
 	left join Address ad on pm.addressId = ad.addressId 
 		left join City c on ad.cityId = c.cityId
 			left join State s on ad.stateId = s.stateId
@@ -10,7 +19,7 @@ select pm.firstName, pm.lastName, coalesce(pm.brokerStatus, '') as brokerStatus,
 					-- 'coalesce' replaces null with an empty string for output, purely aesthetic for now
                 
 -- Query to return the email(s) for a person
-select e.email from Email e left join Person p on p.personId = e.personId where p.personCode = '1AB';
+select e.email from Email e left join Person p on p.personId = e.personId where p.personCode = '5AB';
 	-- Replace 1AB with the desired userCode
 
 -- Query to add an email to a person

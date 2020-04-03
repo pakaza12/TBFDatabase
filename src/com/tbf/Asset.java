@@ -3,8 +3,8 @@ package com.tbf;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 /**
- * This abstract class represents an account
- * with the subclasses: Deposit, PrivateInvestments, and Stocks
+ * This abstract class represents an account with the subclasses: Deposit,
+ * PrivateInvestments, and Stocks
  * 
  * @authors Jayden Carlon and Parker Zach
  *
@@ -15,19 +15,18 @@ public abstract class Asset {
 	protected String code;
 	protected String label;
 	/**
-	 * Value represents a different value in each subclass
-	 * which allows us to calculate the asset value:
-	 * In Deposit, it represents the balance
-	 * In PrivateInvestment it represents the percentage ownership
-	 * In Stocks it represents the number of stocks owned
+	 * Value represents a different value in each subclass which allows us to
+	 * calculate the asset value: In Deposit, it represents the balance In
+	 * PrivateInvestment it represents the percentage ownership In Stocks it
+	 * represents the number of stocks owned
 	 */
 	protected double value;
-	
+
 	public Asset(String code, String label) {
 		this.code = code;
 		this.label = label;
 	}
-	
+
 	public String getCode() {
 		return code;
 	}
@@ -47,12 +46,96 @@ public abstract class Asset {
 	public abstract double getValue();
 
 	public abstract void setValue(Double value);
-	
+
 	public abstract double getTotalWorth();
-	
+
 	public abstract double getAggregateRisk(double totalV);
-	
+
 	public abstract double getRisk();
-	
+
 	public abstract double getAnnualReturn();
+
+	public static Asset[] loadAssets() {
+		Asset b[] = null;
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+		} catch (InstantiationException e) {
+			System.out.println("InstantiationException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} catch (IllegalAccessException e) {
+			System.out.println("IllegalAccessException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} catch (ClassNotFoundException e) {
+			System.out.println("ClassNotFoundException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+
+		Connection conn = null;
+
+		try {
+			conn = DriverManager.getConnection(DatabaseInfo.url, DatabaseInfo.username, DatabaseInfo.password);
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+
+		String query = "select a.assetCode, a.label, a.apr, a.quarterlyDividend, a.baseRateReturn, a.betaMeasure, a.stockSymbol, a.sharePrice, a.baseOmegaMeasure, a.totalValue from Asset a";
+
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		int counter = 0;
+
+		try {
+			ps = conn.prepareStatement(query);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				String assetCode = rs.getString("assetCode");
+				String label = rs.getString("label");
+				Double apr = rs.getDouble("apr");
+				Double quarterlyDividend = rs.getDouble("quarterlyDividend");
+				Double baseRateReturn = rs.getDouble("baseRateReturn");
+				Double betaMeasure = rs.getDouble("betaMeasure");
+				String stockSymbol = rs.getString("stockSymbol");
+				Double sharePrice = rs.getDouble("sharePrice");
+				Double baseOmegaMeasure = rs.getDouble("baseOmegaMeasure");
+				Double totalValue = rs.getDouble("totalValue");
+
+				if (baseOmegaMeasure != null) {
+					b[counter] = new PrivateInvestment(assetCode, label, quarterlyDividend, baseRateReturn / 100.0,
+							baseOmegaMeasure, totalValue);
+				} else if (sharePrice != null) {
+					b[counter] = new Stocks(assetCode, label, quarterlyDividend, baseRateReturn / 100.0, betaMeasure, stockSymbol, sharePrice);
+				} else if (apr != null) {
+					b[counter] = new Deposit(assetCode, label, apr / 100.0);
+				}
+
+				counter++;
+			}
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+
+		try {
+			if (rs != null && !rs.isClosed())
+				rs.close();
+			if (ps != null && !ps.isClosed())
+				ps.close();
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+
+		return b;
+	}
+	
 }
