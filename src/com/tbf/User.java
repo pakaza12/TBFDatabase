@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -99,8 +100,8 @@ public class User {
 			return 0;
 	}
 
-	public static User[] loadUsers() {
-		User b[] = new User[10000];
+	public static ArrayList<User> loadUsers() {
+		ArrayList<User> b = new ArrayList<User>();
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); //.getDeclaredConstructor().newInstance();
@@ -137,7 +138,6 @@ public class User {
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 
-		int counter = 0;
 		try {
 			ps = conn.prepareStatement(query);
 			rs = ps.executeQuery();
@@ -157,11 +157,10 @@ public class User {
         Address a = new Address(street, city, state, zip, country);
 
         if(brokerStatus != null && secIdentity != null && (brokerStatus.contains("J") || brokerStatus.contains("E"))) {
-          b[counter] = new User(personCode, a, firstName, lastName, brokerStatus, secIdentity, email);
+          b.add(new User(personCode, a, firstName, lastName, brokerStatus, secIdentity, email));
         } else {
-          b[counter] = new User(personCode, a, firstName, lastName, "", "", email);
+          b.add(new User(personCode, a, firstName, lastName, "", "", email));
         }
-        counter++;
       }
 		} catch (SQLException e) {
 			System.out.println("SQLException: ");

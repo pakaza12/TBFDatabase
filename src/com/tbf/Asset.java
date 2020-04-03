@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
@@ -61,8 +62,8 @@ public abstract class Asset {
 
 	public abstract double getAnnualReturn();
 
-	public static Asset[] loadAssets() {
-		Asset b[] = null;
+	public static ArrayList<Asset> loadAssets() {
+		ArrayList<Asset> b = new ArrayList<Asset>();
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -94,7 +95,6 @@ public abstract class Asset {
 
 		PreparedStatement ps = null;
 		ResultSet rs = null;
-		int counter = 0;
 
 		try {
 			ps = conn.prepareStatement(query);
@@ -111,17 +111,15 @@ public abstract class Asset {
 				Double baseOmegaMeasure = rs.getDouble("baseOmegaMeasure");
 				Double totalValue = rs.getDouble("totalValue");
 
-				if (baseOmegaMeasure != null) {
-					b[counter] = new PrivateInvestment(assetCode, label, quarterlyDividend, baseRateReturn / 100.0, baseOmegaMeasure, totalValue);
+				if (totalValue > 0) {
+					b.add(new PrivateInvestment(assetCode, label, quarterlyDividend, baseRateReturn / 100.0, baseOmegaMeasure, totalValue));
 				}
-				if (sharePrice != null) {
-					b[counter] = new Stocks(assetCode, label, quarterlyDividend, baseRateReturn / 100.0, betaMeasure, stockSymbol, sharePrice);
+				if (stockSymbol != null) {
+					b.add(new Stocks(assetCode, label, quarterlyDividend, baseRateReturn / 100.0, betaMeasure, stockSymbol, sharePrice));
 				}
-				if (apr != null) {
-					b[counter] = new Deposit(assetCode, label, apr / 100.0);
+				if (apr > 0) {
+					b.add(new Deposit(assetCode, label, apr / 100.0));
 				}
-
-				counter++;
 			}
 		} catch (SQLException e) {
 			System.out.println("SQLException: ");
