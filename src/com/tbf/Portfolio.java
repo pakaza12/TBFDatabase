@@ -286,10 +286,10 @@ public class Portfolio {
 	}
 
 	public static Portfolio[] loadPortfolios() {
-		Portfolio b[] = null;
+		Portfolio b[] = new Portfolio[10000];
 
 		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 		} catch (InstantiationException e) {
 			System.out.println("InstantiationException: ");
 			e.printStackTrace();
@@ -364,7 +364,7 @@ public class Portfolio {
 		HashMap<String, Double> assets = new HashMap<String, Double>();
 
 		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 		} catch (InstantiationException e) {
 			System.out.println("InstantiationException: ");
 			e.printStackTrace();

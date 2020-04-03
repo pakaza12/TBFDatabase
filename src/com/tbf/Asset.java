@@ -62,10 +62,10 @@ public abstract class Asset {
 	public abstract double getAnnualReturn();
 
 	public static Asset[] loadAssets() {
-		Asset b[] = new Asset[1000];
+		Asset b[] = null;
 
 		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 		} catch (InstantiationException e) {
 			System.out.println("InstantiationException: ");
 			e.printStackTrace();
@@ -113,9 +113,11 @@ public abstract class Asset {
 
 				if (baseOmegaMeasure != null) {
 					b[counter] = new PrivateInvestment(assetCode, label, quarterlyDividend, baseRateReturn / 100.0, baseOmegaMeasure, totalValue);
-				} else if (sharePrice != null) {
+				}
+				if (sharePrice != null) {
 					b[counter] = new Stocks(assetCode, label, quarterlyDividend, baseRateReturn / 100.0, betaMeasure, stockSymbol, sharePrice);
-				} else if (apr != null) {
+				}
+				if (apr != null) {
 					b[counter] = new Deposit(assetCode, label, apr / 100.0);
 				}
 

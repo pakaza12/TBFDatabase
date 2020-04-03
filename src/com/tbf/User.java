@@ -100,10 +100,10 @@ public class User {
 	}
 
 	public static User[] loadUsers() {
-		User b[] = null;
+		User b[] = new User[10000];
 		
 		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance(); //.getDeclaredConstructor().newInstance();
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); //.getDeclaredConstructor().newInstance();
 		} catch (InstantiationException e) {
 			System.out.println("InstantiationException: ");
 			e.printStackTrace();
@@ -129,9 +129,9 @@ public class User {
 		}
 		
 
-		String query = "select pm.personId, pm.personCode, pm.firstName, pm.lastName, pm.brokerStatus as brokerStatus, pm.secIdentity as secIdentity, ad.street, c.city, s.state, ad.zip, ad.country, e.email as 'email(s)' from Person pm" 
-	                + "left join Address ad on pm.addressId = ad.addressId"
-                    + "left join City c on ad.cityId = c.cityId"
+		String query = "select pm.personId, pm.personCode, pm.firstName, pm.lastName, pm.brokerStatus as brokerStatus, pm.secIdentity as secIdentity, ad.street, c.city, s.state, ad.zip, ad.country from Person pm " 
+	                + "left join Address ad on pm.addressId = ad.addressId "
+                    + "left join City c on ad.cityId = c.cityId "
                     + "left join State s on ad.stateId = s.stateId";
 
 		PreparedStatement ps = null;
@@ -156,7 +156,7 @@ public class User {
         Set<String> email = loadEmail(personId);
         Address a = new Address(street, city, state, zip, country);
 
-        if(brokerStatus.contains("E") || brokerStatus.contains("J")) {
+        if(brokerStatus != null && secIdentity != null && (brokerStatus.contains("J") || brokerStatus.contains("E"))) {
           b[counter] = new User(personCode, a, firstName, lastName, brokerStatus, secIdentity, email);
         } else {
           b[counter] = new User(personCode, a, firstName, lastName, "", "", email);
@@ -188,7 +188,7 @@ public class User {
 		Set<String> emails = new HashSet<String>();
 
 		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 		} catch (InstantiationException e) {
 			System.out.println("InstantiationException: ");
 			e.printStackTrace();
