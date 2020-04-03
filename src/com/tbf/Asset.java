@@ -62,7 +62,7 @@ public abstract class Asset {
 	public abstract double getAnnualReturn();
 
 	public static Asset[] loadAssets() {
-		Asset b[] = null;
+		Asset b[] = new Asset[1000];
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -112,8 +112,7 @@ public abstract class Asset {
 				Double totalValue = rs.getDouble("totalValue");
 
 				if (baseOmegaMeasure != null) {
-					b[counter] = new PrivateInvestment(assetCode, label, quarterlyDividend, baseRateReturn / 100.0,
-							baseOmegaMeasure, totalValue);
+					b[counter] = new PrivateInvestment(assetCode, label, quarterlyDividend, baseRateReturn / 100.0, baseOmegaMeasure, totalValue);
 				} else if (sharePrice != null) {
 					b[counter] = new Stocks(assetCode, label, quarterlyDividend, baseRateReturn / 100.0, betaMeasure, stockSymbol, sharePrice);
 				} else if (apr != null) {

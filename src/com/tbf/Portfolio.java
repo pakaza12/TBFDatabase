@@ -324,12 +324,12 @@ public class Portfolio {
 			ps = conn.prepareStatement(query);
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				Int portfolioId = rs.getInt("portfolioId");
+				int portfolioId = rs.getInt("portfolioId");
 				String portfolioCode = rs.getString("portfolioCode");
 				String ownerCode = rs.getString("ownerCode");
 				String managerCode = rs.getString("managerCode");
 				String beneficiaryCode = rs.getString("beneficiaryCode");
-				HashMap<String, Double> assetList = loadAssets(portfolioId);
+				HashMap<String, Double> assetList = loadAsset(portfolioId);
 
 				if (beneficiaryCode != null) {
 					b[counter] = new Portfolio(portfolioCode, ownerCode, managerCode, beneficiaryCode, assetList);
@@ -360,7 +360,7 @@ public class Portfolio {
 		return b;
 	}
 
-	public HashMap<String, Double> loadAsset(int portfolioId) {
+	public static HashMap<String, Double> loadAsset(int portfolioId) {
 		HashMap<String, Double> assets = new HashMap<String, Double>();
 
 		try {
