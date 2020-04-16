@@ -37,7 +37,7 @@ create table Address (
 
 create table Person (
 	personId int not null primary key auto_increment,
-	personCode varchar(255) not null,
+	personCode varchar(255) not null unique,
     addressId int not null,
     firstName varchar(255) not null,
     lastName varchar(255) not null,

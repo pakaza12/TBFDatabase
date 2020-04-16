@@ -45,11 +45,43 @@ public class PortfolioData {
 		startJDBC();
 		Connection conn = getConnection();
 		
+		//These functions check if the these things exist, if not they add them
 		JDBCUtils.addCity(city, conn);
 		JDBCUtils.addState(state, conn);
 		JDBCUtils.addAddress(street, zip, country, city, state, conn);
 		
+		String query = "select p.firstName from Person p where p.personCode = ?;";
+		PreparedStatement ps1 = null;
+		ResultSet rs = null;
+		boolean personExist = true;
+		try {
+			ps1 = conn.prepareStatement(query);
+			ps1.setString(1, personCode);
+			rs = ps1.executeQuery();
+			if(!rs.next()) {
+				personExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		
+		if(!personExist) {
+			String query2 = "insert into Person(personCode, addressId, firstName, lastName) values (?, (Select a.addressId from Address a left join City c on"
+								+ " a.cityId = c.cityId left join State s on s.stateId = a.stateId where a.street = ? where a.zip = ? where a.country = ?), ?, ?);";
+			PreparedStatement ps = null;
+			try {
+				ps = conn.prepareStatement(query2);
+				ps1.setString(1, personCode);
+				ps1.setString(2, street);
+				ps1.setString(3, zip);
+				ps1.setString(4, country);
+				ps1.setString(5, firstName);
+				ps1.setString(6, lastName);
+				ps.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 	
 	/**

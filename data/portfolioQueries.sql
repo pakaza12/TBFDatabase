@@ -60,7 +60,14 @@ select pm.firstName, pm.lastName, a.assetCode from Asset a
 			left join Person pm on pm.personId = p.personId 
 				where pm.personCode = '2AB'; 
 					-- Change 3AB with the personCode you want the assets for
-                    
+
+select city from City;
+select state from State;
+select s.street from Address s;
+select p.firstName from Person p where p.personCode = "1AB";
+select a.street, a.country, a.zip from Address a left join State s on s.stateId = a.stateId left join City c on c.cityId = a.cityId where a.street = "10 Acker Court";
+select c.city from City c where c.city = "Hust";
+
 -- A query to create a new asset record
 insert into Asset(assetCode, label, quarterlyDividend, baseRateReturn, baseOmegaMeasure, totalValue) values('17BB', 'Investment Property 1', 20349, 10.2, 0.21, 1250000);
 
