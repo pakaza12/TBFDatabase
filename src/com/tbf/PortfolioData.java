@@ -90,7 +90,38 @@ public class PortfolioData {
 	 * @param personCode
 	 * @param email
 	 */
-	public static void addEmail(String personCode, String email) {}
+	public static void addEmail(String personCode, String email) {
+		startJDBC();
+		Connection conn = getConnection();
+		
+		String query = "select e.email from Email e where e.email = ?;";
+		PreparedStatement ps1 = null;
+		ResultSet rs = null;
+		boolean emailExist = true;
+		try {
+			ps1 = conn.prepareStatement(query);
+			ps1.setString(1, email);
+			rs = ps1.executeQuery();
+			if(!rs.next()) {
+				emailExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		if(!emailExist) {
+			String query2 = "insert into Email(personId, email) values ((select p.personId from Person p where p.personCode = ?), ?);";
+			PreparedStatement ps = null;
+			try {
+				ps = conn.prepareStatement(query2);
+				ps1.setString(1, personCode);
+				ps1.setString(2, email);
+				ps.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 
 	/**
 	 * Removes all asset records from the database

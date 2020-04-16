@@ -49,7 +49,7 @@ create table Person (
 
 create table Email (
 	personId int not null,
-    email varchar(255) not null,
+    email varchar(255) not null unique,
     foreign key (personId) references Person(personId)
     
 )engine=InnoDB,collate=latin1_general_cs;
