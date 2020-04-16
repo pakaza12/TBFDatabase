@@ -1,5 +1,7 @@
 package com.tbf;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
@@ -7,7 +9,10 @@ import java.util.Set;
 public class PortfolioReport {
 	
 	public static void main(String[] args) {
-	
+		PortfolioData.startJDBC();
+		Connection conn = PortfolioData.getConnection();
+		PortfolioData.doesStateExist("Hust", conn);
+		/*
 		//User[] person = dataInput.parsePersons("data/Persons.dat");
 		ArrayList<User> person = User.loadUsers();
 		//Asset[] assets = dataInput.parseAssets("data/Assets.dat");
@@ -16,6 +21,7 @@ public class PortfolioReport {
 		ArrayList<Portfolio> portfolios = Portfolio.loadPortfolios();
 		Portfolio.summaryReport(portfolios, person, assets);
 		Portfolio.detailReport(portfolios, person, assets);
+		*/
 	}
 
 }

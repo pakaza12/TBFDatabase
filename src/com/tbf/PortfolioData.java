@@ -1,5 +1,11 @@
 package com.tbf;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 /**
  * This is a collection of utility methods that define a general API for
  * interacting with the database supporting this application.
@@ -17,7 +23,9 @@ public class PortfolioData {
 	 * provided <code>personCode</code>
 	 * @param personCode
 	 */
-	public static void removePerson(String personCode) {}
+	public static void removePerson(String personCode) {
+		
+	}
 	
 	/**
 	 * Method to add a person record to the database with the provided data. The
@@ -33,7 +41,16 @@ public class PortfolioData {
 	 * @param country
 	 * @param brokerType
 	 */
-	public static void addPerson(String personCode, String firstName, String lastName, String street, String city, String state, String zip, String country, String brokerType, String secBrokerId) {}
+	public static void addPerson(String personCode, String firstName, String lastName, String street, String city, String state, String zip, String country, String brokerType, String secBrokerId) {
+		startJDBC();
+		Connection conn = getConnection();
+		
+		JDBCUtils.addCity(city, conn);
+		JDBCUtils.addState(state, conn);
+		JDBCUtils.addAddress(street, zip, country, city, state, conn);
+		
+		
+	}
 	
 	/**
 	 * Adds an email record corresponding person record corresponding to the
@@ -127,6 +144,36 @@ public class PortfolioData {
 	 */
 	public static void addAsset(String portfolioCode, String assetCode, double value) {}
 	
+	public static void startJDBC() { 
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+		} catch (InstantiationException e) {
+			System.out.println("InstantiationException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} catch (IllegalAccessException e) {
+			System.out.println("IllegalAccessException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} catch (ClassNotFoundException e) {
+			System.out.println("ClassNotFoundException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+	}
+	
+	public static Connection getConnection() {
+		Connection conn = null;
+
+		try {
+			conn = DriverManager.getConnection(DatabaseInfo.url, DatabaseInfo.username, DatabaseInfo.password);
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		return conn;
+	}
 	
 }
 

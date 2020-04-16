@@ -1,11 +1,17 @@
 -- Jayden Carlon and Parker Zach
 -- Queries for portfolioDB
 
+select pm.personId, pm.personCode, pm.firstName, pm.lastName, pm.brokerStatus as brokerStatus, pm.secIdentity as secIdentity, ad.street, c.city, s.state, ad.zip, ad.country from Person pm 
+	                left join Address ad on pm.addressId = ad.addressId
+                    left join City c on ad.cityId = c.cityId
+                    left join State s on ad.stateId = s.stateId;
+
+
 -- Query to retrieve major fields for Portfolio
 select p.portfolioId, p.portfolioCode, p.ownerCode, p.managerCode, p.beneficiaryCode, a.assetCode, ap.assetValue from Portfolio p left join AssetPortfolio ap on ap.portfolioId = p.portfolioId
 	left join Asset a on a.assetId = ap.assetId;
     
-    select a.assetCode, a.label, a.apr, a.quarterlyDividend, a.baseRateReturn, a.betaMeasure, a.stockSymbol, a.sharePrice, a.baseOmegaMeasure, a.totalValue from Asset a;
+select a.assetCode, a.label, a.apr, a.quarterlyDividend, a.baseRateReturn, a.betaMeasure, a.stockSymbol, a.sharePrice, a.baseOmegaMeasure, a.totalValue from Asset a;
 -- Query to retrieve major fields for Assets
 select a.assetCode, a.label, a.apr, a.quarterlyDividend, a.baseRateReturn, a.betaMeasure, a.stockSymbol, a.sharePrice, a.baseOmegaMeasure, a.totalValue, ap.assetValue from Asset a
 	left join AssetPortfolio ap on ap.assetId = a.assetId;

@@ -13,13 +13,13 @@ drop table if exists State;
 
 create table City (
 	cityId int not null primary key auto_increment,
-	city varchar(255) not null
+	city varchar(255) not null unique
     
 )engine=InnoDB,collate=latin1_general_cs;
 
 create table State (
 	stateId int not null primary key auto_increment,
-	state varchar(255) not null
+	state varchar(255) not null unique
     
 )engine=InnoDB,collate=latin1_general_cs;
 
