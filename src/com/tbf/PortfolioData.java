@@ -16,7 +16,9 @@ public class PortfolioData {
 	/**
 	 * Method that removes every person record from the database
 	 */
-	public static void removeAllPersons() {}
+	public static void removeAllPersons() {
+		
+	}
 	
 	/**
 	 * Removes the person record from the database corresponding to the
@@ -319,6 +321,7 @@ public class PortfolioData {
 		startJDBC();
 		Connection conn = getConnection();
 		
+		//Error checking probably not necessary, but used for good design
 		//Check if the owner exists
 		String query = "select p.personCode from Person ep where p.personCode = ?;";
 		PreparedStatement ps1 = null;
