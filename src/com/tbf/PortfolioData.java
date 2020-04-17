@@ -736,7 +736,7 @@ public class PortfolioData {
 		}
 		
 		//Check if the manager exists
-		String query2 = "p.personCode from Person p where p.personCode = ?;";
+		String query2 = "select p.personCode from Person p where p.personCode = ?;";
 		PreparedStatement ps2 = null;
 		ResultSet rs2 = null;
 		boolean managerExist = true;
@@ -752,7 +752,7 @@ public class PortfolioData {
 		}
 		
 		//Check if the beneficiary exists
-		String query4 = "p.personCode from Person p where p.personCode = ?;";
+		String query4 = "select p.personCode from Person p where p.personCode = ?;";
 		PreparedStatement ps4 = null;
 		ResultSet rs4 = null;
 		boolean beneficiaryExist = true;
@@ -854,7 +854,7 @@ public class PortfolioData {
 			e.printStackTrace();
 		}
 		
-		if(!assetExist && !portfolioExist) {
+		if(assetExist && portfolioExist) {
 			String query3 = "insert into AssetPortfolio(portfolioId, assetValue, assetId) values ((select p.portfolioId from Portfolio p where p.portfolioCode = ?),"
 								+ " ?, (select a.assetId from Asset a where a.assetCode = ?));";
 			PreparedStatement ps = null;
