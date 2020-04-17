@@ -9,9 +9,8 @@ import java.util.Set;
 public class PortfolioReport {
 	
 	public static void main(String[] args) {
-		//PortfolioData.startJDBC();
-		//Connection conn = PortfolioData.getConnection();
-		PortfolioData.removeAllAssets();
+		PortfolioData.removeAllPortfolios();
+		//PortfolioData.removeAllAssets();
 		/*
 		//User[] person = dataInput.parsePersons("data/Persons.dat");
 		ArrayList<User> person = User.loadUsers();

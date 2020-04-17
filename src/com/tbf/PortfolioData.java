@@ -365,7 +365,26 @@ public class PortfolioData {
 	 * Removes all portfolio records from the database
 	 */
 	public static void removeAllPortfolios() {
+		startJDBC();
+		Connection conn = getConnection();
 		
+		String query = "select p.portfolioCode from Portfolio p;";
+
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+
+		try {
+			ps = conn.prepareStatement(query);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				String portfolioCode = rs.getString("portfolioCode");
+				removePortfolio(portfolioCode);
+			}
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
 	}
 	
 	/**
@@ -374,7 +393,48 @@ public class PortfolioData {
 	 * @param portfolioCode
 	 */
 	public static void removePortfolio(String portfolioCode) {
+		startJDBC();
+		Connection conn = getConnection();
 		
+		//Check if the portfolio exists
+		String query = "select p.portfolioCode from Portfolio p where p.portfolioCode = ?;";
+		PreparedStatement ps1 = null;
+		ResultSet rs = null;
+		boolean portfolioExist = true;
+		try {
+			ps1 = conn.prepareStatement(query);
+			ps1.setString(1, portfolioCode);
+			rs = ps1.executeQuery();
+			if(!rs.next()) {
+				portfolioExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		//If the portfolio exists, delete it's data from Portfolio and AssetPortfolio
+		if(portfolioExist) {
+			
+			String query2 = "delete from AssetPortfolio where portfolioId = (select a.portfolioId from Portfolio a where a.portfolioCode = ?);";
+			PreparedStatement ps = null;
+			try {
+				ps = conn.prepareStatement(query2);
+				ps.setString(1, portfolioCode);
+				ps.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			
+			String query3 = "delete from Portfolio where portfolioCode = ?;";
+			PreparedStatement ps3 = null;
+			try {
+				ps3 = conn.prepareStatement(query3);
+				ps3.setString(1, portfolioCode);
+				ps3.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 	
 	/**
