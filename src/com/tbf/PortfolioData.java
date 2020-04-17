@@ -149,14 +149,78 @@ public class PortfolioData {
 	/**
 	 * Removes all asset records from the database
 	 */
-	public static void removeAllAssets() {}
+	public static void removeAllAssets() {
+		startJDBC();
+		Connection conn = getConnection();
+		
+		String query = "select assetCode from Asset";
+
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+
+		try {
+			ps = conn.prepareStatement(query);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				String assetCode = rs.getString("assetCode");
+				removeAsset(assetCode);
+			}
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+	}
 
 	/**
 	 * Removes the asset record from the database corresponding to the
 	 * provided <code>assetCode</code>
 	 * @param assetCode
 	 */
-	public static void removeAsset(String assetCode) {}
+	public static void removeAsset(String assetCode) {
+		startJDBC();
+		Connection conn = getConnection();
+		
+		//Check if the asset exists
+		String query = "select a.assetId from Asset a where a.assetCode = ?;";
+		PreparedStatement ps1 = null;
+		ResultSet rs = null;
+		boolean assetExist = true;
+		try {
+			ps1 = conn.prepareStatement(query);
+			ps1.setString(1, assetCode);
+			rs = ps1.executeQuery();
+			if(!rs.next()) {
+				assetExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		//If the asset information exists, delete it from both Asset and AssetPortfolio (Connecting table to Portfolio holding the value)
+		if(assetExist) {
+			
+			String query2 = "delete from AssetPortfolio where assetId = (select a.assetId from Asset a where a.assetCode = ?);";
+			PreparedStatement ps = null;
+			try {
+				ps = conn.prepareStatement(query2);
+				ps.setString(1, assetCode);
+				ps.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			
+			String query4 = "delete from Asset where assetCode = ?;";
+			PreparedStatement ps4 = null;
+			try {
+				ps4 = conn.prepareStatement(query4);
+				ps4.setString(1, assetCode);
+				ps4.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 	
 	/**
 	 * Adds a deposit account asset record to the database with the
@@ -300,14 +364,18 @@ public class PortfolioData {
 	/**
 	 * Removes all portfolio records from the database
 	 */
-	public static void removeAllPortfolios() {}
+	public static void removeAllPortfolios() {
+		
+	}
 	
 	/**
 	 * Removes the portfolio record from the database corresponding to the
 	 * provided <code>portfolioCode</code>
 	 * @param portfolioCode
 	 */
-	public static void removePortfolio(String portfolioCode) {}
+	public static void removePortfolio(String portfolioCode) {
+		
+	}
 	
 	/**
 	 * Adds a portfolio records to the database with the given data.  If the portfolio has no
