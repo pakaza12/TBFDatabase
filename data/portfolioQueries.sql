@@ -61,7 +61,10 @@ select pm.firstName, pm.lastName, a.assetCode from Asset a
 				where pm.personCode = '2AB'; 
 					-- Change 3AB with the personCode you want the assets for
 
-select city from City;
+select * from Address;
+select * from Person;
+insert into Person(personCode, addressId, firstName, lastName) values ('100A', (Select a.addressId from Address a left join City c on  a.cityId = c.cityId left join State s on s.stateId = a.stateId where (a.street = '00 Veith Center' AND a.zip = 77015 AND a.country = 'US') ), 'Parker', 'Zach');
+select secIdentity from Person;
 select state from State;
 select s.street from Address s;
 select p.firstName from Person p where p.personCode = "1AB";

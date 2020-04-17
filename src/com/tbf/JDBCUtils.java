@@ -31,11 +31,11 @@ public class JDBCUtils {
 			PreparedStatement ps = null;
 			try {
 				ps = conn.prepareStatement(query2);
-				ps1.setString(1, street);
-				ps1.setString(2, zip);
-				ps1.setString(3, country);
-				ps1.setString(4, city);
-				ps1.setString(5, state);
+				ps.setString(1, street);
+				ps.setString(2, zip);
+				ps.setString(3, country);
+				ps.setString(4, city);
+				ps.setString(5, state);
 				ps.executeUpdate();
 			} catch (SQLException e) {
 				e.printStackTrace();

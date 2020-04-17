@@ -65,22 +65,43 @@ public class PortfolioData {
 			e.printStackTrace();
 		}
 		
-		if(!personExist) {
+		//If they have a blank/null broker type this enters the individual
+		if(!personExist && (brokerType.isEmpty() || brokerType == null) ) {
 			String query2 = "insert into Person(personCode, addressId, firstName, lastName) values (?, (Select a.addressId from Address a left join City c on"
-								+ " a.cityId = c.cityId left join State s on s.stateId = a.stateId where a.street = ? where a.zip = ? where a.country = ?), ?, ?);";
+								+ " a.cityId = c.cityId left join State s on s.stateId = a.stateId where (a.street = ? AND a.zip = ? AND a.country = ?) ), ?, ?);";
 			PreparedStatement ps = null;
 			try {
 				ps = conn.prepareStatement(query2);
-				ps1.setString(1, personCode);
-				ps1.setString(2, street);
-				ps1.setString(3, zip);
-				ps1.setString(4, country);
-				ps1.setString(5, firstName);
-				ps1.setString(6, lastName);
+				ps.setString(1, personCode);
+				ps.setString(2, street);
+				ps.setInt(3, Integer.parseInt(zip));
+				ps.setString(4, country);
+				ps.setString(5, firstName);
+				ps.setString(6, lastName);
 				ps.executeUpdate();
 			} catch (SQLException e) {
 				e.printStackTrace();
-			}
+			} 
+		//If they have a brokerType they are entered here
+		} else if(!personExist && (brokerType.contains("J") || brokerType.contains("E")) ) {
+			String query2 = "insert into Person(personCode, addressId, firstName, lastName, brokerStatus, secIdentity) values (?,"
+								+ " (Select a.addressId from Address a left join City c on a.cityId = c.cityId left join State s on s.stateId = a.stateId" 
+								+ " where (a.street = ? AND a.zip = ? AND a.country = ?) ), ?, ?, ?, ?);";
+			PreparedStatement ps = null;
+			try {
+				ps = conn.prepareStatement(query2);
+				ps.setString(1, personCode);
+				ps.setString(2, street);
+				ps.setString(3, zip);
+				ps.setString(4, country);
+				ps.setString(5, firstName);
+				ps.setString(6, lastName);
+				ps.setString(7, brokerType);
+				ps.setString(8, secBrokerId);
+				ps.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} 
 		}
 	}
 	
@@ -114,8 +135,8 @@ public class PortfolioData {
 			PreparedStatement ps = null;
 			try {
 				ps = conn.prepareStatement(query2);
-				ps1.setString(1, personCode);
-				ps1.setString(2, email);
+				ps.setString(1, personCode);
+				ps.setString(2, email);
 				ps.executeUpdate();
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -142,7 +163,39 @@ public class PortfolioData {
 	 * @param label
 	 * @param apr - Annual Percentage Rate on the scale [0, 1]
 	 */
-	public static void addDepositAccount(String assetCode, String label, double apr) {}
+	public static void addDepositAccount(String assetCode, String label, double apr) {
+		startJDBC();
+		Connection conn = getConnection();
+		
+		String query = "select a.assetCode from Asset a where a.assetCode = ?;";
+		PreparedStatement ps1 = null;
+		ResultSet rs = null;
+		boolean accountExist = true;
+		try {
+			ps1 = conn.prepareStatement(query);
+			ps1.setString(1, assetCode);
+			rs = ps1.executeQuery();
+			if(!rs.next()) {
+				accountExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		if(!accountExist) {
+			String query2 = "insert into Asset(assetCode, label, apr) values (?, ?, ?);";
+			PreparedStatement ps = null;
+			try {
+				ps = conn.prepareStatement(query2);
+				ps.setString(1, assetCode);
+				ps.setString(2, label);
+				ps.setDouble(3, apr);
+				ps.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 	
 	/**
 	 * Adds a private investment asset record to the database with the
@@ -155,7 +208,42 @@ public class PortfolioData {
 	 * @param totalValue
 	 */
 	public static void addPrivateInvestment(String assetCode, String label, Double quarterlyDividend, 
-			Double baseRateOfReturn, Double baseOmega, Double totalValue) {}
+			Double baseRateOfReturn, Double baseOmega, Double totalValue) {
+		startJDBC();
+		Connection conn = getConnection();
+		
+		String query = "select a.assetCode from Asset a where a.assetCode = ?;";
+		PreparedStatement ps1 = null;
+		ResultSet rs = null;
+		boolean accountExist = true;
+		try {
+			ps1 = conn.prepareStatement(query);
+			ps1.setString(1, assetCode);
+			rs = ps1.executeQuery();
+			if(!rs.next()) {
+				accountExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		if(!accountExist) {
+			String query2 = "insert into Asset(assetCode, label, quarterlyDividend, baseRateReturn, baseOmegaMeasure, totalValue) values(?, ?, ?, ?, ?, ?);";
+			PreparedStatement ps = null;
+			try {
+				ps = conn.prepareStatement(query2);
+				ps.setString(1, assetCode);
+				ps.setString(2, label);
+				ps.setDouble(3, quarterlyDividend);
+				ps.setDouble(4, baseRateOfReturn);
+				ps.setDouble(5, baseOmega);
+				ps.setDouble(6, totalValue);
+				ps.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 	
 	/**
 	 * Adds a stock asset record to the database with the
@@ -169,7 +257,43 @@ public class PortfolioData {
 	 * @param sharePrice
 	 */
 	public static void addStock(String assetCode, String label, Double quarterlyDividend, 
-			Double baseRateOfReturn, Double beta, String stockSymbol, Double sharePrice) {}
+			Double baseRateOfReturn, Double beta, String stockSymbol, Double sharePrice) {
+		startJDBC();
+		Connection conn = getConnection();
+		
+		String query = "select a.assetCode from Asset a where a.assetCode = ?;";
+		PreparedStatement ps1 = null;
+		ResultSet rs = null;
+		boolean accountExist = true;
+		try {
+			ps1 = conn.prepareStatement(query);
+			ps1.setString(1, assetCode);
+			rs = ps1.executeQuery();
+			if(!rs.next()) {
+				accountExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		if(!accountExist) {
+			String query2 = "insert into Asset(assetCode, label, quarterlyDividend, baseRateReturn, betaMeasure, stockSymbol, sharePrice) values(?, ?, ?, ?, ?, ?, ?);";
+			PreparedStatement ps = null;
+			try {
+				ps = conn.prepareStatement(query2);
+				ps.setString(1, assetCode);
+				ps.setString(2, label);
+				ps.setDouble(3, quarterlyDividend);
+				ps.setDouble(4, baseRateOfReturn);
+				ps.setDouble(5, beta);
+				ps.setString(6, stockSymbol);
+				ps.setDouble(6, sharePrice);
+				ps.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 
 	/**
 	 * Removes all portfolio records from the database
@@ -191,7 +315,89 @@ public class PortfolioData {
 	 * @param managerCode
 	 * @param beneficiaryCode
 	 */
-	public static void addPortfolio(String portfolioCode, String ownerCode, String managerCode, String beneficiaryCode) {}
+	public static void addPortfolio(String portfolioCode, String ownerCode, String managerCode, String beneficiaryCode) {
+		startJDBC();
+		Connection conn = getConnection();
+		
+		//Check if the owner exists
+		String query = "select p.personCode from Person ep where p.personCode = ?;";
+		PreparedStatement ps1 = null;
+		ResultSet rs = null;
+		boolean ownerExist = true;
+		try {
+			ps1 = conn.prepareStatement(query);
+			ps1.setString(1, ownerCode);
+			rs = ps1.executeQuery();
+			if(!rs.next()) {
+				ownerExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		//Check if the manager exists
+		String query2 = "p.personCode from Person ep where p.personCode = ?;";
+		PreparedStatement ps2 = null;
+		ResultSet rs2 = null;
+		boolean managerExist = true;
+		try {
+			ps2 = conn.prepareStatement(query2);
+			ps2.setString(1, managerCode);
+			rs2 = ps2.executeQuery();
+			if(!rs2.next()) {
+				managerExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		//Check if the beneficiary exists
+		String query4 = "p.personCode from Person ep where p.personCode = ?;";
+		PreparedStatement ps4 = null;
+		ResultSet rs4 = null;
+		boolean beneficiaryExist = true;
+		try {
+			ps4 = conn.prepareStatement(query4);
+			ps4.setString(1, beneficiaryCode);
+			rs4 = ps4.executeQuery();
+			if(!rs4.next()) {
+				beneficiaryExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		//Check if the portfolio exists
+		String query5 = "select p.portfolioCode from Portfolio p where p.portfolioCode = ?;";
+		PreparedStatement ps5 = null;
+		ResultSet rs5 = null;
+		boolean portfolioExist = true;
+		try {
+			ps5 = conn.prepareStatement(query5);
+			ps5.setString(1, portfolioCode);
+			rs5 = ps5.executeQuery();
+			if(!rs5.next()) {
+				portfolioExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		if(!ownerExist && !managerExist && !beneficiaryExist && !portfolioExist) {
+			String query3 = "insert into Portfolio(portfolioCode, ownerCode, managerCode, personId) values (?, ?, ?, (select personId from Person p where p.personCode = ?));";
+			PreparedStatement ps = null;
+			try {
+				ps = conn.prepareStatement(query3);
+				ps.setString(1, portfolioCode);
+				ps.setString(2, ownerCode);
+				ps.setString(3, beneficiaryCode);
+				ps.setString(4, ownerCode);
+				ps.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 	
 	/**
 	 * Associates the asset record corresponding to <code>assetCode</code> with 
@@ -205,7 +411,55 @@ public class PortfolioData {
 	 * @param assetCode
 	 * @param value
 	 */
-	public static void addAsset(String portfolioCode, String assetCode, double value) {}
+	public static void addAsset(String portfolioCode, String assetCode, double value) {
+		startJDBC();
+		Connection conn = getConnection();
+		
+		String query = "select a.assetCode from Asset a where a.assetCode = ?;";
+		PreparedStatement ps1 = null;
+		ResultSet rs = null;
+		boolean assetExist = true;
+		try {
+			ps1 = conn.prepareStatement(query);
+			ps1.setString(1, assetCode);
+			rs = ps1.executeQuery();
+			if(!rs.next()) {
+				assetExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		String query2 = "select p.portfolioCode from Portfolio p where p.portfolioCode = ?;";
+		PreparedStatement ps2 = null;
+		ResultSet rs2 = null;
+		boolean portfolioExist = true;
+		try {
+			ps2 = conn.prepareStatement(query2);
+			ps2.setString(1, portfolioCode);
+			rs2 = ps2.executeQuery();
+			if(!rs2.next()) {
+				portfolioExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		if(!assetExist && !portfolioExist) {
+			String query3 = "insert into AssetPortfolio(portfolioId, assetValue, assetId) values ((select p.portfolioId from Portfolio p where p.portfolioCode = ?),"
+								+ " ?, (select a.assetId from Asset a where a.assetCode = ?));";
+			PreparedStatement ps = null;
+			try {
+				ps = conn.prepareStatement(query3);
+				ps.setString(1, portfolioCode);
+				ps.setDouble(2, value);
+				ps.setString(3, assetCode);
+				ps.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 	
 	public static void startJDBC() { 
 		try {

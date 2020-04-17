@@ -9,9 +9,9 @@ import java.util.Set;
 public class PortfolioReport {
 	
 	public static void main(String[] args) {
-		PortfolioData.startJDBC();
-		Connection conn = PortfolioData.getConnection();
-		PortfolioData.doesStateExist("Hust", conn);
+		//PortfolioData.startJDBC();
+		//Connection conn = PortfolioData.getConnection();
+		PortfolioData.addPerson("100ABCDEF", "Parker", "Zach", "1040 Y St", "Lincoln", "NE", "68748", "US", "D", "SEC000001");
 		/*
 		//User[] person = dataInput.parsePersons("data/Persons.dat");
 		ArrayList<User> person = User.loadUsers();

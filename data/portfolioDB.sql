@@ -42,7 +42,7 @@ create table Person (
     firstName varchar(255) not null,
     lastName varchar(255) not null,
     brokerStatus varchar(255) default null,
-    secIdentity varchar(255) default null,
+    secIdentity varchar(255) default null unique,
     foreign key (addressId) references Address(addressId)
     
 )engine=InnoDB,collate=latin1_general_cs;
@@ -56,7 +56,7 @@ create table Email (
 
 create table Portfolio (
 	portfolioId int not null primary key auto_increment,
-    portfolioCode varchar(255) not null,
+    portfolioCode varchar(255) not null unique,
     ownerCode varchar(255) not null,
     managerCode varchar(255),
     beneficiaryCode varchar(255),
@@ -67,7 +67,7 @@ create table Portfolio (
 
 create table Asset (
 	assetId int not null primary key auto_increment,
-	assetCode varchar(255) not null,
+	assetCode varchar(255) not null unique,
     label varchar(255) not null,
     apr double default null,
     quarterlyDividend double default null,
