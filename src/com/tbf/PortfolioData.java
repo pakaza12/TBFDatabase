@@ -720,7 +720,7 @@ public class PortfolioData {
 		
 		//Error checking probably not necessary, but used for good design
 		//Check if the owner exists
-		String query = "select p.personCode from Person ep where p.personCode = ?;";
+		String query = "select p.personCode from Person p where p.personCode = ?;";
 		PreparedStatement ps1 = null;
 		ResultSet rs = null;
 		boolean ownerExist = true;
@@ -736,7 +736,7 @@ public class PortfolioData {
 		}
 		
 		//Check if the manager exists
-		String query2 = "p.personCode from Person ep where p.personCode = ?;";
+		String query2 = "p.personCode from Person p where p.personCode = ?;";
 		PreparedStatement ps2 = null;
 		ResultSet rs2 = null;
 		boolean managerExist = true;
@@ -752,7 +752,7 @@ public class PortfolioData {
 		}
 		
 		//Check if the beneficiary exists
-		String query4 = "p.personCode from Person ep where p.personCode = ?;";
+		String query4 = "p.personCode from Person p where p.personCode = ?;";
 		PreparedStatement ps4 = null;
 		ResultSet rs4 = null;
 		boolean beneficiaryExist = true;
