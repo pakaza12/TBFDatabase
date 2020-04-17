@@ -104,4 +104,63 @@ public class JDBCUtils {
 		}
 	}
 	
+	public static void deleteState(int stateId, Connection conn) {
+		String query5 = "delete from State where stateId = ?;";
+		PreparedStatement ps5 = null;
+		try {
+			ps5 = conn.prepareStatement(query5);
+			ps5.setInt(1, stateId);
+			ps5.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void deleteCity(int cityId, Connection conn) {
+		String query6 = "delete from City where cityId = ?;";
+		PreparedStatement ps6 = null;
+		try {
+			ps6 = conn.prepareStatement(query6);
+			ps6.setInt(1, cityId);
+			ps6.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void deleteAddress(int addressId, Connection conn) {
+		String query7 = "delete from Address where addressId = ?;";
+		PreparedStatement ps7 = null;
+		try {
+			ps7 = conn.prepareStatement(query7);
+			ps7.setInt(1, addressId);
+			ps7.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static boolean doesAssetBelongToMore(String assetCode, Connection conn) {
+		//Check if the asset has more than one corresponding person/portfolio
+		String query2 = "select count(assetId) as numAssets from AssetPortfolio where assetId = (select assetId from Asset where assetCode = ?);";
+		PreparedStatement ps2 = null;
+		ResultSet rs2 = null;
+		boolean oneAsset = false;
+		try {
+			ps2 = conn.prepareStatement(query2);
+			ps2.setString(1, assetCode);
+			rs2 = ps2.executeQuery();
+			int numAssets = 0;
+			while(rs2.next()) {
+				numAssets += rs2.getInt("numAssets");
+			}
+			if(numAssets > 1) {
+				oneAsset = true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return oneAsset;
+	}
+	
 }

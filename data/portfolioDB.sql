@@ -169,6 +169,7 @@ insert into Asset(assetCode, label, apr) values ('14BB', '5-year CD', 4.35);
 insert into Asset(assetCode, label, quarterlyDividend, baseRateReturn, betaMeasure, stockSymbol, sharePrice) values('15BB', 'Enterprise Products', 0.445, 0.89, -0.03, 'EPD', 22.68);
 insert into Asset(assetCode, label, apr) values ('16BB', '1-year CD', 3.45);
 
+insert into AssetPortfolio(portfolioId, assetValue, assetId) values ((select p.portfolioId from Portfolio p where p.portfolioCode = '2CB' and p.ownerCode = '4AB'), 200, (select a.assetId from Asset a where a.assetCode = '1BB'));
 insert into AssetPortfolio(portfolioId, assetValue, assetId) values ((select p.portfolioId from Portfolio p where p.portfolioCode = '1CB' and p.ownerCode = '2AB'), 100, (select a.assetId from Asset a where a.assetCode = '1BB'));
 insert into AssetPortfolio(portfolioId, assetValue, assetId) values ((select p.portfolioId from Portfolio p where p.portfolioCode = '1CB' and p.ownerCode = '2AB'), 424.5, (select a.assetId from Asset a where a.assetCode = '16BB'));
 insert into AssetPortfolio(portfolioId, assetValue, assetId) values ((select p.portfolioId from Portfolio p where p.portfolioCode = '1CB' and p.ownerCode = '2AB'), 4.68, (select a.assetId from Asset a where a.assetCode = '2BB'));

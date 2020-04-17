@@ -9,9 +9,7 @@ import java.util.Set;
 public class PortfolioReport {
 	
 	public static void main(String[] args) {
-		PortfolioData.removeAllPortfolios();
-		//PortfolioData.removeAllAssets();
-		/*
+
 		//User[] person = dataInput.parsePersons("data/Persons.dat");
 		ArrayList<User> person = User.loadUsers();
 		//Asset[] assets = dataInput.parseAssets("data/Assets.dat");
@@ -20,7 +18,7 @@ public class PortfolioReport {
 		ArrayList<Portfolio> portfolios = Portfolio.loadPortfolios();
 		Portfolio.summaryReport(portfolios, person, assets);
 		Portfolio.detailReport(portfolios, person, assets);
-		*/
+		
 	}
 
 }

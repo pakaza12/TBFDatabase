@@ -58,11 +58,17 @@ select pm.firstName, pm.lastName, a.assetCode from Asset a
 	left join AssetPortfolio ap on a.assetId = ap.assetId 
 		left join Portfolio p on p.portfolioId = ap.portfolioId 
 			left join Person pm on pm.personId = p.personId 
-				where pm.personCode = '2AB'; 
+				where pm.personCode = '4AB'; 
 					-- Change 3AB with the personCode you want the assets for
 
+select a.assetCode, p.portfolioCode from Portfolio p left join AssetPortfolio ap on ap.portfolioId = p.portfolioId left join Asset a on a.assetId = ap.assetId
+						where p.personId = (select personId from Person where personCode = '1AB');
 select * from Asset;
+select * from Portfolio;
 select * from Person;
+select count(assetId) as numAssets from AssetPortfolio where assetId = (select assetId from Asset where assetCode = '1BB');
+Select * from Portfolio;
+select count(addressId) as numPeople from Person where personId = 1;
 insert into Person(personCode, addressId, firstName, lastName) values ('100A', (Select a.addressId from Address a left join City c on  a.cityId = c.cityId left join State s on s.stateId = a.stateId where (a.street = '00 Veith Center' AND a.zip = 77015 AND a.country = 'US') ), 'Parker', 'Zach');
 select secIdentity from Person;
 select state from State;

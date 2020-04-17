@@ -17,6 +17,34 @@ public class PortfolioData {
 	 * Method that removes every person record from the database
 	 */
 	public static void removeAllPersons() {
+		startJDBC();
+		Connection conn = getConnection();
+		
+		String query = "select p.personCode from Person p;";
+
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+
+		try {
+			ps = conn.prepareStatement(query);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				String personCode = rs.getString("personCode");
+				removePerson(personCode);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		
+		try {
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
 		
 	}
 	
@@ -26,7 +54,164 @@ public class PortfolioData {
 	 * @param personCode
 	 */
 	public static void removePerson(String personCode) {
+		startJDBC();
+		Connection conn = getConnection();
 		
+		//Check if the person exists
+		String query1 = "select personCode from Person where personCode = ?;";
+		PreparedStatement ps1 = null;
+		ResultSet rs1 = null;
+		boolean personExist = true;
+		try {
+			ps1 = conn.prepareStatement(query1);
+			ps1.setString(1, personCode);
+			rs1 = ps1.executeQuery();
+			if(!rs1.next()) {
+				personExist = false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		//Check if the address has more than one corresponding person
+		String query2 = "select addressId, count(addressId) as numPeople from Person where addressId = (select addressId from Person where personCode = ? );";
+		PreparedStatement ps2 = null;
+		ResultSet rs2 = null;
+		int addressId = 0;
+		boolean onePersonAddress = false;
+		try {
+			ps2 = conn.prepareStatement(query2);
+			ps2.setString(1, personCode);
+			rs2 = ps2.executeQuery();
+			int numPeople = 0;
+			while(rs2.next()) {
+				addressId = rs2.getInt("addressId");
+				numPeople += rs2.getInt("numPeople");
+			}
+			if(numPeople <= 1) {
+				onePersonAddress = true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		//Check if the state has multiple different addresses associated with it
+		String query3 = "select stateId, count(stateId) as numState from Address where stateId = (select stateId from Address where addressId = (select addressId from Person where personCode = ?));";
+		PreparedStatement ps3 = null;
+		ResultSet rs3 = null;
+		int stateId = 0;
+		boolean oneStateAddress = false;
+		try {
+			ps3 = conn.prepareStatement(query3);
+			ps3.setString(1, personCode);
+			rs3 = ps3.executeQuery();
+			int numState = 0;
+			while(rs3.next()) {
+				stateId = rs3.getInt("stateId");
+				numState = rs3.getInt("numState");
+			}
+			if(numState <= 1) {
+				oneStateAddress = true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		//Check if the city has multiple different addresses associated with it
+		String query4 = "select cityId, count(cityId) as numCity from Address where cityId = (select cityId from Address where addressId = (select addressId from Person where personCode = ?));";
+		PreparedStatement ps4 = null;
+		ResultSet rs4 = null;
+		boolean oneCityAddress = false;
+		int cityId = 0;
+		try {
+			ps4 = conn.prepareStatement(query4);
+			ps4.setString(1, personCode);
+			rs4 = ps4.executeQuery();
+			int numCity = 0;
+			while(rs4.next()) {
+				cityId = rs4.getInt("cityId");
+				numCity = rs4.getInt("numCity");
+			}
+			if(numCity <= 1) {
+				oneCityAddress = true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		//Deletes the related Portfolio(s) and AssetPortfolio tables
+		String query5 = "select a.assetCode, p.portfolioCode from Portfolio p left join AssetPortfolio ap on ap.portfolioId = p.portfolioId left join Asset a on a.assetId = ap.assetId"
+						+ " where p.personId = (select personId from Person where personCode = ?);";
+		PreparedStatement ps5 = null;
+		ResultSet rs5 = null;
+		try {
+			ps5 = conn.prepareStatement(query5);
+			ps5.setString(1, personCode);
+			rs5 = ps5.executeQuery();
+			while (rs5.next()) {
+				String portfolioCode = rs5.getString("portfolioCode");
+				String assetCode = rs5.getString("assetCode");
+				
+				//Deletes the asset related to the person if they were the only one with the asset
+				if(!JDBCUtils.doesAssetBelongToMore(assetCode, conn)) {
+					removeAsset(assetCode);
+				}
+				removePortfolio(portfolioCode);
+			}
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		
+		//If the preson exists, it deletes the email(s) related to them, then the person
+		if(personExist) {
+			
+			String query6 = "delete from Email where personId = (select personId from Person where personCode = ?);";
+			PreparedStatement ps6 = null;
+			try {
+				ps6 = conn.prepareStatement(query6);
+				ps6.setString(1, personCode);
+				ps6.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			
+			String query7 = "delete from Person where personCode = ?;";
+			PreparedStatement ps7 = null;
+			try {
+				ps7 = conn.prepareStatement(query7);
+				ps7.setString(1, personCode);
+				ps7.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		//If the address only corresponds to one person, we can delete it now
+		if(onePersonAddress) {
+			JDBCUtils.deleteAddress(addressId, conn);
+		}
+		
+		//If the state only corresponds to one address, we can delete it
+		if(oneStateAddress) {
+			JDBCUtils.deleteState(stateId, conn);
+		}
+		
+		//If the city only corresponds to one address, we can delete it
+		if(oneCityAddress) {
+			JDBCUtils.deleteCity(cityId, conn);
+		}
+		
+		try {
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+
 	}
 	
 	/**
@@ -105,6 +290,15 @@ public class PortfolioData {
 				e.printStackTrace();
 			} 
 		}
+		
+		try {
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
 	}
 	
 	/**
@@ -144,6 +338,15 @@ public class PortfolioData {
 				e.printStackTrace();
 			}
 		}
+		
+		try {
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
 	}
 
 	/**
@@ -170,6 +373,16 @@ public class PortfolioData {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
+		
+		try {
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		
 	}
 
 	/**
@@ -220,6 +433,16 @@ public class PortfolioData {
 				e.printStackTrace();
 			}
 		}
+		
+		try {
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		
 	}
 	
 	/**
@@ -260,6 +483,15 @@ public class PortfolioData {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
+		}
+		
+		try {
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 	
@@ -309,6 +541,15 @@ public class PortfolioData {
 				e.printStackTrace();
 			}
 		}
+		
+		try {
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
 	}
 	
 	/**
@@ -353,11 +594,20 @@ public class PortfolioData {
 				ps.setDouble(4, baseRateOfReturn);
 				ps.setDouble(5, beta);
 				ps.setString(6, stockSymbol);
-				ps.setDouble(6, sharePrice);
+				ps.setDouble(7, sharePrice);
 				ps.executeUpdate();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
+		}
+		
+		try {
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 
@@ -381,10 +631,19 @@ public class PortfolioData {
 				removePortfolio(portfolioCode);
 			}
 		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		
+		try {
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
 			System.out.println("SQLException: ");
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
+		
 	}
 	
 	/**
@@ -435,6 +694,16 @@ public class PortfolioData {
 				e.printStackTrace();
 			}
 		}
+		
+		try {
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		
 	}
 	
 	/**
@@ -528,6 +797,15 @@ public class PortfolioData {
 				e.printStackTrace();
 			}
 		}
+		
+		try {
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
 	}
 	
 	/**
@@ -589,6 +867,15 @@ public class PortfolioData {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
+		}
+		
+		try {
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 	
