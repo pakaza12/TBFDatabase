@@ -73,7 +73,7 @@ create table Asset (
     quarterlyDividend double default null,
     baseRateReturn double default null,
     betaMeasure double default null,
-    stockSymbol varchar(10) default null,
+    stockSymbol varchar(255) default null,
     sharePrice double default null,
     baseOmegaMeasure double default null,
     totalValue double default null
