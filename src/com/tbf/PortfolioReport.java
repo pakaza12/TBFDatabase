@@ -14,9 +14,6 @@ public class PortfolioReport {
 		ArrayList<User> person = User.loadUsers();
 		//Asset[] assets = dataInput.parseAssets("data/Assets.dat");
 		ArrayList<Asset> assets = Asset.loadAssets();
-		for(Asset a: assets) {
-			System.out.println("Asset = " + a);
-		}
 		//Portfolio[] portfolios = dataInput.parsePortfolio("data/Portfolios.dat");
 		ArrayList<Portfolio> portfolios = Portfolio.loadPortfolios();
 		Portfolio.summaryReport(portfolios, person, assets);

@@ -110,16 +110,15 @@ public abstract class Asset {
 				Double sharePrice = rs.getDouble("sharePrice");
 				Double baseOmegaMeasure = rs.getDouble("baseOmegaMeasure");
 				Double totalValue = rs.getDouble("totalValue");
-				System.out.println("assetCode = " + assetCode + "totalValue = " + totalValue + "baseRateReturn = " + baseRateReturn);
-
+	
 				if (totalValue > 0) {
-					b.add(new PrivateInvestment(assetCode, label, quarterlyDividend, baseRateReturn / 100.0, baseOmegaMeasure, totalValue));
+					b.add(new PrivateInvestment(assetCode, label, quarterlyDividend, baseRateReturn, baseOmegaMeasure, totalValue));
 				}
 				if (stockSymbol != null) {
-					b.add(new Stocks(assetCode, label, quarterlyDividend, baseRateReturn / 100.0, betaMeasure, stockSymbol, sharePrice));
+					b.add(new Stocks(assetCode, label, quarterlyDividend, baseRateReturn, betaMeasure, stockSymbol, sharePrice));
 				}
 				if (apr > 0) {
-					b.add(new Deposit(assetCode, label, apr / 100.0));
+					b.add(new Deposit(assetCode, label, apr));
 				}
 			}
 		} catch (SQLException e) {

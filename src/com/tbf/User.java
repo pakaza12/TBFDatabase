@@ -144,7 +144,6 @@ public class User {
       while(rs.next()) { 
         int personId = rs.getInt("personId");
         String personCode = rs.getString("personCode");
-        System.out.println("PersonCode = " + personCode);
         String firstName = rs.getString("firstName");
         String lastName = rs.getString("lastName");
         String brokerStatus = rs.getString("brokerStatus");

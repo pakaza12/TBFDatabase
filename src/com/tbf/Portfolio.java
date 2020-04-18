@@ -270,8 +270,8 @@ public class Portfolio {
 				int place = portfolioToAsset.get(c.getKey());
 
 				String label = assets.get(place).getLabel();
-				double anReturn = assets.get(place).getAnnualReturn();
-				double anReturnRate = (anReturn / assets.get(place).getTotalWorth()) * 100.0;
+				double anReturn = (double) assets.get(place).getAnnualReturn();
+				double anReturnRate = (anReturn / (double) assets.get(place).getTotalWorth()) * 100.0;
 				double risk = assets.get(place).getRisk();
 				double value = assets.get(place).getTotalWorth();
 
@@ -325,7 +325,6 @@ public class Portfolio {
 			while (rs.next()) {
 				int portfolioId = rs.getInt("portfolioId");
 				String portfolioCode = rs.getString("portfolioCode");
-				System.out.println("PortfolioCode = " +portfolioCode);
 				String ownerCode = rs.getString("ownerCode");
 				String managerCode = rs.getString("managerCode");
 				String beneficiaryCode = rs.getString("beneficiaryCode");
