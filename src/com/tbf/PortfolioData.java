@@ -783,15 +783,29 @@ public class PortfolioData {
 			e.printStackTrace();
 		}
 		
-		if(ownerExist && managerExist && beneficiaryExist && !portfolioExist) {
+		if(ownerExist && managerExist && !beneficiaryExist && !portfolioExist) {
 			String query3 = "insert into Portfolio(portfolioCode, ownerCode, managerCode, personId) values (?, ?, ?, (select personId from Person p where p.personCode = ?));";
 			PreparedStatement ps = null;
 			try {
 				ps = conn.prepareStatement(query3);
 				ps.setString(1, portfolioCode);
 				ps.setString(2, ownerCode);
-				ps.setString(3, beneficiaryCode);
+				ps.setString(3, managerCode);
 				ps.setString(4, ownerCode);
+				ps.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		} else if(ownerExist && managerExist && beneficiaryExist && !portfolioExist) {
+			String query3 = "insert into Portfolio(portfolioCode, ownerCode, managerCode, beneficiaryCode, personId) values (?, ?, ?, ?, (select personId from Person p where p.personCode = ?));";
+			PreparedStatement ps = null;
+			try {
+				ps = conn.prepareStatement(query3);
+				ps.setString(1, portfolioCode);
+				ps.setString(2, ownerCode);
+				ps.setString(3, managerCode);
+				ps.setString(4, beneficiaryCode);
+				ps.setString(5, ownerCode);
 				ps.executeUpdate();
 			} catch (SQLException e) {
 				e.printStackTrace();
