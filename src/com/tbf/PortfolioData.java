@@ -194,12 +194,12 @@ public class PortfolioData {
 		}
 		
 		//If the state only corresponds to one address, we can delete it
-		if(oneStateAddress) {
+		if(oneStateAddress && onePersonAddress) {
 			JDBCUtils.deleteState(stateId, conn);
 		}
 		
 		//If the city only corresponds to one address, we can delete it
-		if(oneCityAddress) {
+		if(oneCityAddress && onePersonAddress) {
 			JDBCUtils.deleteCity(cityId, conn);
 		}
 		
@@ -253,7 +253,7 @@ public class PortfolioData {
 		}
 		
 		//If they have a blank/null broker type this enters the individual
-		if(!personExist && (brokerType.isEmpty() || brokerType == null) ) {
+		if(!personExist && (brokerType == null) ) {
 			String query2 = "insert into Person(personCode, addressId, firstName, lastName) values (?, (Select a.addressId from Address a left join City c on"
 								+ " a.cityId = c.cityId left join State s on s.stateId = a.stateId where (a.street = ? AND a.zip = ? AND a.country = ?) ), ?, ?);";
 			PreparedStatement ps = null;
@@ -261,7 +261,7 @@ public class PortfolioData {
 				ps = conn.prepareStatement(query2);
 				ps.setString(1, personCode);
 				ps.setString(2, street);
-				ps.setInt(3, Integer.parseInt(zip));
+				ps.setString(3, zip);
 				ps.setString(4, country);
 				ps.setString(5, firstName);
 				ps.setString(6, lastName);

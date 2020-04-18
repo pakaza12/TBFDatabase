@@ -151,7 +151,7 @@ public class User {
         String street = rs.getString("street");
         String city = rs.getString("city");
         String state = rs.getString("state");
-        String zip = Integer.toString(rs.getInt("zip"));
+        String zip = rs.getString("zip");
         String country = rs.getString("country");
         Set<String> email = loadEmail(personId);
         Address a = new Address(street, city, state, zip, country);
