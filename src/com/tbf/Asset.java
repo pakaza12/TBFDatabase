@@ -101,6 +101,7 @@ public abstract class Asset {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				String assetCode = rs.getString("assetCode");
+				System.out.println("assetCode = " + assetCode);
 				String label = rs.getString("label");
 				Double apr = rs.getDouble("apr");
 				Double quarterlyDividend = rs.getDouble("quarterlyDividend");

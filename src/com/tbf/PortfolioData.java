@@ -783,7 +783,7 @@ public class PortfolioData {
 			e.printStackTrace();
 		}
 		
-		if(!ownerExist && !managerExist && !beneficiaryExist && !portfolioExist) {
+		if(ownerExist && managerExist && beneficiaryExist && !portfolioExist) {
 			String query3 = "insert into Portfolio(portfolioCode, ownerCode, managerCode, personId) values (?, ?, ?, (select personId from Person p where p.personCode = ?));";
 			PreparedStatement ps = null;
 			try {

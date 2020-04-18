@@ -141,9 +141,10 @@ public class User {
 		try {
 			ps = conn.prepareStatement(query);
 			rs = ps.executeQuery();
-      while(rs.next()) { //Might have to call rs.next before this if errors out here
+      while(rs.next()) { 
         int personId = rs.getInt("personId");
         String personCode = rs.getString("personCode");
+        System.out.println("PersonCode = " + personCode);
         String firstName = rs.getString("firstName");
         String lastName = rs.getString("lastName");
         String brokerStatus = rs.getString("brokerStatus");
@@ -212,13 +213,14 @@ public class User {
 			throw new RuntimeException(e);
 		}
 
-		String query = "select e.email from Email e where e.personId = " + personId;
+		String query = "select e.email from Email e where e.personId = ?;";
 
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 
 		try {
 			ps = conn.prepareStatement(query);
+			ps.setInt(1, personId);
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				String email = rs.getString("email");

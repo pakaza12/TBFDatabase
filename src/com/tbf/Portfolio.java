@@ -325,6 +325,7 @@ public class Portfolio {
 			while (rs.next()) {
 				int portfolioId = rs.getInt("portfolioId");
 				String portfolioCode = rs.getString("portfolioCode");
+				System.out.println("PortfolioCode = " +portfolioCode);
 				String ownerCode = rs.getString("ownerCode");
 				String managerCode = rs.getString("managerCode");
 				String beneficiaryCode = rs.getString("beneficiaryCode");
@@ -387,14 +388,14 @@ public class Portfolio {
 			throw new RuntimeException(e);
 		}
 
-		String query = "select a.assetCode, ap.assetValue from AssetPortfolio ap left join Asset a on a.assetId = ap.assetId where ap.portfolioId = "
-				+ portfolioId;
+		String query = "select a.assetCode, ap.assetValue from AssetPortfolio ap left join Asset a on a.assetId = ap.assetId where ap.portfolioId = ?;";
 
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 
 		try {
 			ps = conn.prepareStatement(query);
+			ps.setInt(1, portfolioId);
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				String assetCode = rs.getString("assetCode");
