@@ -101,7 +101,6 @@ public abstract class Asset {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				String assetCode = rs.getString("assetCode");
-				System.out.println("assetCode = " + assetCode);
 				String label = rs.getString("label");
 				Double apr = rs.getDouble("apr");
 				Double quarterlyDividend = rs.getDouble("quarterlyDividend");
@@ -111,6 +110,7 @@ public abstract class Asset {
 				Double sharePrice = rs.getDouble("sharePrice");
 				Double baseOmegaMeasure = rs.getDouble("baseOmegaMeasure");
 				Double totalValue = rs.getDouble("totalValue");
+				System.out.println("assetCode = " + assetCode + "totalValue = " + totalValue + "baseRateReturn = " + baseRateReturn);
 
 				if (totalValue > 0) {
 					b.add(new PrivateInvestment(assetCode, label, quarterlyDividend, baseRateReturn / 100.0, baseOmegaMeasure, totalValue));
