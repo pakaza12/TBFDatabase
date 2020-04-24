@@ -1,7 +1,5 @@
 package com.tbf;
 
-import java.util.Iterator;
-
 public class Node<Portfolio>  {
 	
 	private Portfolio item;

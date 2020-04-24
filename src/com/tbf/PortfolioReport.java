@@ -11,8 +11,9 @@ public class PortfolioReport {
 	public static void main(String[] args) {
 
 		ArrayList<Portfolio> portfolios = Portfolio.loadPortfolios();
+		
 		Portfolio.summaryReport(portfolios);
-		Portfolio.detailReport(portfolios);
+		//Portfolio.detailReport(portfolios);
 		
 	}
 

@@ -101,7 +101,8 @@ public class dataInput {
 		return inputUsers;
 	}
 	
-	/*public static Portfolio[] parsePortfolio(String file) {
+	//This is now depricated based on how we have changed the Portfolio class
+	public static Portfolio[] parsePortfolio(String file) {
 		
 		Scanner input = null;
 
@@ -138,14 +139,14 @@ public class dataInput {
 				}
 
 				if(beneficiaryCode.isEmpty()) {
-					portfolios[i] = new Portfolio(portfolioCode, ownerCode, managerCode, assets);
+					portfolios[i] = new Portfolio(portfolioCode, ownerCode, managerCode);
 				} else {
-					portfolios[i] = new Portfolio(portfolioCode, ownerCode, managerCode, beneficiaryCode, assets);
+					portfolios[i] = new Portfolio(portfolioCode, ownerCode, managerCode, beneficiaryCode);
 				}
 			}
 		}
 		
 		return portfolios;
-	}*/
+	}
 
 }
