@@ -65,7 +65,8 @@ select a.assetCode, p.portfolioCode from Portfolio p left join AssetPortfolio ap
 						where p.personId = (select personId from Person where personCode = '1AB');
 select * from Asset;
 select * from Portfolio;
-select * from Person;
+select * from Address;
+select a.assetCode, a.label, a.apr, a.quarterlyDividend, a.baseRateReturn, a.betaMeasure, a.stockSymbol, a.sharePrice, a.baseOmegaMeasure, a.totalValue, ap.assetValue from Portfolio p left join AssetPortfolio ap on p.portfolioId = ap.portfolioId left join Asset a on a.assetId = ap.assetId where p.portfolioId = 184;
 select count(assetId) as numAssets from AssetPortfolio where assetId = (select assetId from Asset where assetCode = '1BB');
 Select * from Portfolio;
 select count(addressId) as numPeople from Person where personId = 1;

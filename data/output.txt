@@ -45,19 +45,19 @@ Portfolios.dat:
 8CB;2AB;6AB;1AB;11BB:43253.3
 9CB;1AB;10AB;2AB;14BB:8493.3
 output.txt
-Portfolio Code         Portfolio Owner         Portfolio Manager         Total Fees         Total Commissions         Aggregate Risk         Annual Returns         Total Value
+Portfolio Code         Portfolio Owner         		Portfolio Manager         Total Fees         		Total Commissions        	 Aggregate Risk         Annual Returns         Total Value
 ===========================================================================================================================================================================================================
 1CB                     Priddy, Paulita                 Stickney, Elia                  $225.00                 $0.24                           -0.0112                 $19.45                  $553.98
 2CB                     Melwall, Jefferson              Stickney, Elia                  $150.00                 $89.16                          0.7803                  $7132.93                $16222.00
 3CB                     Culley, Emmanuel                Stickney, Elia                  $150.00                 $1.64                           0.0157                  $131.18                 $2385.00
 4CB                     Meech, Vincents                 Upston, Mellisa                 $0.00                   $2.03                           0.0000                  $54.04                  $1230.00
-5CB                     Andrus, Ursa                    Upston, Mellisa                 $0.00                   $3217.28                        1.2971                  $85794.11               $556112.68
+5CB                     Andrus, Ursa                    Upston, Mellisa                 $0.00                   $3167.65                        1.2971                  $84470.58               $556112.68
 6CB                     Gatherell, Madonna              Upston, Mellisa                 $0.00                   $293.68                         0.8327                  $7831.46                $8540.71
 7CB                     Uccello, Randolph               Lowndsborough, Lorenza          $0.00                   $11.23                          -0.0009                 $299.37                 $5208.16
 8CB                     Priddy, Paulita                 Lowndsborough, Lorenza          $0.00                   $64.51                          0.0000                  $1720.20                $43253.30
 9CB                     Stickney, Elia                  Brabin, Adolpho                 $75.00                  $4.72                           0.0000                  $377.61                 $8493.30
 ===========================================================================================================================================================================================================
-                                                                              Results = $600.00                 $3684.48                                                $103360.36              $641999.13
+                                                                              Results = $600.00                 $3634.85                                                $102036.84              $641999.13
 
 
 Portfolio Details
@@ -154,9 +154,9 @@ Ventura, CA US 93005
 Assets:
 Code         Asset                     Return Rate         Risk         Annual Return         Value
 12BB         Rental Property 2              15.12%         1.31         $83316.00             $551200.00
-9BB          Altice USA                     50.44%         0.08         $2478.11              $4912.68
+9BB          Altice USA                     23.50%         0.08 	$1154.58              $4912.68
                             ----------------------------------------------------------------------------------
-                             Totals                      1.2971         $85794.11             $556112.68
+                             Totals               	   1.2971 	$84470.58             $556112.68 
 
 Portfolio 6CB
 -----------------------------------------------------------------------------------

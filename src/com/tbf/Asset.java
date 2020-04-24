@@ -112,6 +112,7 @@ public abstract class Asset {
 				Double totalValue = rs.getDouble("totalValue");
 	
 				if (totalValue > 0) {
+					
 					b.add(new PrivateInvestment(assetCode, label, quarterlyDividend, baseRateReturn, baseOmegaMeasure, totalValue));
 				}
 				if (stockSymbol != null) {

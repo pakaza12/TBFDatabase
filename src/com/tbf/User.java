@@ -56,9 +56,20 @@ public class User {
 	public String getLastName() {
 		return this.lastName;
 	}
+	
+	public String getLastNameFirstName() {
+		return this.getLastName() + this.getFirstName();
+	}
 
 	public String getBrokerStatus() {
 		return this.brokerStatus;
+	}
+	
+	public boolean isBroker() {
+		if(this.isExpertBroker() || this.isJuniorBroker()) {
+			return true;
+		}
+		return false;
 	}
 
 	public String getSecidnetity() {

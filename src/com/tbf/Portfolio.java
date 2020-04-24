@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -21,24 +22,25 @@ public class Portfolio {
 	private String OwnerCode;
 	private String managerCode;
 	private String beneficiaryCode;
-	private HashMap<String, Double> assetList;
+	//Contains the assetCode and the Asset corresponding to it
+	private HashMap<String, Asset> assetList;
+	private User owner;
+	private User manager;
+	private User beneficiary;
 
-	public Portfolio(String portfolioCode, String ownerCode, String managerCode, String beneficiaryCode,
-			HashMap<String, Double> assetList) {
+	public Portfolio(String portfolioCode, String ownerCode, String managerCode, String beneficiaryCode) {
 		super();
 		this.portfolioCode = portfolioCode;
 		this.OwnerCode = ownerCode;
 		this.managerCode = managerCode;
 		this.beneficiaryCode = beneficiaryCode;
-		this.assetList = assetList;
 	}
 
-	public Portfolio(String portfolioCode, String ownerCode, String managerCode, HashMap<String, Double> assetList) {
+	public Portfolio(String portfolioCode, String ownerCode, String managerCode) {
 		super();
 		this.portfolioCode = portfolioCode;
 		this.OwnerCode = ownerCode;
 		this.managerCode = managerCode;
-		this.assetList = assetList;
 	}
 
 	public String getPortfolioCode() {
@@ -73,57 +75,24 @@ public class Portfolio {
 		this.beneficiaryCode = beneficiaryCode;
 	}
 
-	public HashMap<String, Double> getAssetList() {
+	public HashMap<String, Asset> getAssetList() {
 		return assetList;
 	}
 
-	public void setAssetList(HashMap<String, Double> assetList) {
+	public void setAssetList(HashMap<String, Asset> assetList) {
 		this.assetList = assetList;
-	}
-
-	/**
-	 * This method will return a map that maps an assets code to its spot in the
-	 * Asset[] assets array. Used to connect the Portfolio class to the Asset class.
-	 */
-	public static HashMap<String, Integer> assetCodeMap(ArrayList<Asset> assets) {
-		HashMap<String, Integer> codeMap = new HashMap<>();
-		int counter = 0;
-		for (Asset a : assets) {
-			// Gets the code from the asset and puts which spot it is in Asset[]
-			codeMap.put(a.getCode(), counter);
-			counter++;
-		}
-		return codeMap;
-	}
-
-	/**
-	 * This method will return a map that maps a users code to its spot in the
-	 * User[] assets array. Used to connect the Portfolio class to the User class.
-	 */
-	public static HashMap<String, Integer> userCodeMap(ArrayList<User> person) {
-		HashMap<String, Integer> codeMap = new HashMap<>();
-		int counter = 0;
-		for (User a : person) {
-			// Gets the code from the person and puts which spot it is in User[]
-			codeMap.put(a.getPersonCode(), counter);
-			counter++;
-		}
-		return codeMap;
 	}
 
 	/**
 	 * This method is used as a summation tool for the total value of each asset in
 	 * the portfolio
 	 */
-	public static double getTotalValue(HashMap<String, Double> assetList, ArrayList<Asset> assets,
-			HashMap<String, Integer> portfolioToAsset) {
+	public static double getTotalValue(HashMap<String, Asset> assetLists) {
 		double value = 0;
 
 		// Iterates through the assets in the (code to position in array) hashmap
-		for (HashMap.Entry<String, Double> c : assetList.entrySet()) {
-			int place = portfolioToAsset.get(c.getKey());
-			assets.get(place).setValue(c.getValue());
-			value += assets.get(place).getTotalWorth();
+		for (HashMap.Entry<String, Asset> c : assetLists.entrySet()) {
+			value += c.getValue().getTotalWorth();
 		}
 		return value;
 	}
@@ -132,14 +101,12 @@ public class Portfolio {
 	 * This method is used as a summation tool for the total aggregate risk of each
 	 * asset in the portfolio
 	 */
-	public static double getAggregateRisk(HashMap<String, Double> assetList, ArrayList<Asset> assets,
-			HashMap<String, Integer> portfolioToAsset, double totalValue) {
+	public static double getAggregateRisk(HashMap<String, Asset> assetList, double totalValue) {
 		double risk = 0;
 
-		// Iterates through the assets in the (code to position in array) hashmap
-		for (HashMap.Entry<String, Double> c : assetList.entrySet()) {
-			int place = portfolioToAsset.get(c.getKey());
-			risk += assets.get(place).getAggregateRisk(totalValue);
+		// Iterates through the assets in the hashmap
+		for (HashMap.Entry<String, Asset> c : assetList.entrySet()) {
+			risk += c.getValue().getAggregateRisk(totalValue);
 		}
 		return risk;
 	}
@@ -148,14 +115,12 @@ public class Portfolio {
 	 * This method is used as a summation tool for the total annual return of each
 	 * asset in the portfolio
 	 */
-	public static double getAnnualReturn(HashMap<String, Double> assetList, ArrayList<Asset> assets,
-			HashMap<String, Integer> portfolioToAsset) {
+	public static double getAnnualReturn(HashMap<String, Asset> assetList) {
 		double annualReturn = 0;
 
 		// Iterates through the assets in the (code to position in array) hashmap
-		for (HashMap.Entry<String, Double> c : assetList.entrySet()) {
-			int place = portfolioToAsset.get(c.getKey());
-			annualReturn += assets.get(place).getAnnualReturn();
+		for (HashMap.Entry<String, Asset> c : assetList.entrySet()) {
+			annualReturn += c.getValue().getAnnualReturn();
 		}
 		return annualReturn;
 	}
@@ -163,9 +128,9 @@ public class Portfolio {
 	/**
 	 * This method is used to get the total fees per portfolio
 	 */
-	public static double getTotalFee(HashMap<String, Double> assetList, ArrayList<User> person, HashMap<String, Integer> portfolioToUser, String managerId) {
-		if (person.get(portfolioToUser.get(managerId)).isJuniorBroker()) {
-			return assetList.size() * 75.0;
+	public static double getTotalFee(Portfolio s) {
+		if (s.getManager().isJuniorBroker()) {
+			return s.getAssetList().size() * 75.0;
 		} else {
 			return 0.0;
 		}
@@ -174,26 +139,18 @@ public class Portfolio {
 	/**
 	 * This method is used to get the total commissions per portfolio
 	 */
-	public static double getTotalCommission(ArrayList<User> person, HashMap<String, Integer> portfolioToUser, String managerId,
-			double annualReturn) {
-		if (person.get(portfolioToUser.get(managerId)).isJuniorBroker()) {
+	public static double getTotalCommission(Portfolio s, double annualReturn) {
+		if (s.getManager().isJuniorBroker()) {
 			return annualReturn * 0.0125;
-		} else if (person.get(portfolioToUser.get(managerId)).isExpertBroker()) {
+		} else if (s.getManager().isExpertBroker()) {
 			return annualReturn * 0.0375;
 		} else {
 			return 0.0;
 		}
 	}
 
-	public static void summaryReport(ArrayList<Portfolio> report, ArrayList<User> person, ArrayList<Asset> assets) {
+	public static void summaryReport(ArrayList<Portfolio> report) {
 		double value = 0, anReturn = 0, fees = 0, commissions = 0;
-
-		// Creates two HashMaps to map the assetCode and userCode to their respective
-		// assets/users in the User/Asset arrays
-		// Ex: (key, value) would be (assetCode, spot in the array)
-		HashMap<String, Integer> portfolioToAsset = assetCodeMap(assets);
-		HashMap<String, Integer> portfolioToUser = userCodeMap(person);
-
 		System.out.println(
 				"Portfolio Code \t\tPortfolio Owner \t\tPortfolio Manager \t\tTotal Fees \t\tTotal Commissions \t\tAggregate Risk \t\tAnnual Returns \t\tTotal Value");
 		System.out.println(
@@ -202,20 +159,18 @@ public class Portfolio {
 		// Goes through the array portfolio by portfolio to print a line by line report
 		// of the values in the portfolio
 		for (Portfolio s : report) {
-			double totalValue = getTotalValue(s.getAssetList(), assets, portfolioToAsset);
+			double totalValue = getTotalValue(s.getAssetList());
 			value += totalValue;
-			double aggregateRisk = getAggregateRisk(s.getAssetList(), assets, portfolioToAsset, totalValue);
-			double annualReturn = getAnnualReturn(s.getAssetList(), assets, portfolioToAsset);
+			double aggregateRisk = getAggregateRisk(s.getAssetList(), totalValue);
+			double annualReturn = getAnnualReturn(s.getAssetList());
 			anReturn += annualReturn;
-			double totalFees = getTotalFee(s.getAssetList(), person, portfolioToUser, s.getManagerCode());
+			double totalFees = getTotalFee(s);
 			fees += totalFees;
-			double totalCommissions = getTotalCommission(person, portfolioToUser, s.getManagerCode(), annualReturn);
+			double totalCommissions = getTotalCommission(s, annualReturn);
 			commissions += totalCommissions;
 
-			String userName = person.get( portfolioToUser.get(s.getOwnerCode()) ).getLastName() + ", "
-					+ person.get( portfolioToUser.get(s.getOwnerCode()) ).getFirstName();
-			String managerName = person.get( portfolioToUser.get(s.getManagerCode()) ).getLastName() + ", "
-					+ person.get( portfolioToUser.get(s.getManagerCode()) ).getFirstName();
+			String userName = s.getOwner().getLastName() + ", " + s.getOwner().getFirstName();
+			String managerName = s.getManager().getLastName() + ", " + s.getManager().getFirstName();
 
 			// Prints out one portfolio per loop
 			System.out.printf("%-23s %-31s %-31s $%-22.2f $%-30.2f %-23.4f $%-22.2f $%-32.2f\n", s.getPortfolioCode(),
@@ -227,14 +182,7 @@ public class Portfolio {
 				anReturn, value);
 	}
 
-	public static void detailReport(ArrayList<Portfolio> report, ArrayList<User> person, ArrayList<Asset> assets) {
-
-		// Creates two HashMaps to map the assetCode and userCode to their respective
-		// assets/users in the User/Asset arrays
-		// Ex: (key, value) would be (assetCode, spot in the array)
-		HashMap<String, Integer> portfolioToAsset = assetCodeMap(assets);
-		HashMap<String, Integer> portfolioToUser = userCodeMap(person);
-
+	public static void detailReport(ArrayList<Portfolio> report) {
 		System.out.printf(
 				"\n\nPortfolio Details\n============================================================================================================================================================================\n");
 
@@ -244,36 +192,31 @@ public class Portfolio {
 					"Portfolio %s\n-----------------------------------------------------------------------------------\n",
 					s.getPortfolioCode());
 
-			double totalValue = getTotalValue(s.getAssetList(), assets, portfolioToAsset);
-			double aggregateRisk = getAggregateRisk(s.getAssetList(), assets, portfolioToAsset, totalValue);
-			double annualReturn = getAnnualReturn(s.getAssetList(), assets, portfolioToAsset);
-			String managerName = person.get( portfolioToUser.get(s.getManagerCode()) ).getLastName() + ", "
-					+ person.get( portfolioToUser.get(s.getManagerCode()) ).getFirstName();
+			double totalValue = getTotalValue(s.getAssetList());
+			double aggregateRisk = getAggregateRisk(s.getAssetList(), totalValue);
+			double annualReturn = getAnnualReturn(s.getAssetList());
+			String managerName = s.getManager().getLastName() + ", " + s.getManager().getFirstName();
 
 			// Test case to check if there is a beneficiary
 			String beneficiaryInfo = "";
-			if (!(s.getBeneficiaryCode() == null) && !(portfolioToUser.get(s.getBeneficiaryCode()) == null)) {
-				beneficiaryInfo += person.get( portfolioToUser.get(s.getBeneficiaryCode()) ).toString();
+			if (!(s.getBeneficiaryCode() == null) && !(s.getBeneficiary() == null)) {
+				beneficiaryInfo += s.getBeneficiary().toString();
 			} else {
 				beneficiaryInfo += "None";
 			}
 
 			System.out.printf("Owner:\n%s \nManager:\n%s \nBeneficiary:\n%s \nAssets:\n",
-					person.get( portfolioToUser.get(s.getOwnerCode()) ).toString(), managerName, beneficiaryInfo);
+					s.getOwner().toString(), managerName, beneficiaryInfo);
 			System.out.printf("Code \t\tAsset \t\t\t\t\tReturn Rate \t\tRisk \t\tAnnual Return \t\tValue\n");
 
 			// Iterates through each asset in the portfolio to print out the details for
 			// each asset
-			for (HashMap.Entry<String, Double> c : s.assetList.entrySet()) {
-				// Gets the spot in the Asset array that the assetCode corresponds to (shows up
-				// in)
-				int place = portfolioToAsset.get(c.getKey());
-
-				String label = assets.get(place).getLabel();
-				double anReturn = (double) assets.get(place).getAnnualReturn();
-				double anReturnRate = (anReturn / (double) assets.get(place).getTotalWorth()) * 100.0;
-				double risk = assets.get(place).getRisk();
-				double value = assets.get(place).getTotalWorth();
+			for (HashMap.Entry<String, Asset> c : s.getAssetList().entrySet()) {
+				String label = c.getValue().getLabel();
+				double anReturn = (double) c.getValue().getAnnualReturn();
+				double anReturnRate = ((double) anReturn / (double) c.getValue().getTotalWorth()) * 100.0;
+				double risk = c.getValue().getRisk();
+				double value = c.getValue().getTotalWorth();
 
 				System.out.printf("%-15s %-31s %18.2f%% %16.2f \t\t$%-22.2f $%-20.2f\n", c.getKey(), label,
 						anReturnRate, risk, anReturn, value);
@@ -328,12 +271,27 @@ public class Portfolio {
 				String ownerCode = rs.getString("ownerCode");
 				String managerCode = rs.getString("managerCode");
 				String beneficiaryCode = rs.getString("beneficiaryCode");
-				HashMap<String, Double> assetList = loadAsset(portfolioId);
+				HashMap<String, Asset> assetList = loadAsset(portfolioId);
+				User owner = loadUser(ownerCode);
+				User manager = loadUser(managerCode);
+				User beneficiary = null;
+				if(beneficiaryCode != null) {
+					beneficiary = loadUser(beneficiaryCode);
+				}
 
 				if (beneficiaryCode != null) {
-					b.add(new Portfolio(portfolioCode, ownerCode, managerCode, beneficiaryCode, assetList));
+					Portfolio p = new Portfolio(portfolioCode, ownerCode, managerCode, beneficiaryCode);
+					p.setAssetList(assetList);
+					p.setOwner(owner);
+					p.setManager(manager);
+					p.setBeneficiary(beneficiary);
+					b.add(p);
 				} else {
-					b.add(new Portfolio(portfolioCode, ownerCode, managerCode, assetList));
+					Portfolio p = new Portfolio(portfolioCode, ownerCode, managerCode);
+					p.setAssetList(assetList);
+					p.setOwner(owner);
+					p.setManager(manager);
+					b.add(p);
 				}
 			}
 		} catch (SQLException e) {
@@ -357,9 +315,33 @@ public class Portfolio {
 
 		return b;
 	}
+	
+	public User getOwner() {
+		return owner;
+	}
 
-	public static HashMap<String, Double> loadAsset(int portfolioId) {
-		HashMap<String, Double> assets = new HashMap<String, Double>();
+	public void setOwner(User owner) {
+		this.owner = owner;
+	}
+
+	public User getManager() {
+		return manager;
+	}
+
+	public void setManager(User manager) {
+		this.manager = manager;
+	}
+
+	public User getBeneficiary() {
+		return beneficiary;
+	}
+
+	public void setBeneficiary(User beneficiary) {
+		this.beneficiary = beneficiary;
+	}
+
+	public static HashMap<String, Asset> loadAsset(int portfolioId) {
+		HashMap<String, Asset> assets = new HashMap<String, Asset>();
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -387,7 +369,9 @@ public class Portfolio {
 			throw new RuntimeException(e);
 		}
 
-		String query = "select a.assetCode, ap.assetValue from AssetPortfolio ap left join Asset a on a.assetId = ap.assetId where ap.portfolioId = ?;";
+		String query = "select a.assetCode, a.label, a.apr, a.quarterlyDividend, a.baseRateReturn, a.betaMeasure, a.stockSymbol, a.sharePrice,"
+						+ " a.baseOmegaMeasure, a.totalValue, ap.assetValue from Portfolio p left join AssetPortfolio ap"
+						+ " on p.portfolioId = ap.portfolioId left join Asset a on a.assetId = ap.assetId where p.portfolioId = ?";
 
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -398,8 +382,31 @@ public class Portfolio {
 			rs = ps.executeQuery();
 			while (rs.next()) {
 				String assetCode = rs.getString("assetCode");
+				String label = rs.getString("label");
+				Double apr = rs.getDouble("apr");
+				Double quarterlyDividend = rs.getDouble("quarterlyDividend");
+				Double baseRateReturn = rs.getDouble("baseRateReturn");
+				Double betaMeasure = rs.getDouble("betaMeasure");
+				String stockSymbol = rs.getString("stockSymbol");
+				Double sharePrice = rs.getDouble("sharePrice");
+				Double baseOmegaMeasure = rs.getDouble("baseOmegaMeasure");
+				Double totalValue = rs.getDouble("totalValue");
 				Double assetValue = rs.getDouble("assetValue");
-				assets.put(assetCode, assetValue);
+				if (totalValue > 0) {
+					PrivateInvestment pm = new PrivateInvestment(assetCode, label, quarterlyDividend, baseRateReturn, baseOmegaMeasure, totalValue);
+					pm.setValue(assetValue);
+					assets.put(assetCode, pm);
+				}
+				if (stockSymbol != null) {
+					Stocks pm = new Stocks(assetCode, label, quarterlyDividend, baseRateReturn, betaMeasure, stockSymbol, sharePrice);
+					pm.setValue(assetValue);
+					assets.put(assetCode, pm);
+				}
+				if (apr > 0) {
+					Deposit pm = new Deposit(assetCode, label, apr);
+					pm.setValue(assetValue);
+					assets.put(assetCode, pm);
+				}
 			}
 		} catch (SQLException e) {
 			System.out.println("SQLException: ");
@@ -421,6 +428,154 @@ public class Portfolio {
 		}
 
 		return assets;
+	}
+	
+	public static User loadUser(String ownerCode) {
+		User b = null;
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance(); //.getDeclaredConstructor().newInstance();
+		} catch (InstantiationException e) {
+			System.out.println("InstantiationException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} catch (IllegalAccessException e) {
+			System.out.println("IllegalAccessException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} catch (ClassNotFoundException e) {
+			System.out.println("ClassNotFoundException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		
+		Connection conn = null;
+
+		try {
+			conn = DriverManager.getConnection(DatabaseInfo.url, DatabaseInfo.username, DatabaseInfo.password);
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		
+
+		String query = "select pm.personId, pm.personCode, pm.firstName, pm.lastName, pm.brokerStatus as brokerStatus, pm.secIdentity as secIdentity, ad.street, c.city, s.state, ad.zip, ad.country from Person pm " 
+	                + "left join Address ad on pm.addressId = ad.addressId "
+                    + "left join City c on ad.cityId = c.cityId "
+                    + "left join State s on ad.stateId = s.stateId where pm.personCode = ?";
+
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+
+		try {
+			ps = conn.prepareStatement(query);
+			ps.setString(1, ownerCode);
+			rs = ps.executeQuery();
+      while(rs.next()) { 
+        int personId = rs.getInt("personId");
+        String personCode = rs.getString("personCode");
+        String firstName = rs.getString("firstName");
+        String lastName = rs.getString("lastName");
+        String brokerStatus = rs.getString("brokerStatus");
+        String secIdentity = rs.getString("secIdentity");
+        String street = rs.getString("street");
+        String city = rs.getString("city");
+        String state = rs.getString("state");
+        String zip = rs.getString("zip");
+        String country = rs.getString("country");
+        Set<String> email = loadEmail(personId);
+        Address a = new Address(street, city, state, zip, country);
+
+        if(brokerStatus != null && secIdentity != null && (brokerStatus.contains("J") || brokerStatus.contains("E"))) {
+          b = new User(personCode, a, firstName, lastName, brokerStatus, secIdentity, email);
+        } else {
+          b = new User(personCode, a, firstName, lastName, "", "", email);
+        }
+      }
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+
+		try {
+			if(rs != null && !rs.isClosed())
+				rs.close();
+			if(ps != null && !ps.isClosed())
+				ps.close();
+			if(conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		return b;
+	}
+
+	public static Set<String> loadEmail(int personId) {
+		Set<String> emails = new HashSet<String>();
+
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+		} catch (InstantiationException e) {
+			System.out.println("InstantiationException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} catch (IllegalAccessException e) {
+			System.out.println("IllegalAccessException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		} catch (ClassNotFoundException e) {
+			System.out.println("ClassNotFoundException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+
+		Connection conn = null;
+
+		try {
+			conn = DriverManager.getConnection(DatabaseInfo.url, DatabaseInfo.username, DatabaseInfo.password);
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+
+		String query = "select e.email from Email e where e.personId = ?;";
+
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+
+		try {
+			ps = conn.prepareStatement(query);
+			ps.setInt(1, personId);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				String email = rs.getString("email");
+				emails.add(email);
+			}
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+
+		try {
+			if (rs != null && !rs.isClosed())
+				rs.close();
+			if (ps != null && !ps.isClosed())
+				ps.close();
+			if (conn != null && !conn.isClosed())
+				conn.close();
+		} catch (SQLException e) {
+			System.out.println("SQLException: ");
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+
+		return emails;
 	}
 
 }
