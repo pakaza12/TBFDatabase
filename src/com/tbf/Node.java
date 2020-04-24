@@ -1,36 +1,36 @@
 package com.tbf;
 
-public class Node<Portfolio>  {
+public class Node<T>  {
 	
-	private Portfolio item;
-	private Node<Portfolio> next;
-	private Node<Portfolio> prev;
+	private T item;
+	private Node<T> next;
+	private Node<T> prev;
 	
-	public Node(Portfolio item) {
+	public Node(T item) {
 		this.item = item;
 		this.next = null;
 	}
 	
-	public Portfolio getItem() {
+	public T getItem() {
 		return item;
 	}
 	
-	public void setItem(Portfolio item) {
+	public void setItem(T item) {
 		this.item = item;
 	}
 	
-	public void setNext(Node<Portfolio> after){
+	public void setNext(Node<T> after){
 		this.next = after;
 	}
 	
-	public Node<Portfolio> getNext(){
+	public Node<T> getNext(){
 		return next;
 	}
 	
-	public void setPrev(Node<Portfolio> prev) {
+	public void setPrev(Node<T> prev) {
 		this.prev = prev;
 	}
-	public Node<Portfolio> getPrev(){
+	public Node<T> getPrev(){
 		return prev;
 	}
 	
