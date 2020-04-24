@@ -11,12 +11,12 @@ package com.tbf;
 public class DataConverter {
 
 	public static void main(String[] args) {
-
+		/*
 		User[] person = dataInput.parsePersons("data/Persons.dat");
 		dataOutput.peopleToXML(person, "data/Persons.xml");
 		Asset[] assets = dataInput.parseAssets("data/Assets.dat");
 		dataOutput.assetsToXML(assets, "data/Assets.xml");
-		Portfolio[] portfolios = dataInput.parsePortfolio("data/Portfolios.dat");
+		Portfolio[] portfolios = dataInput.parsePortfolio("data/Portfolios.dat");*/
 	}
 
 }

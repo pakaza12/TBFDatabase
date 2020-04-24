@@ -101,7 +101,7 @@ public class dataInput {
 		return inputUsers;
 	}
 	
-	public static Portfolio[] parsePortfolio(String file) {
+	/*public static Portfolio[] parsePortfolio(String file) {
 		
 		Scanner input = null;
 
@@ -146,6 +146,6 @@ public class dataInput {
 		}
 		
 		return portfolios;
-	}
+	}*/
 
 }
