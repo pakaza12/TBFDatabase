@@ -58,7 +58,7 @@ public class User {
 	}
 	
 	public String getLastNameFirstName() {
-		return this.getLastName() + this.getFirstName();
+		return this.getLastName() + " " + this.getFirstName();
 	}
 
 	public String getBrokerStatus() {

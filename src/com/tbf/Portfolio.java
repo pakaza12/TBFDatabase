@@ -82,6 +82,10 @@ public class Portfolio {
 	public void setAssetList(HashMap<String, Asset> assetList) {
 		this.assetList = assetList;
 	}
+	
+	public String ownerToString() {
+		return this.owner.getLastName() + " " + this.owner.getFirstName();
+	}
 
 	/**
 	 * This method is used as a summation tool for the total value of each asset in
@@ -148,8 +152,57 @@ public class Portfolio {
 			return 0.0;
 		}
 	}
+	
+	public int compByTypeManager(Portfolio p) {
+		String lastNameA = this.manager.getLastName();
+		String lastNameB = p.getManager().getLastName();
+		String firstNameA = this.manager.getFirstName();
+		String firstNameB = p.getManager().getFirstName();
+		String brokerA = this.manager.getBrokerStatus();
+		String brokerB = p.getManager().getBrokerStatus();
+		
+		//we want lastNameA to be less than lastNameB and everything else
+		if(brokerA.compareTo(brokerB) < 0) {
+			if(firstNameA.compareTo(firstNameB) < 0) {
+				if(lastNameA.compareTo(lastNameB) < 0) {
+					return -1;
+				} else if(lastNameA.compareTo(lastNameB) == 0) {
+					return 0;
+				} else {
+					return 1;
+				}
+			} else if (firstNameA.compareTo(firstNameB) == 0) {
+				if(lastNameA.compareTo(lastNameB) < 0) {
+					return -1;
+				} else if(lastNameA.compareTo(lastNameB) == 0) {
+					return 0;
+				} else {
+					return 1;
+				}
+			}
+		} else if (brokerA.compareTo(brokerB) == 0) {
+			if(firstNameA.compareTo(firstNameB) < 0) {
+				if(lastNameA.compareTo(lastNameB) < 0) {
+					return -1;
+				} else if(lastNameA.compareTo(lastNameB) == 0) {
+					return 0;
+				} else {
+					return 1;
+				}
+			} else if (firstNameA.compareTo(firstNameB) == 0) {
+				if(lastNameA.compareTo(lastNameB) < 0) {
+					return -1;
+				} else if(lastNameA.compareTo(lastNameB) == 0) {
+					return 0;
+				} else {
+					return 1;
+				}
+			}
+		}
+		return 1;
+	}
 
-	public static void summaryReport(ArrayList<Portfolio> report) {
+	public static void summaryReport(CustomList report) {
 		double value = 0, anReturn = 0, fees = 0, commissions = 0;
 		System.out.println(
 				"Portfolio Code \t\tPortfolio Owner \t\tPortfolio Manager \t\tTotal Fees \t\tTotal Commissions \t\tAggregate Risk \t\tAnnual Returns \t\tTotal Value");
@@ -182,7 +235,7 @@ public class Portfolio {
 				anReturn, value);
 	}
 
-	public static void detailReport(ArrayList<Portfolio> report) {
+	public static void detailReport(CustomList report) {
 		System.out.printf(
 				"\n\nPortfolio Details\n============================================================================================================================================================================\n");
 
@@ -228,8 +281,10 @@ public class Portfolio {
 		}
 	}
 
-	public static ArrayList<Portfolio> loadPortfolios() {
-		ArrayList<Portfolio> b = new ArrayList<Portfolio>();
+	public static void loadPortfolios() {
+		CustomList b = new CustomList();
+		CustomList c = new CustomList();
+		CustomList d = new CustomList();
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -285,13 +340,17 @@ public class Portfolio {
 					p.setOwner(owner);
 					p.setManager(manager);
 					p.setBeneficiary(beneficiary);
-					b.add(p);
+					b.insertByName(p);
+					c.insertByValue(p);
+					d.insertByManager(p);
 				} else {
 					Portfolio p = new Portfolio(portfolioCode, ownerCode, managerCode);
 					p.setAssetList(assetList);
 					p.setOwner(owner);
 					p.setManager(manager);
-					b.add(p);
+					b.insertByName(p);
+					c.insertByValue(p);
+					d.insertByManager(p);
 				}
 			}
 		} catch (SQLException e) {
@@ -312,8 +371,11 @@ public class Portfolio {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
+		Portfolio.summaryReport(b);
+		Portfolio.summaryReport(c);
+		Portfolio.summaryReport(d);
 
-		return b;
+		return;
 	}
 	
 	public User getOwner() {
@@ -392,6 +454,7 @@ public class Portfolio {
 				Double baseOmegaMeasure = rs.getDouble("baseOmegaMeasure");
 				Double totalValue = rs.getDouble("totalValue");
 				Double assetValue = rs.getDouble("assetValue");
+				assetCode += Double.toString(assetValue);
 				if (totalValue > 0) {
 					PrivateInvestment pm = new PrivateInvestment(assetCode, label, quarterlyDividend, baseRateReturn, baseOmegaMeasure, totalValue);
 					pm.setValue(assetValue);

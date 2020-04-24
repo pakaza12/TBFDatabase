@@ -10,9 +10,9 @@ public class PortfolioReport {
 	
 	public static void main(String[] args) {
 
-		ArrayList<Portfolio> portfolios = Portfolio.loadPortfolios();
-		
-		Portfolio.summaryReport(portfolios);
+		//ArrayList<Portfolio> portfolios = Portfolio.loadPortfolios();
+		Portfolio.loadPortfolios();
+		//Portfolio.summaryReport(a);
 		//Portfolio.detailReport(portfolios);
 		
 	}

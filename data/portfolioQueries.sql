@@ -47,10 +47,10 @@ delete from Person where personCode = '1AB';
 insert into Person(personCode, addressId, firstName, lastName, brokerStatus, secIdentity) values ('12AB', (Select a.addressId from Address a left join City c on a.cityId = c.cityId where a.street = '91421 Karstens Street'), 'Ella', 'Swat', 'E', 'sec005');
 
 -- A query to get all the assets in a particular portfolio
-select p.portfolioCode, a.assetCode, a.label from Asset a 
+select p.portfolioCode, a.assetCode, a.assetCode, a.label, a.apr, a.quarterlyDividend, a.baseRateReturn, a.betaMeasure, a.stockSymbol, a.sharePrice, a.baseOmegaMeasure, a.totalValue  from Asset a 
 	left join AssetPortfolio ap on a.assetId = ap.assetId 
 		left join Portfolio p on p.portfolioId = ap.portfolioId 
-			where p.portfolioCode = '2CB'; 
+			where p.portfolioCode = 'PF003'; 
 				-- Change the 2CB with the portfolioCode you want the assets for
                 
 -- A query to get all the assets of a particular person
