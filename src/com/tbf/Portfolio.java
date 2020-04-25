@@ -153,6 +153,7 @@ public class Portfolio {
 		}
 	}
 	
+	//Compares this to p if this is smaller it will return -1, 0 if the same, 1 if bigger
 	public int compByTypeManager(Portfolio p) {
 		String lastNameA = this.manager.getLastName();
 		String lastNameB = p.getManager().getLastName();
@@ -167,7 +168,7 @@ public class Portfolio {
 			brokerB = "A";
 		}
 		
-		//Sorts by brokerType first, then lastName, then firstName
+		//Compares by brokerType first, then lastName, then firstName
 		if(brokerA.compareTo(brokerB) < 0) {
 			return -1;
 		} else if (brokerA.compareTo(brokerB) == 0) {
