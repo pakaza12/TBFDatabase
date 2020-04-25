@@ -2,6 +2,13 @@ package com.tbf;
 
 import java.util.Iterator;
 
+
+/**
+ * This is a custom list ADT that allows us to store Portfolios
+ * 
+ * @authors Jayden Carlon and Parker Zach
+ *
+ */
 public class CustomList implements Iterable<Portfolio> {
 
 	private Node head = null;
@@ -86,7 +93,7 @@ public class CustomList implements Iterable<Portfolio> {
 					insertAtPoint(portfolio, place);
 					return;
 				} else if (portfolio.compByTypeManager(port) == 0) {
-					insertAtPoint(portfolio, place+1);
+					insertAtPoint(portfolio, place);
 					return;
 				}
 				if(place == size-1) {

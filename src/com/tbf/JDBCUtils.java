@@ -5,6 +5,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * This class holds some JDBC extra methods to help us add/delete 
+ * data from the database easier
+ * 
+ * @authors Jayden Carlon and Parker Zach
+ *
+ */
 public class JDBCUtils {
 
 	public static void addAddress(String street, String zip, String country, String city, String state, Connection conn) {		

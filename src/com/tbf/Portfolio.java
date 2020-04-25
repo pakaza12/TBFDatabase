@@ -160,39 +160,23 @@ public class Portfolio {
 		String firstNameB = p.getManager().getFirstName();
 		String brokerA = this.manager.getBrokerStatus();
 		String brokerB = p.getManager().getBrokerStatus();
+		if (this.manager.getBrokerStatus() == null) {
+			brokerA = "A";
+		}
+		if (p.getManager().getBrokerStatus() == null) {
+			brokerB = "A";
+		}
 		
-		//we want lastNameA to be less than lastNameB and everything else
+		//Sorts by brokerType first, then lastName, then firstName
 		if(brokerA.compareTo(brokerB) < 0) {
-			if(firstNameA.compareTo(firstNameB) < 0) {
-				if(lastNameA.compareTo(lastNameB) < 0) {
-					return -1;
-				} else if(lastNameA.compareTo(lastNameB) == 0) {
-					return 0;
-				} else {
-					return 1;
-				}
-			} else if (firstNameA.compareTo(firstNameB) == 0) {
-				if(lastNameA.compareTo(lastNameB) < 0) {
-					return -1;
-				} else if(lastNameA.compareTo(lastNameB) == 0) {
-					return 0;
-				} else {
-					return 1;
-				}
-			}
+			return -1;
 		} else if (brokerA.compareTo(brokerB) == 0) {
-			if(firstNameA.compareTo(firstNameB) < 0) {
-				if(lastNameA.compareTo(lastNameB) < 0) {
+			if(lastNameA.compareTo(lastNameB) < 0) {
+				return -1;
+			} else if (lastNameA.compareTo(lastNameB) == 0) {
+				if(firstNameA.compareTo(firstNameB) < 0) {
 					return -1;
-				} else if(lastNameA.compareTo(lastNameB) == 0) {
-					return 0;
-				} else {
-					return 1;
-				}
-			} else if (firstNameA.compareTo(firstNameB) == 0) {
-				if(lastNameA.compareTo(lastNameB) < 0) {
-					return -1;
-				} else if(lastNameA.compareTo(lastNameB) == 0) {
+				} else if(firstNameA.compareTo(firstNameB) == 0) {
 					return 0;
 				} else {
 					return 1;

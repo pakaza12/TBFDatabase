@@ -1,5 +1,13 @@
 package com.tbf;
 
+
+/**
+ * This is a basic Node class that allows us to make custom, or general
+ * lists, stacks, queues, etc.
+ * 
+ * @authors Jayden Carlon and Parker Zach
+ *
+ */
 public class Node {
 
 	private Portfolio item;
